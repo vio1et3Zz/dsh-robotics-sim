@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "机器人网关",
+    "description": "通过本机 DSH Robotics Gateway 启动、观察、执行与取消 Isaac 仿真任务。"
+  }
+}

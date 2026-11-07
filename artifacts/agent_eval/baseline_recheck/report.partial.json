@@ -1,0 +1,74 @@
+{
+  "run_id": "baseline_recheck",
+  "matrix": {
+    "name": "baseline_pick_10",
+    "path": "configs\\agent_eval_tasks.json",
+    "description": "固定场景 10 次 pick/place，用于与 T09 的 10/10 对齐；reset 换 episode，不关闭 worker。"
+  },
+  "started_at": "2026-11-07T12:49:04.898917+00:00",
+  "simulation": {
+    "profile_id": "profile_so101_physx",
+    "seed": 7,
+    "simulation_id": "sim_15420d95c9d746f99f80cfafcdd8a432",
+    "startup_wall_s": 9.95
+  },
+  "episodes": [
+    {
+      "index": 1,
+      "task_id": "pick_018",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "expected_failure": null,
+      "jsonl": "artifacts\\agent_eval\\baseline_recheck\\episode_01.jsonl",
+      "job_id": "job_c7e416b9448447028ddb01f166191207",
+      "status": "succeeded",
+      "error_code": null,
+      "passed": true,
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23034372925758362,
+          0.05815571919083595,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.01317,
+        "z": 0.055,
+        "passed": true
+      },
+      "wall_s": 15.32,
+      "sim_step_end": 2060,
+      "sim_time_s_end": 10.3,
+      "state_version_end": 2,
+      "frames": 15,
+      "frame_steps": [
+        0,
+        148,
+        311,
+        482,
+        635,
+        749,
+        859,
+        973,
+        1204,
+        1326,
+        1452,
+        1575,
+        1728,
+        1893,
+        2060
+      ],
+      "events": 15,
+      "records": 59,
+      "setup": [],
+      "final_frame": "frame_c49465bbed3f4a16b8dfe9877b3baba0",
+      "expected_met": true
+    }
+  ],
+  "start": {
+    "job_id": "job_d35e6f41124048a1b36d79549becd51b",
+    "status": "succeeded",
+    "error": null,
+    "wall_s": 9.95
+  }
+}

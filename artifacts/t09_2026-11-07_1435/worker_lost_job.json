@@ -1,0 +1,18 @@
+﻿{
+    "job_id":  "job_dc9752cfb8e34b59b988822512a12223",
+    "kind":  "skill",
+    "status":  "failed",
+    "simulation_id":  "sim_b129a0938c61428190108dedcfbcae7b",
+    "task_id":  null,
+    "skill":  "hold_pose",
+    "worker_job_id":  "job_cb154abf53f24c1a82454e1c9d8ced55",
+    "parent_job_id":  null,
+    "progress":  0.009833333333333333,
+    "cancel_requested":  false,
+    "created_at":  "2026-11-07T06:47:34.648398+00:00",
+    "updated_at":  "2026-11-07T06:47:36.967954+00:00",
+    "error":  {
+                  "code":  "WORKER_LOST",
+                  "message":  "worker exited while the job was live"
+              }
+}

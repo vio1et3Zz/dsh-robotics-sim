@@ -1,0 +1,47 @@
+{
+  "name": "grasp_variants_open",
+  "description": "D 闭环 demo 第 2 步：补解 x=0.16/0.17/0.19/0.21 变体后，同一抓取分布应全部通过。",
+  "simulation": {
+    "profile_id": "profile_so101_physx",
+    "seed": 7,
+    "budget": {"max_sim_time_s": 900.0, "max_wall_time_s": 1800.0}
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "task_id": "pick_x016",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "setup": [{"skill": "move_object", "parameters": {"object_id": "red_block", "position": [0.16, 0.0, 0.075]}}],
+      "expected_failure": null
+    },
+    {
+      "episode": 2,
+      "task_id": "pick_x017",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "setup": [{"skill": "move_object", "parameters": {"object_id": "red_block", "position": [0.17, 0.0, 0.075]}}],
+      "expected_failure": null
+    },
+    {
+      "episode": 3,
+      "task_id": "pick_x019",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "setup": [{"skill": "move_object", "parameters": {"object_id": "red_block", "position": [0.19, 0.0, 0.075]}}],
+      "expected_failure": null
+    },
+    {
+      "episode": 4,
+      "task_id": "pick_x021",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "setup": [{"skill": "move_object", "parameters": {"object_id": "red_block", "position": [0.21, 0.0, 0.075]}}],
+      "expected_failure": null
+    }
+  ]
+}

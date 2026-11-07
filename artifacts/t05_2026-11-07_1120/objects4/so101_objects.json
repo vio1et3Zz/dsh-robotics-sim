@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "stage": "complete",
+  "checks": {
+    "block_above_table": true,
+    "block_finite": true,
+    "block_near_spawn": true,
+    "box_present": true
+  },
+  "block_pos_world": [
+    0.17999990284442902,
+    -1.351581602193619e-07,
+    0.014999998733401299
+  ],
+  "timings_s": {
+    "total": 10.390058755874634
+  }
+}

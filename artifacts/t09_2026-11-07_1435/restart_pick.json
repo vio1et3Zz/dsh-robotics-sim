@@ -1,0 +1,20 @@
+{
+  "restart": {
+    "sim": "sim_eb7b35f3c9ab4e33b486b856b4ddb887",
+    "episode": "ep_6390a54ef4474b45afcf7491d261d70d",
+    "task": "task_6a3a0f48c1544873ba6e3e3921718ffc",
+    "plan_hash": "481edfb4cdb37642dfd41e5ba18e5e6787907cbc018bfa0528641693b72d1f34",
+    "job": "job_3a8f462b12b44d8285640800cab5b0ae",
+    "status": "succeeded",
+    "error": null,
+    "wall_s": 14.509429454803467,
+    "block": [
+      0.23018670082092285,
+      0.05837193503975868,
+      0.05499999597668648
+    ],
+    "sim_time_s": 10.3,
+    "sim_step": 2060,
+    "ok": true
+  }
+}

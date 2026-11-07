@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSH Robotics Console</title>
+<link rel="stylesheet" href="/ui/assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="mark" aria-hidden="true"></span>
+    <div>
+      <h1>DSH Robotics <span class="muted">Gateway console</span></h1>
+      <div class="muted small mono" id="gw-url">127.0.0.1 · loopback · no auth</div>
+    </div>
+  </div>
+  <div class="pills" aria-live="polite">
+    <span class="pill" id="pill-gateway">gateway …</span>
+    <span class="pill" id="pill-worker">worker …</span>
+    <span class="pill" id="pill-ready">sim ready …</span>
+    <span class="pill" id="pill-startup" title="jobs marked lost when this Gateway process started">startup lost …</span>
+  </div>
+</header>
+
+<div id="toast" class="toast" role="status" hidden></div>
+
+<main class="layout">
+  <section class="card controls" aria-label="仿真控制">
+    <div class="card-head"><h2>仿真</h2><span class="muted small" id="backend-skills"></span></div>
+
+    <div id="sim-list" class="sim-list"></div>
+
+    <div class="divider"></div>
+    <label class="field">Profile
+      <select id="profile">
+        <option value="profile_so101_physx">profile_so101_physx · SO-ARM101</option>
+        <option value="profile_dev_franka_physx">profile_dev_franka_physx · Franka dev</option>
+        <option value="profile_mock_franka">profile_mock_franka · mock（仅供协议测试）</option>
+      </select>
+    </label>
+    <div class="row">
+      <label class="field seed">seed
+        <input id="seed" type="number" min="0" step="1" value="1">
+      </label>
+      <button id="btn-start" class="primary">启动仿真</button>
+    </div>
+    <details class="spec">
+      <summary>SimulationSpec（发送内容）</summary>
+      <pre id="spec-preview" class="meta"></pre>
+    </details>
+
+    <div class="divider"></div>
+    <h3>当前仿真</h3>
+    <div class="row">
+      <button id="btn-reset">Reset</button>
+      <button id="btn-capture" class="primary">抓帧</button>
+      <button id="btn-close" class="danger">Close</button>
+    </div>
+    <p class="hint muted">Close 会释放 worker；若需再次启动而失败，重启 Gateway。</p>
+
+    <div class="divider"></div>
+    <h3>技能</h3>
+    <label class="field">skill
+      <select id="skill">
+        <option value="observe_scene">observe_scene</option>
+        <option value="hold_pose">hold_pose</option>
+        <option value="pick">pick</option>
+        <option value="move_object">move_object（故障注入）</option>
+      </select>
+    </label>
+    <label class="field">parameters
+      <textarea id="skill-params" rows="3" spellcheck="false">{}</textarea>
+    </label>
+    <div class="row">
+      <label class="field tiny">timeout_s<input id="timeout" type="number" min="1" step="1" value="30"></label>
+      <label class="field tiny">expected_s<input id="expected" type="number" min="1" step="1" value="10"></label>
+      <button id="btn-skill">提交技能</button>
+    </div>
+  </section>
+
+  <section class="card viewer" aria-label="前视相机">
+    <div class="card-head">
+      <h2>前视相机</h2>
+      <div class="row compact">
+        <button id="tab-rgb" class="tab active">RGB</button>
+        <button id="tab-depth" class="tab">Depth</button>
+        <span class="muted small" id="frame-meta-line">no frame</span>
+      </div>
+    </div>
+    <div class="viewer-box">
+      <img id="rgb" alt="front camera RGB frame" hidden>
+      <canvas id="depth" hidden></canvas>
+      <div id="viewer-empty" class="empty">尚未抓帧</div>
+    </div>
+    <div id="frame-list" class="frame-list"></div>
+    <pre id="frame-meta" class="meta" hidden></pre>
+  </section>
+
+  <section class="card state" aria-label="世界状态">
+    <div class="card-head"><h2>世界状态</h2><span class="badge" id="state-version">—</span></div>
+    <div id="scene-meta" class="kv"></div>
+    <div id="robots"></div>
+    <div id="objects"></div>
+    <div id="skill-status"></div>
+  </section>
+
+  <section class="card jobs" aria-label="Jobs">
+    <div class="card-head"><h2>Jobs</h2><span class="muted small" id="jobs-count"></span></div>
+    <div class="table-wrap">
+      <table class="grid jobs-table">
+        <thead><tr><th>job</th><th>kind</th><th>sim</th><th>status</th><th>progress</th><th>time</th><th></th></tr></thead>
+        <tbody id="jobs-body"></tbody>
+      </table>
+    </div>
+    <pre id="job-detail" class="meta" hidden></pre>
+  </section>
+
+  <section class="card events-card" aria-label="事件流">
+    <div class="card-head"><h2>事件流</h2><span id="ws-state" class="muted small">connecting…</span></div>
+    <div id="events" class="events" aria-live="off"></div>
+  </section>
+</main>
+
+<footer class="foot muted small">
+  loopback only · no auth · 页面直接读写本机 Gateway；未在其他环境验证
+</footer>
+
+<script src="/ui/assets/app.js"></script>
+</body>
+</html>

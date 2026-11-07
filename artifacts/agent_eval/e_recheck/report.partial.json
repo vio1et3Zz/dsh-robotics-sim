@@ -1,0 +1,80 @@
+{
+  "run_id": "e_recheck",
+  "matrix": {
+    "name": "e_recheck_x019_default",
+    "path": "configs\\agent_eval_e_recheck.json",
+    "description": "E：按 Agent 建议重跑 episode 5 的场景（块 x=0.19），不强制 grasp_x，期望变体自动选择后成功。"
+  },
+  "started_at": "2026-11-07T13:15:27.575159+00:00",
+  "simulation": {
+    "profile_id": "profile_so101_physx",
+    "seed": 7,
+    "simulation_id": "sim_f8ddc9e507f44585a4a0317d6bde0d64",
+    "startup_wall_s": 10.23
+  },
+  "episodes": [
+    {
+      "index": 1,
+      "task_id": "recheck_x019_default",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "expected_failure": null,
+      "jsonl": "artifacts\\agent_eval\\e_recheck\\episode_01.jsonl",
+      "job_id": "job_dc5c936c4c234d7cbec634970853730d",
+      "status": "succeeded",
+      "error_code": null,
+      "passed": true,
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.22869132459163666,
+          0.05813184008002281,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.0119,
+        "z": 0.055,
+        "passed": true
+      },
+      "wall_s": 16.01,
+      "sim_step_end": 2090,
+      "sim_time_s_end": 10.450000000000001,
+      "state_version_end": 3,
+      "frames": 15,
+      "frame_steps": [
+        30,
+        174,
+        326,
+        483,
+        631,
+        741,
+        854,
+        1081,
+        1194,
+        1308,
+        1425,
+        1543,
+        1659,
+        1812,
+        2090
+      ],
+      "events": 15,
+      "records": 61,
+      "setup": [
+        {
+          "skill": "move_object",
+          "job_id": "job_fec79b9833064d3aaf366b0d5efc41d5",
+          "status": "succeeded"
+        }
+      ],
+      "final_frame": "frame_6abab7fbcd514fa886714aa302ac835f",
+      "expected_met": true
+    }
+  ],
+  "start": {
+    "job_id": "job_7a253e89e6824942960ab9827a6ca3cf",
+    "status": "succeeded",
+    "error": null,
+    "wall_s": 10.23
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "run_id": "variants_open",
+  "matrix": {
+    "name": "grasp_variants_open",
+    "path": "configs\\agent_eval_variants.json",
+    "description": "D 闭环 demo 第 2 步：补解 x=0.16/0.17/0.19/0.21 变体后，同一抓取分布应全部通过。"
+  },
+  "started_at": "2026-11-07T12:47:30.636853+00:00",
+  "simulation": {
+    "profile_id": "profile_so101_physx",
+    "seed": 7,
+    "simulation_id": "sim_c89d3a87c55d40258989b1dd8e492fda",
+    "startup_wall_s": 9.52
+  },
+  "episodes": [
+    {
+      "index": 1,
+      "task_id": "pick_x016",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "expected_failure": null,
+      "jsonl": "artifacts\\agent_eval\\variants_open\\episode_01.jsonl",
+      "job_id": "job_43dc8eb2c09a44799dd59380d7a04d2a",
+      "status": "succeeded",
+      "error_code": null,
+      "passed": true,
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.22924086451530457,
+          0.05776820331811905,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.01207,
+        "z": 0.055,
+        "passed": true
+      },
+      "wall_s": 14.75,
+      "sim_step_end": 2090,
+      "sim_time_s_end": 10.450000000000001,
+      "state_version_end": 3,
+      "frames": 15,
+      "frame_steps": [
+        30,
+        187,
+        358,
+        528,
+        679,
+        803,
+        927,
+        1052,
+        1176,
+        1431,
+        1556,
+        1694,
+        1857,
+        2090,
+        2090
+      ],
+      "events": 15,
+      "records": 59,
+      "setup": [
+        {
+          "skill": "move_object",
+          "job_id": "job_4aac1c45e66748898e575cd538570bd1",
+          "status": "succeeded"
+        }
+      ],
+      "final_frame": "frame_67c9fb25fe574c7cbad4cb8ae37256d8",
+      "expected_met": true
+    },
+    {
+      "index": 2,
+      "task_id": "pick_x017",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "expected_failure": null,
+      "jsonl": "artifacts\\agent_eval\\variants_open\\episode_02.jsonl",
+      "job_id": "job_c04fad7bd39a4260a132a520b5856208",
+      "status": "succeeded",
+      "error_code": null,
+      "passed": true,
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23366788029670715,
+          0.060272183269262314,
+          0.054999999701976776
+        ],
+        "xy_distance": 0.0171,
+        "z": 0.055,
+        "passed": true
+      },
+      "wall_s": 14.48,
+      "sim_step_end": 2090,
+      "sim_time_s_end": 10.450000000000001,
+      "state_version_end": 6,
+      "frames": 14,
+      "frame_steps": [
+        30,
+        202,
+        372,
+        543,
+        687,
+        811,
+        935,
+        1059,
+        1314,
+        1437,
+        1561,
+        1702,
+        1870,
+        2090
+      ],
+      "events": 15,
+      "records": 58,
+      "setup": [
+        {
+          "skill": "move_object",
+          "job_id": "job_0fd4b4c5bbac4b668a05567faae1ad99",
+          "status": "succeeded"
+        }
+      ],
+      "final_frame": "frame_876792ad1bad4ce8ac1e24bb0eadf103",
+      "expected_met": true
+    },
+    {
+      "index": 3,
+      "task_id": "pick_x019",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "expected_failure": null,
+      "jsonl": "artifacts\\agent_eval\\variants_open\\episode_03.jsonl",
+      "job_id": "job_00ee2873aa7741df94ab29599b279b00",
+      "status": "succeeded",
+      "error_code": null,
+      "passed": true,
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.22853243350982666,
+          0.05797760188579559,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.01168,
+        "z": 0.055,
+        "passed": true
+      },
+      "wall_s": 15.14,
+      "sim_step_end": 2090,
+      "sim_time_s_end": 10.450000000000001,
+      "state_version_end": 9,
+      "frames": 15,
+      "frame_steps": [
+        30,
+        201,
+        367,
+        533,
+        672,
+        790,
+        901,
+        1015,
+        1253,
+        1378,
+        1501,
+        1624,
+        1784,
+        1945,
+        2090
+      ],
+      "events": 15,
+      "records": 60,
+      "setup": [
+        {
+          "skill": "move_object",
+          "job_id": "job_c32f5228652446e6b5722b2e7cd0d2b1",
+          "status": "succeeded"
+        }
+      ],
+      "final_frame": "frame_7fc2d0848f5741bc8fcc5ecdf3b2a800",
+      "expected_met": true
+    },
+    {
+      "index": 4,
+      "task_id": "pick_x021",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "expected_failure": null,
+      "jsonl": "artifacts\\agent_eval\\variants_open\\episode_04.jsonl",
+      "job_id": "job_ed2ced838c634c39a0f018c0fac1efbf",
+      "status": "succeeded",
+      "error_code": null,
+      "passed": true,
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.22984081506729126,
+          0.057962700724601746,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.01266,
+        "z": 0.055,
+        "passed": true
+      },
+      "wall_s": 16.31,
+      "sim_step_end": 2350,
+      "sim_time_s_end": 11.75,
+      "state_version_end": 12,
+      "frames": 16,
+      "frame_steps": [
+        30,
+        196,
+        368,
+        536,
+        705,
+        873,
+        1000,
+        1125,
+        1248,
+        1504,
+        1629,
+        1753,
+        1875,
+        2032,
+        2193,
+        2350
+      ],
+      "events": 15,
+      "records": 63,
+      "setup": [
+        {
+          "skill": "move_object",
+          "job_id": "job_d4bb16d258df4a62808a81f169145b46",
+          "status": "succeeded"
+        }
+      ],
+      "final_frame": "frame_b3d4c8bf4ea44397b24b9b2ba21ed22d",
+      "expected_met": true
+    }
+  ],
+  "start": {
+    "job_id": "job_99e8c36ade9d4613b1fa88d18182d589",
+    "status": "succeeded",
+    "error": null,
+    "wall_s": 9.52
+  }
+}

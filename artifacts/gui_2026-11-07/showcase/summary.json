@@ -1,0 +1,145 @@
+{
+  "base": "http://127.0.0.1:8717",
+  "started_at": "2026-11-07T16:27:54+0800",
+  "health_before": {
+    "gateway": "ok",
+    "worker": "dead",
+    "simulation_ready": false,
+    "startup_lost_jobs": 0
+  },
+  "backends": {
+    "backends": [
+      {
+        "kind": "isaaclab_physx",
+        "alive": false,
+        "skills": [],
+        "verified": false,
+        "note": "mock endpoints are never simulation verification"
+      }
+    ]
+  },
+  "start_job": {
+    "job_id": "job_0ccb9fb537104c159e5527929bc1b52e",
+    "kind": "start_simulation",
+    "status": "running",
+    "simulation_id": null,
+    "task_id": null,
+    "skill": null,
+    "worker_job_id": null,
+    "parent_job_id": null,
+    "progress": null,
+    "cancel_requested": false,
+    "created_at": "2026-11-07T08:27:54.772067+00:00",
+    "updated_at": "2026-11-07T08:27:54.773314+00:00"
+  },
+  "startup_wall_s": 92.32,
+  "simulation_id": "sim_699da21887a048a285ececf8cd3def3a",
+  "simulation_in_list": true,
+  "state": {
+    "episode_id": "ep_8337146314b1478fb2638e0e9874a873",
+    "state_version": 0,
+    "sim_step": 0,
+    "source": "sim_ground_truth",
+    "dof": 6,
+    "objects": [
+      "red_block",
+      "target_box"
+    ]
+  },
+  "jobs_list_ok": true,
+  "capture_wall_s": 0.92,
+  "frame": {
+    "frame_id": "frame_480ec05abfa74ee8a8eca27fc970cc7f",
+    "camera_id": "front",
+    "simulation_id": "sim_699da21887a048a285ececf8cd3def3a",
+    "episode_id": "ep_8337146314b1478fb2638e0e9874a873",
+    "state_version": 0,
+    "sim_step": 0,
+    "sim_time_s": 0.0,
+    "captured_at": "2026-11-07T08:29:28.014438+00:00",
+    "width": 640,
+    "height": 480,
+    "rgb_format": "png",
+    "depth_format": "npy",
+    "depth_units": "m",
+    "depth_type": "distance_to_image_plane",
+    "intrinsics": {
+      "fx": 732.999267578125,
+      "fy": 732.999267578125,
+      "cx": 320.0,
+      "cy": 240.0,
+      "matrix": [
+        [
+          732.999267578125,
+          0.0,
+          320.0
+        ],
+        [
+          0.0,
+          732.999267578125,
+          240.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "extrinsics": {
+      "frame": "world",
+      "convention": "world",
+      "position": [
+        0.3799999952316284,
+        -0.41999998688697815,
+        0.30000001192092896
+      ],
+      "orientation_xyzw": [
+        -0.19947253167629242,
+        0.12594705820083618,
+        0.8216919302940369,
+        0.5188165903091431
+      ]
+    },
+    "rgb_range": [
+      14.0,
+      241.0
+    ],
+    "depth_range_m": [
+      0.40060415863990784,
+      1.7674065828323364
+    ],
+    "depth_invalid_fraction": 0.08475585937499996,
+    "capture_ms": 0.2631999996083323,
+    "ground_truth_scene": true,
+    "frame_url": "/api/v1/frames/frame_480ec05abfa74ee8a8eca27fc970cc7f",
+    "rgb_url": "/api/v1/frames/frame_480ec05abfa74ee8a8eca27fc970cc7f/rgb.png",
+    "depth_url": "/api/v1/frames/frame_480ec05abfa74ee8a8eca27fc970cc7f/depth.npy"
+  },
+  "rgb": {
+    "status": 200,
+    "bytes": 152868,
+    "sha256": "b39e63b8c75f64f5222491ccd38012e147adee8ed886048ed43e9ec8bc4d1786",
+    "png": true,
+    "content_type": "image/png"
+  },
+  "depth": {
+    "status": 200,
+    "bytes": 1228928,
+    "sha256": "17543c8aa87a55ff62238ca2abd0fca7f72e5fd04e475a86b1bc78d2770c2e74",
+    "npy": true,
+    "content_type": "application/octet-stream"
+  },
+  "frame_in_list": true,
+  "frames_list_count": 1,
+  "console": {
+    "ui_status": 200,
+    "ui_has_title": true,
+    "ui_has_script": true,
+    "app_status": 200,
+    "app_has_connect": true,
+    "app_bytes": 29526
+  },
+  "kept_open": true,
+  "finished_at": "2026-11-07T16:29:28+0800"
+}

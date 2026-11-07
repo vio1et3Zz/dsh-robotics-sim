@@ -1,0 +1,35 @@
+﻿python.exe : test_cancel_requires_worker_acknowledgement (test_fake_backend.FakeBackendTests.test_cancel_requires_worke
+r_acknowledgement) ... ok
+所在位置 行:12 字符: 3
++   & $py -m unittest discover -s tests/unit -v 2>&1 | Out-File -Encodi ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_cancel_req...dgement) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_capabilities_are_mock_and_unverified (test_fake_backend.FakeBackendTests.test_capabilities_are_mock_and_unverified
+) ... ok
+test_closed_backend_fails_fast (test_fake_backend.FakeBackendTests.test_closed_backend_fails_fast) ... ok
+test_completed_skill_updates_physics_facing_state (test_fake_backend.FakeBackendTests.test_completed_skill_updates_phys
+ics_facing_state) ... ok
+test_control_busy_while_a_skill_runs (test_fake_backend.FakeBackendTests.test_control_busy_while_a_skill_runs) ... ok
+test_fake_refuses_a_physx_profile (test_fake_backend.FakeBackendTests.test_fake_refuses_a_physx_profile) ... ok
+test_profile_is_fixed_to_robot_and_scene (test_fake_backend.FakeBackendTests.test_profile_is_fixed_to_robot_and_scene) 
+... ok
+test_profile_limits_environment_count (test_fake_backend.FakeBackendTests.test_profile_limits_environment_count) ... ok
+test_profiles_are_an_allowlist (test_fake_backend.FakeBackendTests.test_profiles_are_an_allowlist) ... ok
+test_start_returns_real_length_joint_arrays (test_fake_backend.FakeBackendTests.test_start_returns_real_length_joint_ar
+rays) ... ok
+test_unknown_skill_is_rejected (test_fake_backend.FakeBackendTests.test_unknown_skill_is_rejected) ... ok
+test_unknown_target_object_is_rejected (test_fake_backend.FakeBackendTests.test_unknown_target_object_is_rejected) ... 
+ok
+test_cases_cover_every_model (test_protocol.ProtocolFixtureTests.test_cases_cover_every_model) ... ok
+test_fixture_count (test_protocol.ProtocolFixtureTests.test_fixture_count) ... ok
+test_plan_hash_is_content_addressed (test_protocol.ProtocolFixtureTests.test_plan_hash_is_content_addressed) ... ok
+test_plan_hash_mismatch_is_rejected (test_protocol.ProtocolFixtureTests.test_plan_hash_mismatch_is_rejected) ... ok
+test_shared_fixtures_validate_as_declared (test_protocol.ProtocolFixtureTests.test_shared_fixtures_validate_as_declared
+) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.003s
+
+OK

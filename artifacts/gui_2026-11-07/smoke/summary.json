@@ -1,0 +1,154 @@
+{
+  "base": "http://127.0.0.1:8716",
+  "started_at": "2026-11-07T16:24:58+0800",
+  "health_before": {
+    "gateway": "ok",
+    "worker": "dead",
+    "simulation_ready": false,
+    "startup_lost_jobs": 0
+  },
+  "backends": {
+    "backends": [
+      {
+        "kind": "isaaclab_physx",
+        "alive": false,
+        "skills": [],
+        "verified": false,
+        "note": "mock endpoints are never simulation verification"
+      }
+    ]
+  },
+  "start_job": {
+    "job_id": "job_42ffef691eaa43e2bc1c3070ef8c6046",
+    "kind": "start_simulation",
+    "status": "running",
+    "simulation_id": null,
+    "task_id": null,
+    "skill": null,
+    "worker_job_id": null,
+    "parent_job_id": null,
+    "progress": null,
+    "cancel_requested": false,
+    "created_at": "2026-11-07T08:24:58.750325+00:00",
+    "updated_at": "2026-11-07T08:24:58.751433+00:00"
+  },
+  "startup_wall_s": 92.34,
+  "simulation_id": "sim_1d8c3ce0c7594c59a9889a8f6b5c9f9f",
+  "simulation_in_list": true,
+  "state": {
+    "episode_id": "ep_021269979aa647938e0c78c5dd22176a",
+    "state_version": 0,
+    "sim_step": 0,
+    "source": "sim_ground_truth",
+    "dof": 6,
+    "objects": [
+      "red_block",
+      "target_box"
+    ]
+  },
+  "jobs_list_ok": true,
+  "capture_wall_s": 0.96,
+  "frame": {
+    "frame_id": "frame_4f93d894e0634a528d62e72d293309c7",
+    "camera_id": "front",
+    "simulation_id": "sim_1d8c3ce0c7594c59a9889a8f6b5c9f9f",
+    "episode_id": "ep_021269979aa647938e0c78c5dd22176a",
+    "state_version": 0,
+    "sim_step": 0,
+    "sim_time_s": 0.0,
+    "captured_at": "2026-11-07T08:26:32.036134+00:00",
+    "width": 640,
+    "height": 480,
+    "rgb_format": "png",
+    "depth_format": "npy",
+    "depth_units": "m",
+    "depth_type": "distance_to_image_plane",
+    "intrinsics": {
+      "fx": 732.999267578125,
+      "fy": 732.999267578125,
+      "cx": 320.0,
+      "cy": 240.0,
+      "matrix": [
+        [
+          732.999267578125,
+          0.0,
+          320.0
+        ],
+        [
+          0.0,
+          732.999267578125,
+          240.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "extrinsics": {
+      "frame": "world",
+      "convention": "world",
+      "position": [
+        0.3799999952316284,
+        -0.41999998688697815,
+        0.30000001192092896
+      ],
+      "orientation_xyzw": [
+        -0.19947253167629242,
+        0.12594705820083618,
+        0.8216919302940369,
+        0.5188165903091431
+      ]
+    },
+    "rgb_range": [
+      14.0,
+      241.0
+    ],
+    "depth_range_m": [
+      0.40060415863990784,
+      1.7674065828323364
+    ],
+    "depth_invalid_fraction": 0.08475585937499996,
+    "capture_ms": 5.14389999807463,
+    "ground_truth_scene": true,
+    "frame_url": "/api/v1/frames/frame_4f93d894e0634a528d62e72d293309c7",
+    "rgb_url": "/api/v1/frames/frame_4f93d894e0634a528d62e72d293309c7/rgb.png",
+    "depth_url": "/api/v1/frames/frame_4f93d894e0634a528d62e72d293309c7/depth.npy"
+  },
+  "rgb": {
+    "status": 200,
+    "bytes": 152389,
+    "sha256": "2a07c0fafe155846d156974d39e0677df09271d27da160d7c72653b1793cd00e",
+    "png": true,
+    "content_type": "image/png"
+  },
+  "depth": {
+    "status": 200,
+    "bytes": 1228928,
+    "sha256": "17543c8aa87a55ff62238ca2abd0fca7f72e5fd04e475a86b1bc78d2770c2e74",
+    "npy": true,
+    "content_type": "application/octet-stream"
+  },
+  "frame_in_list": true,
+  "frames_list_count": 1,
+  "console": {
+    "ui_status": 200,
+    "ui_has_title": true,
+    "ui_has_script": true,
+    "app_status": 200,
+    "app_has_connect": true,
+    "app_bytes": 29447
+  },
+  "close": {
+    "simulation_id": "sim_1d8c3ce0c7594c59a9889a8f6b5c9f9f",
+    "closed": true
+  },
+  "health_after_close": {
+    "gateway": "ok",
+    "worker": "dead",
+    "simulation_ready": false,
+    "startup_lost_jobs": 0
+  },
+  "finished_at": "2026-11-07T16:26:44+0800"
+}

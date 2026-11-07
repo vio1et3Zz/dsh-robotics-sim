@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "0.1",
+  "_note": "模板：把 <...> 占位符换成本机路径；脚本也支持 DSH_ISAAC_PYTHON / DSH_ISAACLAB_ROOT / DSH_ISAACLAB_SOURCE 覆盖。",
+  "workspaceRoot": ".",
+  "isaac": {
+    "root": "<ISAAC_ROOT>",
+    "labSource": "<ISAAC_ROOT>/source/isaaclab",
+    "launcher": "<ISAAC_ROOT>/isaaclab.cmd",
+    "python": "<ISAAC_PYTHON>",
+    "expectedTag": "v3.0.0-beta2.patch1",
+    "expectedCommit": "ffff603eafc6b74264a5261cc0183d6a65390d78",
+    "expectedAssetRoot": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/6.0",
+    "expectedPackages": {
+      "isaaclab": "6.1.14",
+      "isaacsim": "6.0.1.0",
+      "isaaclab-physx": "1.1.3",
+      "torch": "2.11.0+cu128"
+    }
+  },
+  "dsh": {
+    "asarPath": "<DSH_APP_ASAR>",
+    "runtimeVersion": "0.2.2-rc.1",
+    "cordisVersion": "4.1.0",
+    "toolsVersion": "0.2.2-rc.1",
+    "profile": "desktop",
+    "profileDir": "%USERPROFILE%\\.dsh\\profiles\\desktop"
+  },
+  "gateway": {
+    "host": "127.0.0.1",
+    "port": 8710,
+    "baseUrl": "http://127.0.0.1:8710"
+  },
+  "worker": {
+    "numEnvs": 1,
+    "device": "cuda:0",
+    "logDir": "artifacts\\logs"
+  },
+  "artifacts": {
+    "root": "artifacts",
+    "asciiFallback": "%LOCALAPPDATA%\\dsh-robotics\\artifacts",
+    "note": "TorchScript/ONNX exports must use an ASCII-only directory; see docs/compatibility.md section 5."
+  }
+}

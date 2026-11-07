@@ -1,0 +1,201 @@
+{
+  "base": "http://127.0.0.1:8714",
+  "started_at": "2026-11-07T20:35:48+0800",
+  "startup": {
+    "job_id": "job_35e4ea6e3ec449709b9c0c3fc5f5dc8a",
+    "status": "succeeded",
+    "error": null
+  },
+  "simulation_id": "sim_7b61f5c0b4ec44e088480b9f3803d2e4",
+  "reset": {
+    "episode_id": "ep_424e1e7d3d8f49dbb6763ef0577ac68b",
+    "status": "ok"
+  },
+  "state_before": {
+    "episode_id": "ep_424e1e7d3d8f49dbb6763ef0577ac68b",
+    "state_version": 1,
+    "sim_step": 0
+  },
+  "job_id": "job_8134a4a695e0420b8a3f8bf521f13beb",
+  "skill": {
+    "name": "vla_stub",
+    "parameters": {
+      "goal": "lift"
+    }
+  },
+  "state": {
+    "count": 4,
+    "errors": 0,
+    "p50_ms": 5.6,
+    "p95_ms": 37.4,
+    "max_ms": 37.4,
+    "samples": [
+      {
+        "ms": 37.389299999631476,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 0.0,
+        "sim_step": 0,
+        "state_version": 1,
+        "episode_id": "ep_424e1e7d3d8f49dbb6763ef0577ac68b",
+        "joints_finite": true
+      },
+      {
+        "ms": 5.560400000831578,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 0.552,
+        "sim_step": 64,
+        "state_version": 1,
+        "episode_id": "ep_424e1e7d3d8f49dbb6763ef0577ac68b",
+        "joints_finite": true
+      },
+      {
+        "ms": 24.315299997397233,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 1.061,
+        "sim_step": 144,
+        "state_version": 1,
+        "episode_id": "ep_424e1e7d3d8f49dbb6763ef0577ac68b",
+        "joints_finite": true
+      },
+      {
+        "ms": 3.5190999988117255,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 1.6,
+        "sim_step": 230,
+        "state_version": 2,
+        "episode_id": "ep_424e1e7d3d8f49dbb6763ef0577ac68b",
+        "joints_finite": true
+      }
+    ]
+  },
+  "frames": {
+    "count": 1,
+    "errors": 0,
+    "p50_ms": 36.9,
+    "p95_ms": 36.9,
+    "max_ms": 36.9,
+    "samples": [
+      {
+        "ms": 36.92589999991469,
+        "delay_ms": 0.0,
+        "status": 201,
+        "error": null,
+        "t": 0.001,
+        "sim_step": 0,
+        "state_version": 1,
+        "episode_id": "ep_424e1e7d3d8f49dbb6763ef0577ac68b",
+        "frame_id": "frame_80a32fdcfb5e455c8c57a398d1284d33",
+        "buffered": true
+      }
+    ]
+  },
+  "health": null,
+  "cancel": {
+    "request": {
+      "ms": 21.790699996927287,
+      "delay_ms": 0.0,
+      "status": 202,
+      "json": {
+        "job_id": "job_8134a4a695e0420b8a3f8bf521f13beb",
+        "kind": "skill",
+        "status": "canceling",
+        "simulation_id": "sim_7b61f5c0b4ec44e088480b9f3803d2e4",
+        "task_id": null,
+        "skill": "vla_stub",
+        "worker_job_id": "job_a593c34dfbcb49d598fb59b151b75b5d",
+        "parent_job_id": null,
+        "progress": 0.0,
+        "cancel_requested": true,
+        "created_at": "2026-11-07T12:35:58.552069+00:00",
+        "updated_at": "2026-11-07T12:36:00.085425+00:00"
+      },
+      "error": null,
+      "t": 1.522
+    },
+    "settled_ms": 16.4,
+    "final_status": "canceled",
+    "error": null
+  },
+  "job": {
+    "status": "canceled",
+    "progress": 0.0,
+    "error": null
+  },
+  "frame_sim_steps": [
+    0
+  ],
+  "frame_sim_step_monotonic": null,
+  "events_endpoint": {
+    "status": 200,
+    "count": 12,
+    "types": [
+      "created",
+      "created",
+      "started",
+      "progress",
+      "progress",
+      "progress",
+      "progress",
+      "progress",
+      "progress",
+      "progress",
+      "progress",
+      "canceled"
+    ],
+    "seq": [
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222
+    ],
+    "terminal": {
+      "schema_version": "0.1",
+      "request_id": null,
+      "trace_id": null,
+      "job_id": "job_a593c34dfbcb49d598fb59b151b75b5d",
+      "event_seq": 11,
+      "at": "2026-11-07T12:36:00.105360Z",
+      "type": "canceled",
+      "status": "canceled",
+      "skill": "vla_stub",
+      "message": "cancel acknowledged",
+      "progress": 0.0,
+      "data": {},
+      "evidence": [
+        "isaaclab_physx"
+      ]
+    }
+  },
+  "latest_frame_endpoint": {
+    "status": 200,
+    "frame_id": "frame_80a32fdcfb5e455c8c57a398d1284d33",
+    "sim_step": 0
+  },
+  "finished_at": "2026-11-07T20:36:00+0800",
+  "verdict": {
+    "state_p95_under_200ms": true,
+    "state_samples_present": true,
+    "frame_max_under_1000ms": true,
+    "frames_increasing": false,
+    "cancel_ack_under_1000ms": true,
+    "cancel_final_canceled": true,
+    "health_under_100ms": false,
+    "all_pass": false
+  }
+}

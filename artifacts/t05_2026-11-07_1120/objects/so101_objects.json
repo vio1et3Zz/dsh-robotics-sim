@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "error": "AttributeError: 'FabricFrameView' object has no attribute 'data'",
+  "traceback": "Traceback (most recent call last):\n  File \"<repo>\\python\\robotics_backends\\isaaclab_physx\\so101_objects_entry.py\", line 101, in main\n    block_pos = [float(v) for v in block.data.root_pos_w.torch[0].detach().to(\"cpu\", torch.float64)]\n                                   ^^^^^^^^^^\nAttributeError: 'FabricFrameView' object has no attribute 'data'\n"
+}

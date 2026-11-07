@@ -1,0 +1,47 @@
+{
+  "base": "http://127.0.0.1:8714",
+  "started_at": "2026-11-07T20:00:42+0800",
+  "health_before": {
+    "gateway": "ok",
+    "worker": "alive",
+    "simulation_ready": true,
+    "startup_lost_jobs": 0
+  },
+  "closed": {
+    "simulation_id": "sim_30b94b68b7f244f7b69b19c16c194670",
+    "status": 202,
+    "body": {
+      "simulation_id": "sim_30b94b68b7f244f7b69b19c16c194670",
+      "closed": true
+    }
+  },
+  "health_after_close": {
+    "gateway": "ok",
+    "worker": "dead",
+    "simulation_ready": false,
+    "startup_lost_jobs": 0
+  },
+  "restart": {
+    "job_id": "job_b7f6cd830a2448cea3f2787c5966d392",
+    "status": "succeeded",
+    "wall_s": 10.04,
+    "simulation_id": "sim_213114aeec7c412fb49c5cc191a2271c",
+    "state": {
+      "episode_id": "ep_ffcbcbfba4784566aaaa4c582e6bef7a",
+      "sim_step": 0,
+      "source": "sim_ground_truth"
+    },
+    "closed": {
+      "status": 202,
+      "body": {
+        "simulation_id": "sim_213114aeec7c412fb49c5cc191a2271c",
+        "closed": true
+      }
+    }
+  },
+  "verdict": {
+    "reused": true,
+    "worker_alive_during_restart": "dead"
+  },
+  "finished_at": "2026-11-07T20:01:14+0800"
+}

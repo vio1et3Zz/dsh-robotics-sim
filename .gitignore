@@ -1,0 +1,39 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# --- Node ---
+node_modules/
+.npm-cache/
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# --- Third-party assets (not redistributed; see README "资产") ---
+assets/
+
+# --- Local run products ---
+# Keep small summaries / reports / JSONL / JSON; drop frames, DBs, logs and
+# per-worker output directories (artifacts/ is ~700 MB with them).
+artifacts/_tests/
+artifacts/**/frames/
+artifacts/**/worker_*/
+artifacts/**/policy_logs/
+artifacts/**/*.db
+artifacts/**/*.db-shm
+artifacts/**/*.db-wal
+artifacts/**/*.log
+artifacts/**/*.npy
+
+# Debug dumps / compiled caches inside evidence
+artifacts/**/warp_cache/
+artifacts/**/gripper_points.json
+
+# Local machine config (doctor.ps1 reads it if present)
+configs/local.json

@@ -1,0 +1,553 @@
+{
+  "base": "http://127.0.0.1:8714",
+  "started_at": "2026-11-07T20:00:16+0800",
+  "startup": {
+    "job_id": "job_59f29820c26e4f3187a4d143aec87e18",
+    "status": "succeeded",
+    "error": null
+  },
+  "simulation_id": "sim_30b94b68b7f244f7b69b19c16c194670",
+  "state_before": {
+    "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+    "state_version": 0,
+    "sim_step": 0
+  },
+  "job_id": "job_bb8965a6762d4134bd9013775c3d9619",
+  "skill": {
+    "name": "pick",
+    "parameters": {}
+  },
+  "state": {
+    "count": 30,
+    "errors": 0,
+    "p50_ms": 8.4,
+    "p95_ms": 37.0,
+    "max_ms": 50.0,
+    "samples": [
+      {
+        "ms": 49.99089999910211,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 0.0,
+        "sim_step": 0,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 5.02039999992121,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 0.554,
+        "sim_step": 56,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 20.518600002105813,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 1.065,
+        "sim_step": 136,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 4.9813000005087815,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 1.591,
+        "sim_step": 222,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 18.933599996671546,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 2.101,
+        "sim_step": 303,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 8.752000001550186,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 2.629,
+        "sim_step": 387,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 5.9962000013911165,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 3.139,
+        "sim_step": 468,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 17.904400003317278,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 3.649,
+        "sim_step": 555,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 3.6716999966301955,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 4.173,
+        "sim_step": 625,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 7.344699995883275,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 4.68,
+        "sim_step": 683,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 2.7964999972027726,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 5.19,
+        "sim_step": 744,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 19.855200000165496,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 5.699,
+        "sim_step": 807,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 19.23730000271462,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 6.224,
+        "sim_step": 867,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 5.990300000121351,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 6.752,
+        "sim_step": 928,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 8.424100000411272,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 7.263,
+        "sim_step": 989,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 3.927600002498366,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 7.773,
+        "sim_step": 1052,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 10.062499997729901,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 8.281,
+        "sim_step": 1112,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 9.713599996757694,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 8.806,
+        "sim_step": 1172,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 6.762500001059379,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 9.328,
+        "sim_step": 1233,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 8.405500004300848,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 9.839,
+        "sim_step": 1295,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 18.34219999727793,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 10.348,
+        "sim_step": 1356,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 23.27099999820348,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 10.871,
+        "sim_step": 1415,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 6.4391999985673465,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 11.395,
+        "sim_step": 1475,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 9.38970000424888,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 11.904,
+        "sim_step": 1538,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 23.876200000813697,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 12.415,
+        "sim_step": 1598,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 6.3922999979695305,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 12.954,
+        "sim_step": 1674,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 6.946500005142298,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 13.464,
+        "sim_step": 1754,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 37.023700002464466,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 13.975,
+        "sim_step": 1839,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 6.413600000087172,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 14.516,
+        "sim_step": 1917,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      },
+      {
+        "ms": 3.023800003575161,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 15.027,
+        "sim_step": 2060,
+        "state_version": 1,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "joints_finite": true
+      }
+    ]
+  },
+  "frames": {
+    "count": 8,
+    "errors": 0,
+    "p50_ms": 35.3,
+    "p95_ms": 51.2,
+    "max_ms": 51.2,
+    "samples": [
+      {
+        "ms": 49.48290000174893,
+        "delay_ms": 0.0,
+        "status": 201,
+        "error": null,
+        "t": 0.001,
+        "sim_step": 0,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "frame_id": "frame_57e3239c415645fea5339f8375ea7cc8",
+        "buffered": true
+      },
+      {
+        "ms": 42.630799995095,
+        "delay_ms": 0.0,
+        "status": 201,
+        "error": null,
+        "t": 2.054,
+        "sim_step": 300,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "frame_id": "frame_ccf8d0412cf34b3ba0861d03fd8b239f",
+        "buffered": true
+      },
+      {
+        "ms": 32.882100000279024,
+        "delay_ms": 0.0,
+        "status": 201,
+        "error": null,
+        "t": 4.111,
+        "sim_step": 622,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "frame_id": "frame_86f2a97806014fea82ab4e712c50ba58",
+        "buffered": true
+      },
+      {
+        "ms": 35.281900003610644,
+        "delay_ms": 0.0,
+        "status": 201,
+        "error": null,
+        "t": 6.146,
+        "sim_step": 863,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "frame_id": "frame_048e3667555a458d9b3bc01e0ceb7bc4",
+        "buffered": true
+      },
+      {
+        "ms": 31.913500002701767,
+        "delay_ms": 0.0,
+        "status": 201,
+        "error": null,
+        "t": 8.189,
+        "sim_step": 1108,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "frame_id": "frame_8e5ebde4a1cb41f89d14d3c736309d41",
+        "buffered": true
+      },
+      {
+        "ms": 30.907499996828847,
+        "delay_ms": 0.0,
+        "status": 201,
+        "error": null,
+        "t": 10.225,
+        "sim_step": 1351,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "frame_id": "frame_00e17622dec640638b273c1d99fa6a14",
+        "buffered": true
+      },
+      {
+        "ms": 37.03099999984261,
+        "delay_ms": 0.0,
+        "status": 201,
+        "error": null,
+        "t": 12.261,
+        "sim_step": 1592,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "frame_id": "frame_b72176e299e54dd0b25d870f90049fa4",
+        "buffered": true
+      },
+      {
+        "ms": 51.24639999849023,
+        "delay_ms": 0.0,
+        "status": 201,
+        "error": null,
+        "t": 14.3,
+        "sim_step": 1908,
+        "state_version": 0,
+        "episode_id": "ep_3152918aacca434fa04b04a190de75d2",
+        "frame_id": "frame_0c238195101945d0b697968a4bcceced",
+        "buffered": true
+      }
+    ]
+  },
+  "health": {
+    "ms": 1.6710000054445118,
+    "delay_ms": 0.0,
+    "status": 200,
+    "json": {
+      "gateway": "ok",
+      "worker": "alive",
+      "simulation_ready": true,
+      "startup_lost_jobs": 0
+    },
+    "error": null,
+    "t": 10.002
+  },
+  "cancel": {
+    "request": null,
+    "settled_ms": 5009.8,
+    "final_status": "succeeded",
+    "error": null
+  },
+  "job": {
+    "status": "succeeded",
+    "progress": 1.0,
+    "error": null
+  },
+  "frame_sim_steps": [
+    0,
+    300,
+    622,
+    863,
+    1108,
+    1351,
+    1592,
+    1908
+  ],
+  "frame_sim_step_monotonic": true,
+  "events_endpoint": {
+    "status": 200,
+    "count": 15,
+    "types": [
+      "created",
+      "created",
+      "started",
+      "progress",
+      "progress",
+      "progress",
+      "progress",
+      "progress",
+      "progress",
+      "progress",
+      "progress",
+      "progress",
+      "progress",
+      "progress",
+      "succeeded"
+    ],
+    "seq": [
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238
+    ]
+  },
+  "latest_frame_endpoint": {
+    "status": 200,
+    "frame_id": "frame_0c238195101945d0b697968a4bcceced",
+    "sim_step": 1908
+  },
+  "finished_at": "2026-11-07T20:00:41+0800",
+  "verdict": {
+    "state_p95_under_200ms": true,
+    "state_samples_present": true,
+    "frame_max_under_1000ms": true,
+    "frames_increasing": true,
+    "cancel_ack_under_1000ms": false,
+    "cancel_final_canceled": true,
+    "health_under_100ms": true,
+    "all_pass": false
+  }
+}

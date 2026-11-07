@@ -1,0 +1,14 @@
+{"message": "app-ready"}
+{"message": "building-scene"}
+{"message": "scene-created"}
+{"message": "sim-reset"}
+{"message": "robot-ready", "bodies": ["base", "shoulder", "upper_arm", "lower_arm", "wrist", "gripper", "moving_jaw_so101_v1"], "joints": ["shoulder_pan", "shoulder_lift", "elbow_flex", "wrist_flex", "wrist_roll", "gripper"]}
+{"message": "stage-ready", "default_prims": 49}
+{"message": "rigid-bodies", "names": ["base", "shoulder", "upper_arm", "lower_arm", "wrist", "gripper", "moving_jaw_so101_v1"]}
+{"message": "body-prim", "body": "gripper", "path": "/World/envs/env_0/Robot/gripper"}
+{"message": "body-xf", "body": "gripper", "translation": [0.02061525173485279, -0.2774733006954193, 0.2668520510196686]}
+{"message": "body-collisions", "body": "gripper", "colliders": 0, "points": 0, "types": []}
+{"message": "body-prim", "body": "moving_jaw_so101_v1", "path": "/World/envs/env_0/Robot/moving_jaw_so101_v1"}
+{"message": "body-xf", "body": "moving_jaw_so101_v1", "translation": [0.03941557556390762, -0.3008729815483093, 0.2870521545410156]}
+{"message": "body-collisions", "body": "moving_jaw_so101_v1", "colliders": 0, "points": 0, "types": []}
+{"message": "done"}

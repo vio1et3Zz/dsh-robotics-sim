@@ -1,0 +1,2151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dsh-robotics.local/protocol/0.1/protocol.bundle.json",
+  "title": "DSH Robotics protocol",
+  "description": "Generated from python/robotics_protocol. Lengths are metres, angles radians, time seconds, quaternions xyzw and normalized. Unknown fields are rejected.",
+  "x-protocol-version": "0.1",
+  "$defs": {
+    "BackendCapabilities": {
+      "additionalProperties": false,
+      "properties": {
+        "backend_id": {
+          "pattern": "^backend_[a-z0-9_-]{3,48}$",
+          "title": "Backend Id",
+          "type": "string"
+        },
+        "backend_kind": {
+          "$ref": "#/$defs/BackendKind"
+        },
+        "schema_version": {
+          "const": "0.1",
+          "default": "0.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "protocol_version": {
+          "const": "0.1",
+          "default": "0.1",
+          "title": "Protocol Version",
+          "type": "string"
+        },
+        "generated_at": {
+          "format": "date-time",
+          "title": "Generated At",
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "title": "Updated At",
+          "type": "string"
+        },
+        "physics": {
+          "$ref": "#/$defs/PhysicsInfo"
+        },
+        "renderer": {
+          "$ref": "#/$defs/RendererInfo"
+        },
+        "visualizer": {
+          "$ref": "#/$defs/VisualizerInfo"
+        },
+        "installed": {
+          "title": "Installed",
+          "type": "boolean"
+        },
+        "verified": {
+          "title": "Verified",
+          "type": "boolean"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 64,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "combinations": {
+          "items": {
+            "$ref": "#/$defs/CapabilityCombination"
+          },
+          "maxItems": 128,
+          "title": "Combinations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "backend_id",
+        "backend_kind",
+        "generated_at",
+        "updated_at",
+        "physics",
+        "renderer",
+        "visualizer",
+        "installed",
+        "verified"
+      ],
+      "title": "BackendCapabilities",
+      "type": "object"
+    },
+    "BackendKind": {
+      "enum": [
+        "mock",
+        "isaaclab_physx",
+        "isaaclab_newton"
+      ],
+      "title": "BackendKind",
+      "type": "string"
+    },
+    "CameraConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "maxLength": 64,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "width": {
+          "maximum": 4096,
+          "minimum": 16,
+          "title": "Width",
+          "type": "integer"
+        },
+        "height": {
+          "maximum": 4096,
+          "minimum": 16,
+          "title": "Height",
+          "type": "integer"
+        },
+        "update_period_s": {
+          "exclusiveMinimum": 0.0,
+          "maximum": 10.0,
+          "title": "Update Period S",
+          "type": "number"
+        },
+        "data_types": {
+          "items": {
+            "enum": [
+              "rgb",
+              "depth"
+            ],
+            "type": "string"
+          },
+          "maxItems": 2,
+          "minItems": 1,
+          "title": "Data Types",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "width",
+        "height",
+        "update_period_s",
+        "data_types"
+      ],
+      "title": "CameraConfig",
+      "type": "object"
+    },
+    "CapabilityCombination": {
+      "additionalProperties": false,
+      "properties": {
+        "combination_id": {
+          "pattern": "^combo_[a-z0-9_]{3,48}$",
+          "title": "Combination Id",
+          "type": "string"
+        },
+        "robot_id": {
+          "pattern": "^[a-z][a-z0-9_]{1,31}$",
+          "title": "Robot Id",
+          "type": "string"
+        },
+        "task_id": {
+          "pattern": "^[a-z][a-z0-9_]{2,63}$",
+          "title": "Task Id",
+          "type": "string"
+        },
+        "scene_id": {
+          "pattern": "^[a-z][a-z0-9_]{1,63}$",
+          "title": "Scene Id",
+          "type": "string"
+        },
+        "backend_kind": {
+          "$ref": "#/$defs/BackendKind"
+        },
+        "status": {
+          "$ref": "#/$defs/CapabilityStatus"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 64,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "checked_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Checked At"
+        },
+        "load_error": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ErrorInfo"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "combination_id",
+        "robot_id",
+        "task_id",
+        "scene_id",
+        "backend_kind",
+        "status"
+      ],
+      "title": "CapabilityCombination",
+      "type": "object"
+    },
+    "CapabilityStatus": {
+      "enum": [
+        "installed",
+        "verified",
+        "failed",
+        "unavailable"
+      ],
+      "title": "CapabilityStatus",
+      "type": "string"
+    },
+    "ControlMode": {
+      "enum": [
+        "position",
+        "velocity",
+        "effort"
+      ],
+      "title": "ControlMode",
+      "type": "string"
+    },
+    "EndEffectorSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "maxLength": 64,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "parent_joint": {
+          "maxLength": 96,
+          "minLength": 1,
+          "title": "Parent Joint",
+          "type": "string"
+        },
+        "offset_m": {
+          "default": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "description": "3-D vector in metres, frame declared by the containing pose.",
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Offset M",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "parent_joint"
+      ],
+      "title": "EndEffectorSpec",
+      "type": "object"
+    },
+    "ErrorCode": {
+      "enum": [
+        "INVALID_REQUEST",
+        "UNSUPPORTED_BACKEND",
+        "UNSUPPORTED_CAPABILITY",
+        "ASSET_NOT_READY",
+        "UNREACHABLE",
+        "GRASP_FAILED",
+        "PLACEMENT_FAILED",
+        "STALE_WORLD_STATE",
+        "CONTROL_BUSY",
+        "LIMIT_VIOLATION",
+        "WORKER_LOST",
+        "TIMEOUT",
+        "MOCK_NOT_VERIFIED",
+        "NOT_IMPLEMENTED"
+      ],
+      "title": "ErrorCode",
+      "type": "string"
+    },
+    "ErrorInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "$ref": "#/$defs/ErrorCode"
+        },
+        "message": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        },
+        "retryable": {
+          "default": false,
+          "title": "Retryable",
+          "type": "boolean"
+        },
+        "details": {
+          "additionalProperties": true,
+          "title": "Details",
+          "type": "object"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 64,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "occurred_at": {
+          "format": "date-time",
+          "title": "Occurred At",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message",
+        "occurred_at"
+      ],
+      "title": "ErrorInfo",
+      "type": "object"
+    },
+    "Frame": {
+      "enum": [
+        "world",
+        "robot_base",
+        "tool0",
+        "camera"
+      ],
+      "title": "Frame",
+      "type": "string"
+    },
+    "GpuInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "memory_mib": {
+          "maximum": 1048576,
+          "minimum": 1,
+          "title": "Memory Mib",
+          "type": "integer"
+        },
+        "driver": {
+          "maxLength": 64,
+          "minLength": 1,
+          "title": "Driver",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "memory_mib",
+        "driver"
+      ],
+      "title": "GpuInfo",
+      "type": "object"
+    },
+    "GripperSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "default": "none",
+          "enum": [
+            "parallel",
+            "single",
+            "none"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "joint_names": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "title": "Joint Names",
+          "type": "array"
+        },
+        "open_value": {
+          "default": 0.0,
+          "title": "Open Value",
+          "type": "number"
+        },
+        "close_value": {
+          "default": 0.0,
+          "title": "Close Value",
+          "type": "number"
+        },
+        "max_width_m": {
+          "default": 0.0,
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Max Width M",
+          "type": "number"
+        }
+      },
+      "title": "GripperSpec",
+      "type": "object"
+    },
+    "GripperState": {
+      "additionalProperties": false,
+      "properties": {
+        "width_m": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Width M",
+          "type": "number"
+        },
+        "closed": {
+          "title": "Closed",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "width_m",
+        "closed"
+      ],
+      "title": "GripperState",
+      "type": "object"
+    },
+    "JobEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "0.1",
+          "default": "0.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "request_id": {
+          "anyOf": [
+            {
+              "pattern": "^req_[0-9a-f-]{8,36}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Request Id"
+        },
+        "trace_id": {
+          "anyOf": [
+            {
+              "pattern": "^trace_[0-9a-f-]{8,36}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Trace Id"
+        },
+        "job_id": {
+          "pattern": "^job_[0-9a-f-]{8,36}$",
+          "title": "Job Id",
+          "type": "string"
+        },
+        "event_seq": {
+          "minimum": 0,
+          "title": "Event Seq",
+          "type": "integer"
+        },
+        "at": {
+          "format": "date-time",
+          "title": "At",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/$defs/JobEventType"
+        },
+        "status": {
+          "$ref": "#/$defs/JobStatus"
+        },
+        "skill": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z][a-z0-9_]{2,40}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Skill"
+        },
+        "message": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Message"
+        },
+        "progress": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Progress"
+        },
+        "data": {
+          "additionalProperties": true,
+          "title": "Data",
+          "type": "object"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 64,
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "job_id",
+        "event_seq",
+        "at",
+        "type",
+        "status"
+      ],
+      "title": "JobEvent",
+      "type": "object"
+    },
+    "JobEventType": {
+      "enum": [
+        "created",
+        "started",
+        "progress",
+        "skill_started",
+        "skill_finished",
+        "verifying",
+        "succeeded",
+        "failed",
+        "cancel_requested",
+        "canceled",
+        "log",
+        "frame"
+      ],
+      "title": "JobEventType",
+      "type": "string"
+    },
+    "JobStatus": {
+      "enum": [
+        "pending",
+        "running",
+        "canceling",
+        "succeeded",
+        "failed",
+        "canceled"
+      ],
+      "title": "JobStatus",
+      "type": "string"
+    },
+    "JointSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "maxLength": 96,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "logical_name": {
+          "pattern": "^[a-z][a-z0-9_]{1,48}$",
+          "title": "Logical Name",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/$defs/JointType"
+        },
+        "unit": {
+          "enum": [
+            "rad",
+            "m"
+          ],
+          "title": "Unit",
+          "type": "string"
+        },
+        "lower": {
+          "title": "Lower",
+          "type": "number"
+        },
+        "upper": {
+          "title": "Upper",
+          "type": "number"
+        },
+        "home": {
+          "title": "Home",
+          "type": "number"
+        },
+        "velocity_limit": {
+          "exclusiveMinimum": 0,
+          "title": "Velocity Limit",
+          "type": "number"
+        }
+      },
+      "required": [
+        "name",
+        "logical_name",
+        "type",
+        "unit",
+        "lower",
+        "upper",
+        "home",
+        "velocity_limit"
+      ],
+      "title": "JointSpec",
+      "type": "object"
+    },
+    "JointType": {
+      "enum": [
+        "revolute",
+        "prismatic",
+        "fixed"
+      ],
+      "title": "JointType",
+      "type": "string"
+    },
+    "ObjectState": {
+      "additionalProperties": false,
+      "properties": {
+        "object_id": {
+          "pattern": "^[a-z][a-z0-9_]{1,31}$",
+          "title": "Object Id",
+          "type": "string"
+        },
+        "pose": {
+          "$ref": "#/$defs/Pose"
+        },
+        "size_m": {
+          "description": "3-D vector in metres, frame declared by the containing pose.",
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Size M",
+          "type": "array"
+        },
+        "grasped_by": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z][a-z0-9_]{1,31}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Grasped By"
+        },
+        "visible": {
+          "default": true,
+          "title": "Visible",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "object_id",
+        "pose",
+        "size_m"
+      ],
+      "title": "ObjectState",
+      "type": "object"
+    },
+    "ObservationSource": {
+      "enum": [
+        "sim_ground_truth",
+        "vision",
+        "estimator",
+        "mixed"
+      ],
+      "title": "ObservationSource",
+      "type": "string"
+    },
+    "PhysicsConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "engine": {
+          "enum": [
+            "physx",
+            "newton"
+          ],
+          "title": "Engine",
+          "type": "string"
+        },
+        "dt": {
+          "exclusiveMinimum": 0.0,
+          "maximum": 0.1,
+          "title": "Dt",
+          "type": "number"
+        },
+        "decimation": {
+          "maximum": 32,
+          "minimum": 1,
+          "title": "Decimation",
+          "type": "integer"
+        },
+        "solver_iterations": {
+          "maximum": 64,
+          "minimum": 1,
+          "title": "Solver Iterations",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "engine",
+        "dt",
+        "decimation",
+        "solver_iterations"
+      ],
+      "title": "PhysicsConfig",
+      "type": "object"
+    },
+    "PhysicsInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "engine": {
+          "maxLength": 64,
+          "minLength": 1,
+          "title": "Engine",
+          "type": "string"
+        },
+        "version": {
+          "maxLength": 64,
+          "minLength": 1,
+          "title": "Version",
+          "type": "string"
+        },
+        "deterministic": {
+          "title": "Deterministic",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "engine",
+        "version",
+        "deterministic"
+      ],
+      "title": "PhysicsInfo",
+      "type": "object"
+    },
+    "PlanStep": {
+      "additionalProperties": false,
+      "properties": {
+        "step_id": {
+          "pattern": "^step_[a-z0-9_]{1,40}$",
+          "title": "Step Id",
+          "type": "string"
+        },
+        "skill": {
+          "pattern": "^[a-z][a-z0-9_]{2,40}$",
+          "title": "Skill",
+          "type": "string"
+        },
+        "parameters": {
+          "additionalProperties": true,
+          "title": "Parameters",
+          "type": "object"
+        },
+        "depends_on": {
+          "items": {
+            "pattern": "^step_[a-z0-9_]{1,40}$",
+            "type": "string"
+          },
+          "maxItems": 32,
+          "title": "Depends On",
+          "type": "array"
+        },
+        "expected_duration_s": {
+          "exclusiveMinimum": 0.0,
+          "maximum": 600.0,
+          "title": "Expected Duration S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "step_id",
+        "skill",
+        "expected_duration_s"
+      ],
+      "title": "PlanStep",
+      "type": "object"
+    },
+    "Pose": {
+      "additionalProperties": false,
+      "properties": {
+        "frame": {
+          "$ref": "#/$defs/Frame"
+        },
+        "frame_id": {
+          "anyOf": [
+            {
+              "maxLength": 64,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Frame Id"
+        },
+        "position": {
+          "description": "3-D vector in metres, frame declared by the containing pose.",
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Position",
+          "type": "array"
+        },
+        "orientation_xyzw": {
+          "description": "Normalized quaternion in xyzw order.",
+          "maxItems": 4,
+          "minItems": 4,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Orientation Xyzw",
+          "type": "array"
+        }
+      },
+      "required": [
+        "frame",
+        "position",
+        "orientation_xyzw"
+      ],
+      "title": "Pose",
+      "type": "object"
+    },
+    "PredicateKind": {
+      "enum": [
+        "object_in_region",
+        "object_height",
+        "robot_released",
+        "gripper_width",
+        "object_pose",
+        "custom"
+      ],
+      "title": "PredicateKind",
+      "type": "string"
+    },
+    "PythonRuntime": {
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "maxLength": 32,
+          "minLength": 3,
+          "title": "Version",
+          "type": "string"
+        },
+        "executable": {
+          "maxLength": 1024,
+          "minLength": 1,
+          "title": "Executable",
+          "type": "string"
+        },
+        "platform": {
+          "maxLength": 256,
+          "minLength": 1,
+          "title": "Platform",
+          "type": "string"
+        }
+      },
+      "required": [
+        "version",
+        "executable",
+        "platform"
+      ],
+      "title": "PythonRuntime",
+      "type": "object"
+    },
+    "Region3D": {
+      "additionalProperties": false,
+      "properties": {
+        "min": {
+          "description": "3-D vector in metres, frame declared by the containing pose.",
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Min",
+          "type": "array"
+        },
+        "max": {
+          "description": "3-D vector in metres, frame declared by the containing pose.",
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Max",
+          "type": "array"
+        }
+      },
+      "required": [
+        "min",
+        "max"
+      ],
+      "title": "Region3D",
+      "type": "object"
+    },
+    "RendererConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "headless": {
+          "title": "Headless",
+          "type": "boolean"
+        },
+        "backend": {
+          "anyOf": [
+            {
+              "maxLength": 64,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Backend"
+        },
+        "cameras": {
+          "items": {
+            "$ref": "#/$defs/CameraConfig"
+          },
+          "maxItems": 8,
+          "title": "Cameras",
+          "type": "array"
+        }
+      },
+      "required": [
+        "enabled",
+        "headless"
+      ],
+      "title": "RendererConfig",
+      "type": "object"
+    },
+    "RendererInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "backend": {
+          "anyOf": [
+            {
+              "maxLength": 64,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Backend"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "maxLength": 64,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Version"
+        }
+      },
+      "required": [
+        "enabled"
+      ],
+      "title": "RendererInfo",
+      "type": "object"
+    },
+    "RobotAsset": {
+      "additionalProperties": false,
+      "properties": {
+        "usd_path": {
+          "maxLength": 2048,
+          "minLength": 1,
+          "title": "Usd Path",
+          "type": "string"
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sha256"
+        },
+        "license": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "License",
+          "type": "string"
+        },
+        "source": {
+          "maxLength": 1024,
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "usd_path",
+        "license",
+        "source"
+      ],
+      "title": "RobotAsset",
+      "type": "object"
+    },
+    "RobotSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "robot_id": {
+          "pattern": "^[a-z][a-z0-9_]{1,31}$",
+          "title": "Robot Id",
+          "type": "string"
+        },
+        "model": {
+          "maxLength": 96,
+          "minLength": 1,
+          "title": "Model",
+          "type": "string"
+        },
+        "dof": {
+          "maximum": 64,
+          "minimum": 1,
+          "title": "Dof",
+          "type": "integer"
+        },
+        "joints": {
+          "items": {
+            "$ref": "#/$defs/JointSpec"
+          },
+          "maxItems": 64,
+          "minItems": 1,
+          "title": "Joints",
+          "type": "array"
+        },
+        "end_effector": {
+          "$ref": "#/$defs/EndEffectorSpec"
+        },
+        "gripper": {
+          "$ref": "#/$defs/GripperSpec"
+        },
+        "control_modes": {
+          "items": {
+            "$ref": "#/$defs/ControlMode"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "title": "Control Modes",
+          "type": "array"
+        },
+        "skills": {
+          "items": {
+            "pattern": "^[a-z][a-z0-9_]{2,40}$",
+            "type": "string"
+          },
+          "maxItems": 64,
+          "minItems": 1,
+          "title": "Skills",
+          "type": "array"
+        },
+        "asset": {
+          "$ref": "#/$defs/RobotAsset"
+        }
+      },
+      "required": [
+        "robot_id",
+        "model",
+        "dof",
+        "joints",
+        "end_effector",
+        "gripper",
+        "control_modes",
+        "skills",
+        "asset"
+      ],
+      "title": "RobotSpec",
+      "type": "object"
+    },
+    "RobotState": {
+      "additionalProperties": false,
+      "properties": {
+        "robot_id": {
+          "pattern": "^[a-z][a-z0-9_]{1,31}$",
+          "title": "Robot Id",
+          "type": "string"
+        },
+        "dof": {
+          "maximum": 64,
+          "minimum": 1,
+          "title": "Dof",
+          "type": "integer"
+        },
+        "joint_positions": {
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 64,
+          "minItems": 1,
+          "title": "Joint Positions",
+          "type": "array"
+        },
+        "joint_velocities": {
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 64,
+          "minItems": 1,
+          "title": "Joint Velocities",
+          "type": "array"
+        },
+        "ee_pose": {
+          "$ref": "#/$defs/Pose"
+        },
+        "gripper": {
+          "$ref": "#/$defs/GripperState"
+        }
+      },
+      "required": [
+        "robot_id",
+        "dof",
+        "joint_positions",
+        "joint_velocities",
+        "ee_pose",
+        "gripper"
+      ],
+      "title": "RobotState",
+      "type": "object"
+    },
+    "RuntimeManifest": {
+      "additionalProperties": false,
+      "properties": {
+        "runtime_id": {
+          "pattern": "^runtime_[a-z0-9_-]{3,48}$",
+          "title": "Runtime Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "0.1",
+          "default": "0.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "protocol_version": {
+          "const": "0.1",
+          "default": "0.1",
+          "title": "Protocol Version",
+          "type": "string"
+        },
+        "adapter_version": {
+          "maxLength": 32,
+          "minLength": 1,
+          "title": "Adapter Version",
+          "type": "string"
+        },
+        "python": {
+          "$ref": "#/$defs/PythonRuntime"
+        },
+        "packages": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Packages",
+          "type": "object"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceRevision"
+        },
+        "config_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Config Sha256",
+          "type": "string"
+        },
+        "assets": {
+          "additionalProperties": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "title": "Assets",
+          "type": "object"
+        },
+        "gpu": {
+          "$ref": "#/$defs/GpuInfo"
+        },
+        "worker": {
+          "$ref": "#/$defs/WorkerRuntime"
+        },
+        "notes": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 32,
+          "title": "Notes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "runtime_id",
+        "created_at",
+        "adapter_version",
+        "python",
+        "source",
+        "config_sha256",
+        "gpu",
+        "worker"
+      ],
+      "title": "RuntimeManifest",
+      "type": "object"
+    },
+    "SimulationBudget": {
+      "additionalProperties": false,
+      "properties": {
+        "max_sim_time_s": {
+          "exclusiveMinimum": 0.0,
+          "maximum": 86400.0,
+          "title": "Max Sim Time S",
+          "type": "number"
+        },
+        "max_wall_time_s": {
+          "exclusiveMinimum": 0.0,
+          "maximum": 86400.0,
+          "title": "Max Wall Time S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "max_sim_time_s",
+        "max_wall_time_s"
+      ],
+      "title": "SimulationBudget",
+      "type": "object"
+    },
+    "SimulationSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "profile_id": {
+          "pattern": "^profile_[a-z0-9_]{3,48}$",
+          "title": "Profile Id",
+          "type": "string"
+        },
+        "backend_kind": {
+          "$ref": "#/$defs/BackendKind"
+        },
+        "robot_id": {
+          "pattern": "^[a-z][a-z0-9_]{1,31}$",
+          "title": "Robot Id",
+          "type": "string"
+        },
+        "scene_id": {
+          "pattern": "^[a-z][a-z0-9_]{1,63}$",
+          "title": "Scene Id",
+          "type": "string"
+        },
+        "physics": {
+          "$ref": "#/$defs/PhysicsConfig"
+        },
+        "renderer": {
+          "$ref": "#/$defs/RendererConfig"
+        },
+        "seed": {
+          "maximum": 2147483647,
+          "minimum": 0,
+          "title": "Seed",
+          "type": "integer"
+        },
+        "num_envs": {
+          "maximum": 64,
+          "minimum": 1,
+          "title": "Num Envs",
+          "type": "integer"
+        },
+        "budget": {
+          "$ref": "#/$defs/SimulationBudget"
+        }
+      },
+      "required": [
+        "profile_id",
+        "backend_kind",
+        "robot_id",
+        "scene_id",
+        "physics",
+        "renderer",
+        "seed",
+        "num_envs",
+        "budget"
+      ],
+      "title": "SimulationSpec",
+      "type": "object"
+    },
+    "SkillInvocation": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "0.1",
+          "default": "0.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "request_id": {
+          "anyOf": [
+            {
+              "pattern": "^req_[0-9a-f-]{8,36}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Request Id"
+        },
+        "trace_id": {
+          "anyOf": [
+            {
+              "pattern": "^trace_[0-9a-f-]{8,36}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Trace Id"
+        },
+        "skill": {
+          "pattern": "^[a-z][a-z0-9_]{2,40}$",
+          "title": "Skill",
+          "type": "string"
+        },
+        "parameters": {
+          "additionalProperties": true,
+          "title": "Parameters",
+          "type": "object"
+        },
+        "target_object_id": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z][a-z0-9_]{1,31}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Object Id"
+        },
+        "frame": {
+          "$ref": "#/$defs/Frame",
+          "default": "world"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0.0,
+          "maximum": 600.0,
+          "title": "Timeout S",
+          "type": "number"
+        },
+        "expected_duration_s": {
+          "exclusiveMinimum": 0.0,
+          "maximum": 600.0,
+          "title": "Expected Duration S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "skill",
+        "timeout_s",
+        "expected_duration_s"
+      ],
+      "title": "SkillInvocation",
+      "type": "object"
+    },
+    "SkillPhase": {
+      "enum": [
+        "idle",
+        "running",
+        "verifying",
+        "succeeded",
+        "failed",
+        "canceled"
+      ],
+      "title": "SkillPhase",
+      "type": "string"
+    },
+    "SkillSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "pattern": "^[a-z][a-z0-9_]{2,40}$",
+          "title": "Name",
+          "type": "string"
+        },
+        "robot_id": {
+          "pattern": "^[a-z][a-z0-9_]{1,31}$",
+          "title": "Robot Id",
+          "type": "string"
+        },
+        "description": {
+          "maxLength": 512,
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "parameters_schema": {
+          "additionalProperties": true,
+          "title": "Parameters Schema",
+          "type": "object"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0.0,
+          "maximum": 600.0,
+          "title": "Timeout S",
+          "type": "number"
+        },
+        "preconditions": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 32,
+          "title": "Preconditions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "robot_id",
+        "description",
+        "timeout_s"
+      ],
+      "title": "SkillSpec",
+      "type": "object"
+    },
+    "SkillStatus": {
+      "additionalProperties": false,
+      "properties": {
+        "skill": {
+          "pattern": "^[a-z][a-z0-9_]{2,40}$",
+          "title": "Skill",
+          "type": "string"
+        },
+        "phase": {
+          "$ref": "#/$defs/SkillPhase",
+          "default": "idle"
+        },
+        "progress": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Progress",
+          "type": "number"
+        },
+        "message": {
+          "anyOf": [
+            {
+              "maxLength": 512,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Message"
+        }
+      },
+      "required": [
+        "skill",
+        "progress"
+      ],
+      "title": "SkillStatus",
+      "type": "object"
+    },
+    "SourceRevision": {
+      "additionalProperties": false,
+      "properties": {
+        "repo": {
+          "maxLength": 1024,
+          "minLength": 1,
+          "title": "Repo",
+          "type": "string"
+        },
+        "commit": {
+          "pattern": "^[0-9a-f]{40}$",
+          "title": "Commit",
+          "type": "string"
+        },
+        "describe": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Describe",
+          "type": "string"
+        },
+        "dirty": {
+          "title": "Dirty",
+          "type": "boolean"
+        },
+        "diff_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Diff Sha256"
+        }
+      },
+      "required": [
+        "repo",
+        "commit",
+        "describe",
+        "dirty"
+      ],
+      "title": "SourceRevision",
+      "type": "object"
+    },
+    "SuccessPredicate": {
+      "additionalProperties": false,
+      "properties": {
+        "predicate_id": {
+          "pattern": "^pred_[a-z0-9_]{1,40}$",
+          "title": "Predicate Id",
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/PredicateKind"
+        },
+        "object_id": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z][a-z0-9_]{1,31}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Object Id"
+        },
+        "region": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Region3D"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "params": {
+          "additionalProperties": true,
+          "title": "Params",
+          "type": "object"
+        },
+        "tolerance_m": {
+          "default": 0.005,
+          "maximum": 0.5,
+          "minimum": 0.0,
+          "title": "Tolerance M",
+          "type": "number"
+        }
+      },
+      "required": [
+        "predicate_id",
+        "kind"
+      ],
+      "title": "SuccessPredicate",
+      "type": "object"
+    },
+    "TaskBudget": {
+      "additionalProperties": false,
+      "properties": {
+        "sim_time_s": {
+          "exclusiveMinimum": 0.0,
+          "maximum": 86400.0,
+          "title": "Sim Time S",
+          "type": "number"
+        },
+        "wall_time_s": {
+          "exclusiveMinimum": 0.0,
+          "maximum": 86400.0,
+          "title": "Wall Time S",
+          "type": "number"
+        },
+        "max_skill_calls": {
+          "maximum": 1000,
+          "minimum": 1,
+          "title": "Max Skill Calls",
+          "type": "integer"
+        },
+        "max_retries": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Max Retries",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "sim_time_s",
+        "wall_time_s",
+        "max_skill_calls",
+        "max_retries"
+      ],
+      "title": "TaskBudget",
+      "type": "object"
+    },
+    "TaskPlan": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "0.1",
+          "default": "0.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "request_id": {
+          "anyOf": [
+            {
+              "pattern": "^req_[0-9a-f-]{8,36}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Request Id"
+        },
+        "trace_id": {
+          "anyOf": [
+            {
+              "pattern": "^trace_[0-9a-f-]{8,36}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Trace Id"
+        },
+        "plan_id": {
+          "pattern": "^plan_[0-9a-f-]{8,36}$",
+          "title": "Plan Id",
+          "type": "string"
+        },
+        "task_id": {
+          "pattern": "^task_[0-9a-f-]{8,36}$",
+          "title": "Task Id",
+          "type": "string"
+        },
+        "episode_id": {
+          "pattern": "^ep_[0-9a-f-]{8,36}$",
+          "title": "Episode Id",
+          "type": "string"
+        },
+        "base_state_version": {
+          "minimum": 0,
+          "title": "Base State Version",
+          "type": "integer"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "steps": {
+          "items": {
+            "$ref": "#/$defs/PlanStep"
+          },
+          "maxItems": 64,
+          "minItems": 1,
+          "title": "Steps",
+          "type": "array"
+        },
+        "plan_hash": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Plan Hash"
+        },
+        "budget": {
+          "$ref": "#/$defs/TaskBudget"
+        }
+      },
+      "required": [
+        "plan_id",
+        "task_id",
+        "episode_id",
+        "base_state_version",
+        "created_at",
+        "steps",
+        "budget"
+      ],
+      "title": "TaskPlan",
+      "type": "object"
+    },
+    "TaskSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "0.1",
+          "default": "0.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "request_id": {
+          "anyOf": [
+            {
+              "pattern": "^req_[0-9a-f-]{8,36}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Request Id"
+        },
+        "trace_id": {
+          "anyOf": [
+            {
+              "pattern": "^trace_[0-9a-f-]{8,36}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Trace Id"
+        },
+        "task_id": {
+          "pattern": "^task_[0-9a-f-]{8,36}$",
+          "title": "Task Id",
+          "type": "string"
+        },
+        "goal": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Goal",
+          "type": "string"
+        },
+        "robot_id": {
+          "pattern": "^[a-z][a-z0-9_]{1,31}$",
+          "title": "Robot Id",
+          "type": "string"
+        },
+        "scene_id": {
+          "pattern": "^[a-z][a-z0-9_]{1,63}$",
+          "title": "Scene Id",
+          "type": "string"
+        },
+        "success_predicates": {
+          "items": {
+            "$ref": "#/$defs/SuccessPredicate"
+          },
+          "maxItems": 32,
+          "minItems": 1,
+          "title": "Success Predicates",
+          "type": "array"
+        },
+        "budgets": {
+          "$ref": "#/$defs/TaskBudget"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 32,
+          "title": "Constraints",
+          "type": "array"
+        }
+      },
+      "required": [
+        "task_id",
+        "goal",
+        "robot_id",
+        "scene_id",
+        "success_predicates",
+        "budgets"
+      ],
+      "title": "TaskSpec",
+      "type": "object"
+    },
+    "VisualizerInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "kind": {
+          "anyOf": [
+            {
+              "maxLength": 64,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Kind"
+        }
+      },
+      "required": [
+        "enabled"
+      ],
+      "title": "VisualizerInfo",
+      "type": "object"
+    },
+    "WorkerProfile": {
+      "additionalProperties": false,
+      "description": "A launch profile the Gateway resolves; clients never pass an executable.",
+      "properties": {
+        "profile_id": {
+          "pattern": "^profile_[a-z0-9_]{3,48}$",
+          "title": "Profile Id",
+          "type": "string"
+        },
+        "backend_id": {
+          "pattern": "^backend_[a-z0-9_-]{3,48}$",
+          "title": "Backend Id",
+          "type": "string"
+        },
+        "backend_kind": {
+          "$ref": "#/$defs/BackendKind"
+        },
+        "robot_id": {
+          "pattern": "^[a-z][a-z0-9_]{1,31}$",
+          "title": "Robot Id",
+          "type": "string"
+        },
+        "scene_id": {
+          "pattern": "^[a-z][a-z0-9_]{1,63}$",
+          "title": "Scene Id",
+          "type": "string"
+        },
+        "python_executable": {
+          "maxLength": 1024,
+          "minLength": 1,
+          "title": "Python Executable",
+          "type": "string"
+        },
+        "entry_module": {
+          "pattern": "^[a-zA-Z_][a-zA-Z0-9_.]*$",
+          "title": "Entry Module",
+          "type": "string"
+        },
+        "allowed_imports": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 64,
+          "title": "Allowed Imports",
+          "type": "array"
+        },
+        "max_envs": {
+          "maximum": 64,
+          "minimum": 1,
+          "title": "Max Envs",
+          "type": "integer"
+        },
+        "description": {
+          "maxLength": 256,
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        }
+      },
+      "required": [
+        "profile_id",
+        "backend_id",
+        "backend_kind",
+        "robot_id",
+        "scene_id",
+        "python_executable",
+        "entry_module",
+        "max_envs",
+        "description"
+      ],
+      "title": "WorkerProfile",
+      "type": "object"
+    },
+    "WorkerRuntime": {
+      "additionalProperties": false,
+      "properties": {
+        "cwd": {
+          "maxLength": 1024,
+          "minLength": 1,
+          "title": "Cwd",
+          "type": "string"
+        },
+        "log_dir": {
+          "maxLength": 1024,
+          "minLength": 1,
+          "title": "Log Dir",
+          "type": "string"
+        },
+        "num_envs": {
+          "maximum": 64,
+          "minimum": 1,
+          "title": "Num Envs",
+          "type": "integer"
+        },
+        "device": {
+          "pattern": "^(cpu|cuda(:\\d+)?)$",
+          "title": "Device",
+          "type": "string"
+        }
+      },
+      "required": [
+        "cwd",
+        "log_dir",
+        "num_envs",
+        "device"
+      ],
+      "title": "WorkerRuntime",
+      "type": "object"
+    },
+    "WorldState": {
+      "additionalProperties": false,
+      "properties": {
+        "simulation_id": {
+          "pattern": "^sim_[0-9a-f-]{8,36}$",
+          "title": "Simulation Id",
+          "type": "string"
+        },
+        "episode_id": {
+          "pattern": "^ep_[0-9a-f-]{8,36}$",
+          "title": "Episode Id",
+          "type": "string"
+        },
+        "env_id": {
+          "maximum": 63,
+          "minimum": 0,
+          "title": "Env Id",
+          "type": "integer"
+        },
+        "state_version": {
+          "minimum": 0,
+          "title": "State Version",
+          "type": "integer"
+        },
+        "event_seq": {
+          "minimum": 0,
+          "title": "Event Seq",
+          "type": "integer"
+        },
+        "sim_step": {
+          "minimum": 0,
+          "title": "Sim Step",
+          "type": "integer"
+        },
+        "sim_time_s": {
+          "minimum": 0.0,
+          "title": "Sim Time S",
+          "type": "number"
+        },
+        "wall_time": {
+          "format": "date-time",
+          "title": "Wall Time",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/ObservationSource"
+        },
+        "frame": {
+          "$ref": "#/$defs/Frame",
+          "default": "world"
+        },
+        "robots": {
+          "items": {
+            "$ref": "#/$defs/RobotState"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Robots",
+          "type": "array"
+        },
+        "objects": {
+          "items": {
+            "$ref": "#/$defs/ObjectState"
+          },
+          "maxItems": 256,
+          "title": "Objects",
+          "type": "array"
+        },
+        "skills": {
+          "items": {
+            "$ref": "#/$defs/SkillStatus"
+          },
+          "maxItems": 64,
+          "title": "Skills",
+          "type": "array"
+        }
+      },
+      "required": [
+        "simulation_id",
+        "episode_id",
+        "env_id",
+        "state_version",
+        "event_seq",
+        "sim_step",
+        "sim_time_s",
+        "wall_time",
+        "source",
+        "robots"
+      ],
+      "title": "WorldState",
+      "type": "object"
+    }
+  }
+}

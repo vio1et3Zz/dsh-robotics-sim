@@ -1,0 +1,63 @@
+{
+  "name": "e_failure_analysis",
+  "description": "E：混合成功/失败（预检失败 2 类 + 抓取阶段失败 1 类），供 Agent 读 report.json 做失败分析。",
+  "simulation": {
+    "profile_id": "profile_so101_physx",
+    "seed": 7,
+    "budget": {"max_sim_time_s": 900.0, "max_wall_time_s": 1800.0}
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "task_id": "control_x018",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "expected_failure": null
+    },
+    {
+      "episode": 2,
+      "task_id": "variant_x016",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "setup": [{"skill": "move_object", "parameters": {"object_id": "red_block", "position": [0.16, 0.0, 0.075]}}],
+      "expected_failure": null
+    },
+    {
+      "episode": 3,
+      "task_id": "place_out_of_reach",
+      "skill": "pick",
+      "parameters": {"place_x": 0.30, "place_y": 0.05},
+      "seed": 7,
+      "expected_failure": "UNREACHABLE_TARGET"
+    },
+    {
+      "episode": 4,
+      "task_id": "block_too_far",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "setup": [{"skill": "move_object", "parameters": {"object_id": "red_block", "position": [0.25, 0.0, 0.075]}}],
+      "expected_failure": "OBJECT_OUT_OF_WORKSPACE"
+    },
+    {
+      "episode": 5,
+      "task_id": "stale_grasp_variant",
+      "skill": "pick",
+      "parameters": {"grasp_x": 0.16},
+      "seed": 7,
+      "setup": [{"skill": "move_object", "parameters": {"object_id": "red_block", "position": [0.19, 0.0, 0.075]}}],
+      "expected_failure": "GRASP_MISSED"
+    },
+    {
+      "episode": 6,
+      "task_id": "variant_x021",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "setup": [{"skill": "move_object", "parameters": {"object_id": "red_block", "position": [0.21, 0.0, 0.075]}}],
+      "expected_failure": null
+    }
+  ]
+}

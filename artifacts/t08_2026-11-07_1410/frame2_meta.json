@@ -1,0 +1,68 @@
+﻿{
+    "frame_id":  "frame_97739cbfe05041cfa07e1fe495846afe",
+    "camera_id":  "front",
+    "simulation_id":  "sim_1ac29a62b53f40f7a9165735011b0053",
+    "episode_id":  "ep_6007a8a765d744dfbdbebb585b5283f9",
+    "state_version":  1,
+    "sim_step":  30,
+    "sim_time_s":  0.15000000000000005,
+    "captured_at":  "2026-11-07T06:28:13.424599+00:00",
+    "width":  640,
+    "height":  480,
+    "rgb_format":  "png",
+    "depth_format":  "npy",
+    "depth_units":  "m",
+    "depth_type":  "distance_to_image_plane",
+    "intrinsics":  {
+                       "fx":  732.999267578125,
+                       "fy":  732.999267578125,
+                       "cx":  320.0,
+                       "cy":  240.0,
+                       "matrix":  [
+                                      [
+                                          732.999267578125,
+                                          0.0,
+                                          320.0
+                                      ],
+                                      [
+                                          0.0,
+                                          732.999267578125,
+                                          240.0
+                                      ],
+                                      [
+                                          0.0,
+                                          0.0,
+                                          1.0
+                                      ]
+                                  ]
+                   },
+    "extrinsics":  {
+                       "frame":  "world",
+                       "convention":  "world",
+                       "position":  [
+                                        0.3799999952316284,
+                                        -0.41999998688697815,
+                                        0.30000001192092896
+                                    ],
+                       "orientation_xyzw":  [
+                                                -0.19947253167629242,
+                                                0.12594705820083618,
+                                                0.8216919302940369,
+                                                0.5188165903091431
+                                            ]
+                   },
+    "rgb_range":  [
+                      18.0,
+                      240.0
+                  ],
+    "depth_range_m":  [
+                          0.40060415863990784,
+                          1.7674068212509155
+                      ],
+    "depth_invalid_fraction":  0.08471028645833334,
+    "capture_ms":  0.6149000000732485,
+    "ground_truth_scene":  true,
+    "frame_url":  "/api/v1/frames/frame_97739cbfe05041cfa07e1fe495846afe",
+    "rgb_url":  "/api/v1/frames/frame_97739cbfe05041cfa07e1fe495846afe/rgb.png",
+    "depth_url":  "/api/v1/frames/frame_97739cbfe05041cfa07e1fe495846afe/depth.npy"
+}

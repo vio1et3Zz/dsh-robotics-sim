@@ -1,0 +1,10 @@
+# monitor probe (vla_stub)
+
+- state: p50 5.6 ms / p95 37.4 ms / max 37.4 ms (4 samples, 0 errors)
+- frames: p50 36.9 ms / p95 36.9 ms / max 36.9 ms (1 samples, 0 errors)
+- health: null
+- cancel: {"request": {"ms": 21.790699996927287, "delay_ms": 0.0, "status": 202, "json": {"job_id": "job_8134a4a695e0420b8a3f8bf521f13beb", "kind": "skill", "status": "canceling", "simulation_id": "sim_7b61f5c0b4ec44e088480b9f3803d2e4", "task_id": null, "skill": "vla_stub", "worker_job_id": "job_a593c34dfbcb49d598fb59b151b75b5d", "parent_job_id": null, "progress": 0.0, "cancel_requested": true, "created_at": "2026-11-07T12:35:58.552069+00:00", "updated_at": "2026-11-07T12:36:00.085425+00:00"}, "error": null, "t": 1.522}, "settled_ms": 16.4, "final_status": "canceled", "error": null}
+- frame sim_step: [0]
+- events endpoint: {'status': 200, 'count': 12, 'types': ['created', 'created', 'started', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'canceled'], 'seq': [211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222], 'terminal': {'schema_version': '0.1', 'request_id': None, 'trace_id': None, 'job_id': 'job_a593c34dfbcb49d598fb59b151b75b5d', 'event_seq': 11, 'at': '2026-11-07T12:36:00.105360Z', 'type': 'canceled', 'status': 'canceled', 'skill': 'vla_stub', 'message': 'cancel acknowledged', 'progress': 0.0, 'data': {}, 'evidence': ['isaaclab_physx']}}
+- terminal event: {"schema_version": "0.1", "request_id": null, "trace_id": null, "job_id": "job_a593c34dfbcb49d598fb59b151b75b5d", "event_seq": 11, "at": "2026-11-07T12:36:00.105360Z", "type": "canceled", "status": "canceled", "skill": "vla_stub", "message": "cancel acknowledged", "progress": 0.0, "data": {}, "evidence": ["isaaclab_physx"]}
+- verdict: {"state_p95_under_200ms": true, "state_samples_present": true, "frame_max_under_1000ms": true, "frames_increasing": false, "cancel_ack_under_1000ms": true, "cancel_final_canceled": true, "health_under_100ms": false, "all_pass": false}

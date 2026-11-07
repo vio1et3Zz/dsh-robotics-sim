@@ -1,0 +1,81 @@
+{
+  "tool_chain": "DSH robotics_* tools (same Gateway HTTP API as the eval runner)",
+  "simulation_id": "sim_d7701b8dca90436295ed632216fe6ff7",
+  "episode_id": "ep_91645410c938429994ce1f6166ce6283",
+  "task_id": "task_e0a1b2c3",
+  "steps": [
+    {
+      "tool": "robotics_start_simulation",
+      "profile_id": "profile_so101_physx",
+      "seed": 7,
+      "job_id": "job_5041cec514a24441a29e605e956cda55",
+      "status": "succeeded",
+      "startup_wall_s": 10.39
+    },
+    {
+      "tool": "robotics_create_task",
+      "status": "ok",
+      "spec": "task_e0a1b2c3 / red_block in target box / budgets 6 skill calls"
+    },
+    {
+      "tool": "robotics_inspect_scene",
+      "state_version": 0,
+      "block": [0.17999990284442902, -1.3129375986409286e-07, 0.07499999552965164]
+    },
+    {
+      "tool": "robotics_validate_plan",
+      "plan_id": "plan_e0a1b2c3",
+      "base_state_version": 0,
+      "valid": true,
+      "plan_hash": "fce68855cf64882fab6ec06b1214f04ee6944977f88ea8cdbe8b70d33dfe5845"
+    },
+    {
+      "tool": "robotics_run_skill",
+      "skill": "move_object",
+      "parameters": {"object_id": "red_block", "position": [0.184, 0, 0.075]},
+      "job_id": "job_9f8136e5701c4e4fad7d295d7022cb09",
+      "status": "succeeded",
+      "block_after": [0.18386752903461456, -1.0772448177931437e-07, 0.07499999552965164],
+      "state_version_after": 1
+    },
+    {
+      "tool": "robotics_execute_task",
+      "plan_hash": "fce68855cf64882fab6ec06b1214f04ee6944977f88ea8cdbe8b70d33dfe5845",
+      "expected": "STALE_WORLD_STATE",
+      "actual": "STALE_WORLD_STATE: plan episode/state_version is stale",
+      "detected": true
+    },
+    {
+      "tool": "robotics_validate_plan",
+      "plan_id": "plan_e0a1b2c4",
+      "base_state_version": 1,
+      "valid": true,
+      "plan_hash": "932845bd667fb26c281cf8b7e4a22b2c3a67d7e50dd51b7482fbc4f585983b7b"
+    },
+    {
+      "tool": "robotics_execute_task",
+      "plan_hash": "932845bd667fb26c281cf8b7e4a22b2c3a67d7e50dd51b7482fbc4f585983b7b",
+      "job_id": "job_7794cbc02a544b918e81f55e9cdab4ff",
+      "status": "succeeded",
+      "wall_s": 13.79
+    },
+    {
+      "tool": "robotics_inspect_scene",
+      "state_version": 2,
+      "sim_step": 2090,
+      "block_final": [0.23257306218147278, 0.05861341580748558, 0.05499999597668648],
+      "in_target_region": true,
+      "pick_phase": "succeeded"
+    },
+    {
+      "tool": "robotics_close_simulation",
+      "closed": true
+    }
+  ],
+  "verification": {
+    "stale_detected": true,
+    "replan_succeeded": true,
+    "block_in_target_box": true,
+    "note": "Agent replanned with the post-move state_version; no motion was replayed from the stale plan."
+  }
+}

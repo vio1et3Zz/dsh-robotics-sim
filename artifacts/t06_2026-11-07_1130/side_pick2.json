@@ -1,0 +1,21 @@
+{
+  "phase": "gripper-open",
+  "grasp_local": [
+    0.0071,
+    0.0,
+    -0.085
+  ],
+  "target_quat_xyzw": [
+    -0.5,
+    -0.5,
+    0.5,
+    0.5
+  ],
+  "block_before": [
+    0.17999990284442902,
+    -1.3129375986409286e-07,
+    0.07499999552965164
+  ],
+  "errors_approach": 0.0857863798737526,
+  "exception": "Traceback (most recent call last):\n  File \"<repo>\\scripts\\so101_side_pick_probe.py\", line 164, in main\n    report[\"state_approach\"] = mouth_errors(torch.tensor([BLOCK_CENTER], device=robot.device))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<repo>\\scripts\\so101_side_pick_probe.py\", line 114, in mouth_errors\n    \"mouth_target\": [float(v) for v in target.detach().to(\"cpu\", torch.float64)],\n                     ^^^^^^^^\nValueError: only one element tensors can be converted to Python scalars\n"
+}

@@ -1,0 +1,80 @@
+{
+  "bodies": {
+    "gripper": {
+      "path": "/so101_new_calib/gripper",
+      "children": [
+        {
+          "path": "/so101_new_calib/gripper/gripperframe",
+          "name": "gripperframe",
+          "type": "Xform",
+          "applied_schemas": [],
+          "has_collision_api": false,
+          "has_rigid_api": false
+        },
+        {
+          "path": "/so101_new_calib/gripper/visuals",
+          "name": "visuals",
+          "type": "Xform",
+          "applied_schemas": [],
+          "has_collision_api": false,
+          "has_rigid_api": false
+        },
+        {
+          "path": "/so101_new_calib/gripper/collisions",
+          "name": "collisions",
+          "type": "Xform",
+          "applied_schemas": [],
+          "has_collision_api": false,
+          "has_rigid_api": false
+        }
+      ],
+      "collision_prims": [],
+      "world_aabb": {
+        "min": [
+          -0.007384864660788079,
+          -0.38189918554171676,
+          0.23165197360369624
+        ],
+        "max": [
+          0.044616754220388605,
+          -0.27647279413421605,
+          0.29725232670270035
+        ]
+      }
+    },
+    "moving_jaw_so101_v1": {
+      "path": "/so101_new_calib/moving_jaw_so101_v1",
+      "children": [
+        {
+          "path": "/so101_new_calib/moving_jaw_so101_v1/visuals",
+          "name": "visuals",
+          "type": "Xform",
+          "applied_schemas": [],
+          "has_collision_api": false,
+          "has_rigid_api": false
+        },
+        {
+          "path": "/so101_new_calib/moving_jaw_so101_v1/collisions",
+          "name": "collisions",
+          "type": "Xform",
+          "applied_schemas": [],
+          "has_collision_api": false,
+          "has_rigid_api": false
+        }
+      ],
+      "collision_prims": [],
+      "world_aabb": {
+        "min": [
+          -0.0034846097372450563,
+          -0.3828736801866698,
+          0.274752076002179
+        ],
+        "max": [
+          0.04451679500435935,
+          -0.2908781816491322,
+          0.29705078270484203
+        ]
+      }
+    }
+  }
+}

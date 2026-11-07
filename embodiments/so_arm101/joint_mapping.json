@@ -1,0 +1,109 @@
+{
+  "robot_id": "so101",
+  "asset_usd": "assets/isaac6/RobotStudio/so101_new_calib/so101_new_calib.usd",
+  "ee_body": "moving_jaw_so101_v1",
+  "joints": [
+    {
+      "logical_name": "shoulder_pan",
+      "asset_name": "shoulder_pan",
+      "index": 0,
+      "type": "revolute",
+      "axis": "Z",
+      "unit": "rad",
+      "lower": -1.9198598861694336,
+      "upper": 1.9198598861694336,
+      "home": 0.0,
+      "velocity_limit": 10.0,
+      "direction": 1,
+      "direction_evidence": "positive target produced positive measured delta"
+    },
+    {
+      "logical_name": "shoulder_lift",
+      "asset_name": "shoulder_lift",
+      "index": 1,
+      "type": "revolute",
+      "axis": "Z",
+      "unit": "rad",
+      "lower": -1.7453298568725586,
+      "upper": 1.7453298568725586,
+      "home": 0.0,
+      "velocity_limit": 10.0,
+      "direction": 1,
+      "direction_evidence": "positive target produced positive measured delta"
+    },
+    {
+      "logical_name": "elbow_flex",
+      "asset_name": "elbow_flex",
+      "index": 2,
+      "type": "revolute",
+      "axis": "Z",
+      "unit": "rad",
+      "lower": -1.6899999380111694,
+      "upper": 1.6899999380111694,
+      "home": 0.0,
+      "velocity_limit": 10.0,
+      "direction": 1,
+      "direction_evidence": "positive target produced positive measured delta"
+    },
+    {
+      "logical_name": "wrist_flex",
+      "asset_name": "wrist_flex",
+      "index": 3,
+      "type": "revolute",
+      "axis": "Z",
+      "unit": "rad",
+      "lower": -1.65805983543396,
+      "upper": 1.65805983543396,
+      "home": 0.0,
+      "velocity_limit": 10.0,
+      "direction": 1,
+      "direction_evidence": "positive target produced positive measured delta"
+    },
+    {
+      "logical_name": "wrist_roll",
+      "asset_name": "wrist_roll",
+      "index": 4,
+      "type": "revolute",
+      "axis": "Z",
+      "unit": "rad",
+      "lower": -2.743849754333496,
+      "upper": 2.841209650039673,
+      "home": 0.0,
+      "velocity_limit": 10.0,
+      "direction": 1,
+      "direction_evidence": "positive target produced positive measured delta"
+    },
+    {
+      "logical_name": "gripper",
+      "asset_name": "gripper",
+      "index": 5,
+      "type": "revolute",
+      "axis": "Z",
+      "unit": "rad",
+      "lower": -0.17453299462795258,
+      "upper": 1.7453298568725586,
+      "home": 0.0,
+      "velocity_limit": 10.0,
+      "direction": 1,
+      "direction_evidence": "positive target produced positive measured delta"
+    }
+  ],
+  "gripper": {
+    "joint": "gripper",
+    "close_command_rad": 0.0,
+    "open_command_rad": 1.0,
+    "measured_closed_rad": -0.00035213344381190836,
+    "measured_open_rad": 0.9992020130157471,
+    "limits_rad": [
+      -0.17453299462795258,
+      1.7453298568725586
+    ],
+    "max_width_m_estimate": 0.04,
+    "width_status": "estimated_pending_T06_measurement"
+  },
+  "notes": [
+    "USD stores revolute limits in degrees; Isaac Lab reports radians.",
+    "USD drive gains were replaced by project-owned ImplicitActuatorCfg gains.",
+    "All arm joints move in the commanded positive direction; gravity sag is visible in shoulder_lift."
+  ]
+}

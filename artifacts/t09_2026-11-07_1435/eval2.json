@@ -1,0 +1,521 @@
+{
+  "started_at": "2026-11-07T06:38:02.792489+00:00",
+  "runs": [
+    {
+      "label": "run_1",
+      "ok": true,
+      "job": {
+        "job_id": "job_8701c3af43ae48578b00e9c42e2cc535",
+        "status": "succeeded",
+        "error": null
+      },
+      "grasp_x": 0.18,
+      "block_before": [
+        0.17999990284442902,
+        -1.3129375986409286e-07,
+        0.07499999552965164
+      ],
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23018670082092285,
+          0.05837193503975868,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.013185528807178323,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 15.93602967262268,
+      "state": {
+        "episode_id": "ep_36b41b28866341a08fef0c5ce1b10df5",
+        "state_version": 1,
+        "sim_time_s": 10.3,
+        "sim_step": 2060
+      }
+    },
+    {
+      "label": "run_2",
+      "ok": true,
+      "job": {
+        "job_id": "job_cd82663afe0541f2b533e4ab91068a7c",
+        "status": "succeeded",
+        "error": null
+      },
+      "grasp_x": 0.18,
+      "block_before": [
+        0.17999984323978424,
+        -2.0357875030185824e-07,
+        0.07499999552965164
+      ],
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23048795759677887,
+          0.057667702436447144,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.012991955788322596,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 16.168057680130005,
+      "state": {
+        "episode_id": "ep_6ecca398e06046c4a921482eb40d57f2",
+        "state_version": 3,
+        "sim_time_s": 10.3,
+        "sim_step": 2060
+      }
+    },
+    {
+      "label": "run_3",
+      "ok": true,
+      "job": {
+        "job_id": "job_e8fde20ce2e7434988de074267cea113",
+        "status": "succeeded",
+        "error": null
+      },
+      "grasp_x": 0.18,
+      "block_before": [
+        0.17999984323978424,
+        -2.0357875030185824e-07,
+        0.07499999552965164
+      ],
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23023486137390137,
+          0.05817978084087372,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.013101954127064514,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 15.907017707824707,
+      "state": {
+        "episode_id": "ep_0e649733aba049f5b1b08ccaf786f7a2",
+        "state_version": 5,
+        "sim_time_s": 10.3,
+        "sim_step": 2060
+      }
+    },
+    {
+      "label": "run_4",
+      "ok": true,
+      "job": {
+        "job_id": "job_2eea2712aac34b87b392392d1d704849",
+        "status": "succeeded",
+        "error": null
+      },
+      "grasp_x": 0.18,
+      "block_before": [
+        0.17999984323978424,
+        -2.0357875030185824e-07,
+        0.07499999552965164
+      ],
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23048795759677887,
+          0.057667702436447144,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.012991955788322596,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 16.15831422805786,
+      "state": {
+        "episode_id": "ep_b581edbf2f024c3581c13eed29d4bb67",
+        "state_version": 7,
+        "sim_time_s": 10.3,
+        "sim_step": 2060
+      }
+    },
+    {
+      "label": "run_5",
+      "ok": true,
+      "job": {
+        "job_id": "job_534aa0e9f3744b3c9114cee72c119985",
+        "status": "succeeded",
+        "error": null
+      },
+      "grasp_x": 0.18,
+      "block_before": [
+        0.17999984323978424,
+        -2.0357875030185824e-07,
+        0.07499999552965164
+      ],
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23023486137390137,
+          0.05817978084087372,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.013101954127064514,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 16.349645137786865,
+      "state": {
+        "episode_id": "ep_9951939209a24268bb409d6fc9ce2849",
+        "state_version": 9,
+        "sim_time_s": 10.3,
+        "sim_step": 2060
+      }
+    },
+    {
+      "label": "run_6",
+      "ok": true,
+      "job": {
+        "job_id": "job_6c1413d35c1044a486bc5b1d42db6d1c",
+        "status": "succeeded",
+        "error": null
+      },
+      "grasp_x": 0.18,
+      "block_before": [
+        0.17999984323978424,
+        -2.0357875030185824e-07,
+        0.07499999552965164
+      ],
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23048795759677887,
+          0.057667702436447144,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.012991955788322596,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 15.848974704742432,
+      "state": {
+        "episode_id": "ep_64b1486e99424f178b962a6ae5e51bb3",
+        "state_version": 11,
+        "sim_time_s": 10.3,
+        "sim_step": 2060
+      }
+    },
+    {
+      "label": "run_7",
+      "ok": true,
+      "job": {
+        "job_id": "job_86409092a97849f7b1ad794a0ffb1be8",
+        "status": "succeeded",
+        "error": null
+      },
+      "grasp_x": 0.18,
+      "block_before": [
+        0.17999984323978424,
+        -2.0357875030185824e-07,
+        0.07499999552965164
+      ],
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23023486137390137,
+          0.05817978084087372,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.013101954127064514,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 14.94149661064148,
+      "state": {
+        "episode_id": "ep_72226aa71031499392829240622f3476",
+        "state_version": 13,
+        "sim_time_s": 10.3,
+        "sim_step": 2060
+      }
+    },
+    {
+      "label": "run_8",
+      "ok": true,
+      "job": {
+        "job_id": "job_03086b40e5fc45f9bdb4268a6fceff31",
+        "status": "succeeded",
+        "error": null
+      },
+      "grasp_x": 0.18,
+      "block_before": [
+        0.17999984323978424,
+        -2.0357875030185824e-07,
+        0.07499999552965164
+      ],
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23048795759677887,
+          0.057667702436447144,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.012991955788322596,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 14.938335180282593,
+      "state": {
+        "episode_id": "ep_63a2dbc74ba54cf7b06ad4d2f4fa4d59",
+        "state_version": 15,
+        "sim_time_s": 10.3,
+        "sim_step": 2060
+      }
+    },
+    {
+      "label": "run_9",
+      "ok": true,
+      "job": {
+        "job_id": "job_94f99727da1843f4bb7322ab2552dc12",
+        "status": "succeeded",
+        "error": null
+      },
+      "grasp_x": 0.18,
+      "block_before": [
+        0.17999984323978424,
+        -2.0357875030185824e-07,
+        0.07499999552965164
+      ],
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23023486137390137,
+          0.05817978084087372,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.013101954127064514,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 15.022434949874878,
+      "state": {
+        "episode_id": "ep_4e54f60af7e54d8a9db3a0ff49e64657",
+        "state_version": 17,
+        "sim_time_s": 10.3,
+        "sim_step": 2060
+      }
+    },
+    {
+      "label": "run_10",
+      "ok": true,
+      "job": {
+        "job_id": "job_4e87ee68f0e24f58abd1cc9e4ad2c12c",
+        "status": "succeeded",
+        "error": null
+      },
+      "grasp_x": 0.18,
+      "block_before": [
+        0.17999984323978424,
+        -2.0357875030185824e-07,
+        0.07499999552965164
+      ],
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23048795759677887,
+          0.057667702436447144,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.012991955788322596,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 14.894879817962646,
+      "state": {
+        "episode_id": "ep_9b74915b576d4df0838368ab0a8ca772",
+        "state_version": 19,
+        "sim_time_s": 10.3,
+        "sim_step": 2060
+      }
+    }
+  ],
+  "recoveries": [
+    {
+      "case": "stale_after_object_move",
+      "validate": 200,
+      "move_status": 202,
+      "move_job": "succeeded",
+      "stale_status": 409,
+      "stale_code": "STALE_WORLD_STATE",
+      "stale_detected": true,
+      "replan_validate": 200,
+      "replan_execute": 202,
+      "replan_job": "succeeded",
+      "replan_success": true,
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.237713024020195,
+          0.05970035493373871,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.0201952495845066,
+        "z": 0.05499999597668648
+      }
+    },
+    {
+      "case": "first_grasp_wrong_variant",
+      "reset": 202,
+      "block_after_reset": [
+        0.17999984323978424,
+        -2.0357875030185824e-07,
+        0.07499999552965164
+      ],
+      "move_status": 202,
+      "move_job": "succeeded",
+      "first": {
+        "label": "recovery_first_grasp",
+        "ok": false,
+        "job": {
+          "job_id": "job_98d47d28da3d4c649f2ecd988348a450",
+          "status": "failed",
+          "error": {
+            "code": "GRASP_MISSED",
+            "message": "GRASP_MISSED"
+          }
+        },
+        "grasp_x": 0.18,
+        "block_before": [
+          0.1998673379421234,
+          -8.014377073095602e-08,
+          0.07499999552965164
+        ],
+        "details": {
+          "job_status": "failed",
+          "block": [
+            0.19986732304096222,
+            -7.98311106109395e-08,
+            0.07499999552965164
+          ],
+          "xy_distance": 0.05390113787903188,
+          "z": 0.07499999552965164
+        },
+        "wall_s": 3.3329405784606934,
+        "state": {
+          "episode_id": "ep_e365b368a2474a938549412a1f8450de",
+          "state_version": 24,
+          "sim_time_s": 2.75,
+          "sim_step": 550
+        }
+      },
+      "first_failed_with_grasp_missed": true,
+      "second": {
+        "label": "recovery_second_grasp",
+        "ok": true,
+        "job": {
+          "job_id": "job_58ab5fab62e146e4a5e6baec91cdf0dd",
+          "status": "succeeded",
+          "error": null
+        },
+        "grasp_x": 0.2,
+        "block_before": [
+          0.19986732304096222,
+          -7.98311106109395e-08,
+          0.07499999552965164
+        ],
+        "details": {
+          "job_status": "succeeded",
+          "block": [
+            0.23101893067359924,
+            0.058065421879291534,
+            0.05499999597668648
+          ],
+          "xy_distance": 0.01365532362415995,
+          "z": 0.05499999597668648
+        },
+        "wall_s": 15.312665224075317,
+        "state": {
+          "episode_id": "ep_e365b368a2474a938549412a1f8450de",
+          "state_version": 25,
+          "sim_time_s": 13.05,
+          "sim_step": 2610
+        }
+      },
+      "recovered": true
+    }
+  ],
+  "cancel": {
+    "case": "cancel_pick",
+    "submit_status": 202,
+    "job_id": "job_f583c88c7df34c01bb0242a14865ff02",
+    "ack_s": 0.21691179275512695,
+    "status": "canceled",
+    "worker_ack_canceled": true,
+    "episode_unchanged": true,
+    "state_version_after": 27,
+    "block_after_cancel": [
+      0.17999982833862305,
+      -2.0255956201253866e-07,
+      0.07499999552965164
+    ]
+  },
+  "start": {
+    "status": 202,
+    "response": {
+      "job_id": "job_54b2d21a65184dd7b64092e2555654be",
+      "kind": "start_simulation",
+      "status": "running",
+      "simulation_id": null,
+      "task_id": null,
+      "skill": null,
+      "worker_job_id": null,
+      "parent_job_id": null,
+      "progress": null,
+      "cancel_requested": false,
+      "created_at": "2026-11-07T06:38:02.821045+00:00",
+      "updated_at": "2026-11-07T06:38:02.821045+00:00"
+    }
+  },
+  "start_job": {
+    "status": "succeeded",
+    "simulation_id": "sim_da8746ee29724713a5d91dcfa45c7742"
+  },
+  "frame": {
+    "status": 201,
+    "frame_id": "frame_6a959b8447784f7fb13be018981d93c5",
+    "rgb_url": "/api/v1/frames/frame_6a959b8447784f7fb13be018981d93c5/rgb.png"
+  },
+  "resets": [
+    {
+      "run": 2,
+      "status": 202
+    },
+    {
+      "run": 3,
+      "status": 202
+    },
+    {
+      "run": 4,
+      "status": 202
+    },
+    {
+      "run": 5,
+      "status": 202
+    },
+    {
+      "run": 6,
+      "status": 202
+    },
+    {
+      "run": 7,
+      "status": 202
+    },
+    {
+      "run": 8,
+      "status": 202
+    },
+    {
+      "run": 9,
+      "status": 202
+    },
+    {
+      "run": 10,
+      "status": 202
+    }
+  ],
+  "successes": 10,
+  "runs_completed": 10,
+  "pass_rate": 1.0,
+  "meets_target": true,
+  "close": {
+    "status": 202,
+    "response": {
+      "simulation_id": "sim_da8746ee29724713a5d91dcfa45c7742",
+      "closed": true
+    }
+  },
+  "finished_at": "2026-11-07T06:43:00.996625+00:00"
+}

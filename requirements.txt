@@ -1,0 +1,9 @@
+# Gateway runtime (versions tested in the author's Isaac Lab 3.0 / Python 3.12 env).
+# The Isaac workers run inside the Isaac Lab Python environment and are not
+# installed from this file.
+fastapi==0.120.4
+uvicorn==0.29.0
+pydantic==2.11.10
+numpy==2.3.1
+pillow==12.2.0
+scipy==1.17.0

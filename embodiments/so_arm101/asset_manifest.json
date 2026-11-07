@@ -1,0 +1,42 @@
+{
+  "robot_id": "so101",
+  "source_prefix": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/6.0/Isaac/Robots/RobotStudio/so101_new_calib/",
+  "local_root": "assets/isaac6/RobotStudio/so101_new_calib",
+  "main_usd": "so101_new_calib.usd",
+  "license": "Apache-2.0",
+  "license_file": "LICENSE",
+  "downloaded_at": "2026-11-07T03:17:58.545368+00:00",
+  "files": [
+    {
+      "path": "configuration/so101_new_calib_base.usd",
+      "bytes": 23236640,
+      "sha256": "6e0378bd7953a75c7edbe01265f3084b7811c12d9d51ce9cc5dcdb66031819dd"
+    },
+    {
+      "path": "configuration/so101_new_calib_physics.usd",
+      "bytes": 5259,
+      "sha256": "51215765a73c4f41845631aa716b6c11e27c83a24499e77f5b2756375748668f"
+    },
+    {
+      "path": "configuration/so101_new_calib_robot.usd",
+      "bytes": 1611,
+      "sha256": "19414f5b9b6590665ebc07cf8a84ebd0279a5501636c56ff8ee83467a6d87367"
+    },
+    {
+      "path": "configuration/so101_new_calib_sensor.usd",
+      "bytes": 655,
+      "sha256": "2be04b1883787e2405dc06c37a55711d61ddfa4ae35327360f9674ebfea0b0ec"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "so101_new_calib.usd",
+      "bytes": 1464,
+      "sha256": "04ef30434ff8bb752241ce5c6d33304ad04629b5d9290c580c4fd8b9fc89efb3"
+    }
+  ],
+  "note": "Vendored because this host's omni.client cannot stat remote Nucleus assets."
+}

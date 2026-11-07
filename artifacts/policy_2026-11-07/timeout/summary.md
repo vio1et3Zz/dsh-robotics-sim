@@ -1,0 +1,10 @@
+# monitor probe (vla_stub)
+
+- state: p50 18.5 ms / p95 21.3 ms / max 36.0 ms (21 samples, 0 errors)
+- frames: p50 36.1 ms / p95 47.9 ms / max 47.9 ms (6 samples, 0 errors)
+- health: {"ms": 26.569499998004176, "delay_ms": 0.0, "status": 200, "json": {"gateway": "ok", "worker": "alive", "simulation_ready": true, "startup_lost_jobs": 0}, "error": null, "t": 10.027}
+- cancel: {"request": null, "settled_ms": 15.7, "final_status": "failed", "error": {"code": "POLICY_TIMEOUT", "message": "policy exceeded 5.0s"}}
+- frame sim_step: [0, 321, 650, 820, 820, 820]
+- events endpoint: {'status': 200, 'count': 24, 'types': ['created', 'created', 'started', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'failed'], 'seq': [124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147], 'terminal': {'schema_version': '0.1', 'request_id': None, 'trace_id': None, 'job_id': 'job_cff1476249f440eda41919ea2b9944c3', 'event_seq': 23, 'at': '2026-11-07T12:34:21.706745Z', 'type': 'failed', 'status': 'failed', 'skill': 'vla_stub', 'message': 'POLICY_TIMEOUT', 'progress': None, 'data': {'error_code': 'POLICY_TIMEOUT', 'message': 'policy exceeded 5.0s', 'detail': {'chunks': 82, 'sim_step': 820}}, 'evidence': ['isaaclab_physx']}}
+- terminal event: {"schema_version": "0.1", "request_id": null, "trace_id": null, "job_id": "job_cff1476249f440eda41919ea2b9944c3", "event_seq": 23, "at": "2026-11-07T12:34:21.706745Z", "type": "failed", "status": "failed", "skill": "vla_stub", "message": "POLICY_TIMEOUT", "progress": null, "data": {"error_code": "POLICY_TIMEOUT", "message": "policy exceeded 5.0s", "detail": {"chunks": 82, "sim_step": 820}}, "evidence": ["isaaclab_physx"]}
+- verdict: {"state_p95_under_200ms": true, "state_samples_present": true, "frame_max_under_1000ms": true, "frames_increasing": true, "cancel_ack_under_1000ms": false, "cancel_final_canceled": true, "health_under_100ms": true, "all_pass": false}

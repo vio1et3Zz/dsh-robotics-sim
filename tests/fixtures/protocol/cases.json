@@ -1,0 +1,1476 @@
+{
+  "schemaVersion": "0.1",
+  "generatedAt": "2026-11-06T16:39:05.349539+00:00",
+  "cases": [
+    {
+      "name": "valid_runtimemanifest",
+      "model": "RuntimeManifest",
+      "valid": true,
+      "payload": {
+        "runtime_id": "runtime_t01_probe",
+        "created_at": "2026-11-07T00:30:00+08:00",
+        "adapter_version": "0.1.0",
+        "python": {
+          "version": "3.12.10",
+          "executable": "<isaac-root>\\env_isaaclab\\Scripts\\python.exe",
+          "platform": "Windows-11-10.0.26200"
+        },
+        "packages": {
+          "isaaclab": "6.1.14",
+          "torch": "2.11.0+cu128"
+        },
+        "source": {
+          "repo": "<isaac-root>\\IsaacLab",
+          "commit": "ffffffffffffffffffffffffffffffffffffffff",
+          "describe": "v3.0.0-beta2.patch1-dirty",
+          "dirty": true,
+          "diff_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "config_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "assets": {
+          "so101_new_calib.usd": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        },
+        "gpu": {
+          "name": "RTX 4060 Laptop",
+          "memory_mib": 8188,
+          "driver": "616.92"
+        },
+        "worker": {
+          "cwd": "<repo>",
+          "log_dir": "artifacts\\logs",
+          "num_envs": 1,
+          "device": "cuda:0"
+        },
+        "notes": [
+          "T01 fixture"
+        ]
+      }
+    },
+    {
+      "name": "valid_backendcapabilities",
+      "model": "BackendCapabilities",
+      "valid": true,
+      "payload": {
+        "backend_id": "backend_mock",
+        "backend_kind": "mock",
+        "generated_at": "2026-11-07T00:30:00+08:00",
+        "updated_at": "2026-11-07T00:30:00+08:00",
+        "physics": {
+          "engine": "none",
+          "version": "0",
+          "deterministic": true
+        },
+        "renderer": {
+          "enabled": false
+        },
+        "visualizer": {
+          "enabled": false
+        },
+        "installed": true,
+        "verified": false,
+        "evidence": [
+          "fake backend; protocol tests only"
+        ],
+        "combinations": [
+          {
+            "combination_id": "combo_mock_franka_pick_place",
+            "robot_id": "franka",
+            "task_id": "pick_place",
+            "scene_id": "table_top",
+            "backend_kind": "mock",
+            "status": "installed",
+            "evidence": [
+              "fake backend"
+            ],
+            "checked_at": "2026-11-07T00:30:00+08:00"
+          }
+        ]
+      }
+    },
+    {
+      "name": "valid_capabilitycombination",
+      "model": "CapabilityCombination",
+      "valid": true,
+      "payload": {
+        "combination_id": "combo_mock_franka_pick_place",
+        "robot_id": "franka",
+        "task_id": "pick_place",
+        "scene_id": "table_top",
+        "backend_kind": "mock",
+        "status": "installed",
+        "evidence": [
+          "fake backend"
+        ],
+        "checked_at": "2026-11-07T00:30:00+08:00"
+      }
+    },
+    {
+      "name": "valid_robotspec",
+      "model": "RobotSpec",
+      "valid": true,
+      "payload": {
+        "robot_id": "so101",
+        "model": "SO-ARM101",
+        "dof": 6,
+        "joints": [
+          {
+            "name": "shoulder_pan",
+            "logical_name": "shoulder_pan",
+            "type": "revolute",
+            "unit": "rad",
+            "lower": -2.0,
+            "upper": 2.0,
+            "home": 0.0,
+            "velocity_limit": 2.0
+          },
+          {
+            "name": "shoulder_lift",
+            "logical_name": "shoulder_lift",
+            "type": "revolute",
+            "unit": "rad",
+            "lower": -1.5,
+            "upper": 1.5,
+            "home": 0.0,
+            "velocity_limit": 2.0
+          },
+          {
+            "name": "elbow_flex",
+            "logical_name": "elbow_flex",
+            "type": "revolute",
+            "unit": "rad",
+            "lower": -1.8,
+            "upper": 1.8,
+            "home": 0.0,
+            "velocity_limit": 2.0
+          },
+          {
+            "name": "wrist_flex",
+            "logical_name": "wrist_flex",
+            "type": "revolute",
+            "unit": "rad",
+            "lower": -1.7,
+            "upper": 1.7,
+            "home": 0.0,
+            "velocity_limit": 2.0
+          },
+          {
+            "name": "wrist_roll",
+            "logical_name": "wrist_roll",
+            "type": "revolute",
+            "unit": "rad",
+            "lower": -2.5,
+            "upper": 2.5,
+            "home": 0.0,
+            "velocity_limit": 3.0
+          },
+          {
+            "name": "gripper",
+            "logical_name": "gripper",
+            "type": "prismatic",
+            "unit": "m",
+            "lower": 0.0,
+            "upper": 0.04,
+            "home": 0.0,
+            "velocity_limit": 0.1
+          }
+        ],
+        "end_effector": {
+          "name": "tool0",
+          "parent_joint": "wrist_roll",
+          "offset_m": [
+            0.0,
+            0.0,
+            0.1
+          ]
+        },
+        "gripper": {
+          "kind": "parallel",
+          "joint_names": [
+            "gripper"
+          ],
+          "open_value": 0.04,
+          "close_value": 0.0,
+          "max_width_m": 0.04
+        },
+        "control_modes": [
+          "position"
+        ],
+        "skills": [
+          "observe_scene",
+          "home",
+          "pick",
+          "place"
+        ],
+        "asset": {
+          "usd_path": "https://example.invalid/isaac/so101_new_calib.usd",
+          "license": "NVIDIA Isaac Sim asset license",
+          "source": "Isaac Sim 6.0 asset root"
+        }
+      }
+    },
+    {
+      "name": "valid_jointspec",
+      "model": "JointSpec",
+      "valid": true,
+      "payload": {
+        "name": "shoulder_pan",
+        "logical_name": "shoulder_pan",
+        "type": "revolute",
+        "unit": "rad",
+        "lower": -2.0,
+        "upper": 2.0,
+        "home": 0.0,
+        "velocity_limit": 2.0
+      }
+    },
+    {
+      "name": "valid_simulationspec",
+      "model": "SimulationSpec",
+      "valid": true,
+      "payload": {
+        "profile_id": "profile_dev_franka_physx",
+        "backend_kind": "isaaclab_physx",
+        "robot_id": "franka",
+        "scene_id": "table_top",
+        "physics": {
+          "engine": "physx",
+          "dt": 0.005,
+          "decimation": 4,
+          "solver_iterations": 8
+        },
+        "renderer": {
+          "enabled": true,
+          "headless": true,
+          "backend": "isaac_rtx",
+          "cameras": [
+            {
+              "name": "front",
+              "width": 320,
+              "height": 240,
+              "update_period_s": 0.2,
+              "data_types": [
+                "rgb",
+                "depth"
+              ]
+            }
+          ]
+        },
+        "seed": 7,
+        "num_envs": 1,
+        "budget": {
+          "max_sim_time_s": 120.0,
+          "max_wall_time_s": 300.0
+        }
+      }
+    },
+    {
+      "name": "valid_workerprofile",
+      "model": "WorkerProfile",
+      "valid": true,
+      "payload": {
+        "profile_id": "profile_dev_franka_physx",
+        "backend_id": "backend_isaac_physx",
+        "backend_kind": "isaaclab_physx",
+        "robot_id": "franka",
+        "scene_id": "table_top",
+        "python_executable": "<isaac-root>\\env_isaaclab\\Scripts\\python.exe",
+        "entry_module": "robotics_backends.isaaclab_physx.entry",
+        "allowed_imports": [
+          "isaaclab",
+          "isaacsim"
+        ],
+        "max_envs": 1,
+        "description": "Franka development profile for the T02-T04 software chain."
+      }
+    },
+    {
+      "name": "valid_worldstate",
+      "model": "WorldState",
+      "valid": true,
+      "payload": {
+        "simulation_id": "sim_0123456789abcdef",
+        "episode_id": "ep_0123456789abcdef",
+        "env_id": 0,
+        "state_version": 3,
+        "event_seq": 5,
+        "sim_step": 120,
+        "sim_time_s": 0.6,
+        "wall_time": "2026-11-06T16:39:05.347237+00:00",
+        "source": "sim_ground_truth",
+        "frame": "world",
+        "robots": [
+          {
+            "robot_id": "franka",
+            "dof": 7,
+            "joint_positions": [
+              0.0,
+              -0.4,
+              0.0,
+              -2.0,
+              0.0,
+              1.6,
+              0.8
+            ],
+            "joint_velocities": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ee_pose": {
+              "frame": "world",
+              "position": [
+                0.4,
+                0.0,
+                0.25
+              ],
+              "orientation_xyzw": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            "gripper": {
+              "width_m": 0.04,
+              "closed": false
+            }
+          }
+        ],
+        "objects": [
+          {
+            "object_id": "red_block",
+            "pose": {
+              "frame": "world",
+              "position": [
+                0.5,
+                0.0,
+                0.02
+              ],
+              "orientation_xyzw": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            "size_m": [
+              0.04,
+              0.04,
+              0.04
+            ]
+          },
+          {
+            "object_id": "target_box",
+            "pose": {
+              "frame": "world",
+              "position": [
+                0.6,
+                0.3,
+                0.04
+              ],
+              "orientation_xyzw": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            "size_m": [
+              0.12,
+              0.12,
+              0.08
+            ]
+          }
+        ],
+        "skills": []
+      }
+    },
+    {
+      "name": "valid_robotstate",
+      "model": "RobotState",
+      "valid": true,
+      "payload": {
+        "robot_id": "franka",
+        "dof": 7,
+        "joint_positions": [
+          0.0,
+          -0.4,
+          0.0,
+          -2.0,
+          0.0,
+          1.6,
+          0.8
+        ],
+        "joint_velocities": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ee_pose": {
+          "frame": "world",
+          "position": [
+            0.4,
+            0.0,
+            0.25
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "gripper": {
+          "width_m": 0.04,
+          "closed": false
+        }
+      }
+    },
+    {
+      "name": "valid_objectstate",
+      "model": "ObjectState",
+      "valid": true,
+      "payload": {
+        "object_id": "red_block",
+        "pose": {
+          "frame": "world",
+          "position": [
+            0.5,
+            0.0,
+            0.02
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "size_m": [
+          0.04,
+          0.04,
+          0.04
+        ]
+      }
+    },
+    {
+      "name": "valid_skillspec",
+      "model": "SkillSpec",
+      "valid": true,
+      "payload": {
+        "name": "pick",
+        "robot_id": "franka",
+        "description": "Close the gripper around the target and lift it by 5 cm.",
+        "parameters_schema": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        },
+        "timeout_s": 30.0,
+        "preconditions": [
+          "target visible",
+          "gripper open"
+        ]
+      }
+    },
+    {
+      "name": "valid_skillinvocation",
+      "model": "SkillInvocation",
+      "valid": true,
+      "payload": {
+        "skill": "pick",
+        "parameters": {
+          "approach_height_m": 0.1
+        },
+        "target_object_id": "red_block",
+        "frame": "world",
+        "timeout_s": 30.0,
+        "expected_duration_s": 10.0
+      }
+    },
+    {
+      "name": "valid_taskspec",
+      "model": "TaskSpec",
+      "valid": true,
+      "payload": {
+        "task_id": "task_0123456789abcdef",
+        "goal": "Place the red block inside the target box.",
+        "robot_id": "franka",
+        "scene_id": "table_top",
+        "success_predicates": [
+          {
+            "predicate_id": "pred_in_box",
+            "kind": "object_in_region",
+            "object_id": "red_block",
+            "region": {
+              "min": [
+                0.54,
+                0.24,
+                0.0
+              ],
+              "max": [
+                0.66,
+                0.36,
+                0.12
+              ]
+            },
+            "tolerance_m": 0.005
+          }
+        ],
+        "budgets": {
+          "sim_time_s": 120.0,
+          "wall_time_s": 300.0,
+          "max_skill_calls": 12,
+          "max_retries": 2
+        },
+        "constraints": [
+          "keep the target box upright"
+        ]
+      }
+    },
+    {
+      "name": "valid_taskplan",
+      "model": "TaskPlan",
+      "valid": true,
+      "payload": {
+        "plan_id": "plan_0123456789abcdef",
+        "task_id": "task_0123456789abcdef",
+        "episode_id": "ep_0123456789abcdef",
+        "base_state_version": 3,
+        "created_at": "2026-11-07T00:30:00+08:00",
+        "steps": [
+          {
+            "step_id": "step_observe",
+            "skill": "observe_scene",
+            "parameters": {},
+            "depends_on": [],
+            "expected_duration_s": 2.0
+          },
+          {
+            "step_id": "step_pick",
+            "skill": "pick",
+            "parameters": {
+              "target": "red_block"
+            },
+            "depends_on": [
+              "step_observe"
+            ],
+            "expected_duration_s": 10.0
+          },
+          {
+            "step_id": "step_place",
+            "skill": "place",
+            "parameters": {
+              "target": "target_box"
+            },
+            "depends_on": [
+              "step_pick"
+            ],
+            "expected_duration_s": 10.0
+          }
+        ],
+        "plan_hash": "349343fc13e2bee3f23e77f68981c5b70769454753c00b6f6cd791fd0f26443f",
+        "budget": {
+          "sim_time_s": 120.0,
+          "wall_time_s": 300.0,
+          "max_skill_calls": 12,
+          "max_retries": 2
+        }
+      }
+    },
+    {
+      "name": "valid_jobevent",
+      "model": "JobEvent",
+      "valid": true,
+      "payload": {
+        "job_id": "job_0123456789abcdef",
+        "event_seq": 4,
+        "at": "2026-11-07T00:30:00+08:00",
+        "type": "succeeded",
+        "status": "succeeded",
+        "skill": "place",
+        "message": "placement verified",
+        "progress": 1.0,
+        "data": {
+          "success_predicates": 1
+        },
+        "evidence": [
+          "artifacts/run-001/placement.json"
+        ]
+      }
+    },
+    {
+      "name": "valid_errorinfo",
+      "model": "ErrorInfo",
+      "valid": true,
+      "payload": {
+        "code": "TIMEOUT",
+        "message": "skill exceeded its wall-clock budget",
+        "retryable": true,
+        "details": {
+          "timeout_s": 30.0
+        },
+        "evidence": [
+          "artifacts/run-001/worker.log"
+        ],
+        "occurred_at": "2026-11-07T00:30:00+08:00"
+      }
+    },
+    {
+      "name": "world_state_joint_length",
+      "model": "WorldState",
+      "valid": false,
+      "payload": {
+        "simulation_id": "sim_0123456789abcdef",
+        "episode_id": "ep_0123456789abcdef",
+        "env_id": 0,
+        "state_version": 3,
+        "event_seq": 5,
+        "sim_step": 120,
+        "sim_time_s": 0.6,
+        "wall_time": "2026-11-06T16:39:05.347237+00:00",
+        "source": "sim_ground_truth",
+        "frame": "world",
+        "robots": [
+          {
+            "robot_id": "franka",
+            "dof": 7,
+            "joint_positions": [
+              0.0,
+              -0.4,
+              0.0,
+              -2.0,
+              0.0,
+              1.6
+            ],
+            "joint_velocities": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ee_pose": {
+              "frame": "world",
+              "position": [
+                0.4,
+                0.0,
+                0.25
+              ],
+              "orientation_xyzw": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            "gripper": {
+              "width_m": 0.04,
+              "closed": false
+            }
+          }
+        ],
+        "objects": [
+          {
+            "object_id": "red_block",
+            "pose": {
+              "frame": "world",
+              "position": [
+                0.5,
+                0.0,
+                0.02
+              ],
+              "orientation_xyzw": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            "size_m": [
+              0.04,
+              0.04,
+              0.04
+            ]
+          },
+          {
+            "object_id": "target_box",
+            "pose": {
+              "frame": "world",
+              "position": [
+                0.6,
+                0.3,
+                0.04
+              ],
+              "orientation_xyzw": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            "size_m": [
+              0.12,
+              0.12,
+              0.08
+            ]
+          }
+        ],
+        "skills": []
+      }
+    },
+    {
+      "name": "robot_dof_mismatch",
+      "model": "RobotSpec",
+      "valid": false,
+      "payload": {
+        "robot_id": "so101",
+        "model": "SO-ARM101",
+        "dof": 7,
+        "joints": [
+          {
+            "name": "shoulder_pan",
+            "logical_name": "shoulder_pan",
+            "type": "revolute",
+            "unit": "rad",
+            "lower": -2.0,
+            "upper": 2.0,
+            "home": 0.0,
+            "velocity_limit": 2.0
+          },
+          {
+            "name": "shoulder_lift",
+            "logical_name": "shoulder_lift",
+            "type": "revolute",
+            "unit": "rad",
+            "lower": -1.5,
+            "upper": 1.5,
+            "home": 0.0,
+            "velocity_limit": 2.0
+          },
+          {
+            "name": "elbow_flex",
+            "logical_name": "elbow_flex",
+            "type": "revolute",
+            "unit": "rad",
+            "lower": -1.8,
+            "upper": 1.8,
+            "home": 0.0,
+            "velocity_limit": 2.0
+          },
+          {
+            "name": "wrist_flex",
+            "logical_name": "wrist_flex",
+            "type": "revolute",
+            "unit": "rad",
+            "lower": -1.7,
+            "upper": 1.7,
+            "home": 0.0,
+            "velocity_limit": 2.0
+          },
+          {
+            "name": "wrist_roll",
+            "logical_name": "wrist_roll",
+            "type": "revolute",
+            "unit": "rad",
+            "lower": -2.5,
+            "upper": 2.5,
+            "home": 0.0,
+            "velocity_limit": 3.0
+          },
+          {
+            "name": "gripper",
+            "logical_name": "gripper",
+            "type": "prismatic",
+            "unit": "m",
+            "lower": 0.0,
+            "upper": 0.04,
+            "home": 0.0,
+            "velocity_limit": 0.1
+          }
+        ],
+        "end_effector": {
+          "name": "tool0",
+          "parent_joint": "wrist_roll",
+          "offset_m": [
+            0.0,
+            0.0,
+            0.1
+          ]
+        },
+        "gripper": {
+          "kind": "parallel",
+          "joint_names": [
+            "gripper"
+          ],
+          "open_value": 0.04,
+          "close_value": 0.0,
+          "max_width_m": 0.04
+        },
+        "control_modes": [
+          "position"
+        ],
+        "skills": [
+          "observe_scene",
+          "home",
+          "pick",
+          "place"
+        ],
+        "asset": {
+          "usd_path": "https://example.invalid/isaac/so101_new_calib.usd",
+          "license": "NVIDIA Isaac Sim asset license",
+          "source": "Isaac Sim 6.0 asset root"
+        }
+      }
+    },
+    {
+      "name": "robot_joint_unit_mismatch",
+      "model": "RobotSpec",
+      "valid": false,
+      "payload": {
+        "robot_id": "so101",
+        "model": "SO-ARM101",
+        "dof": 6,
+        "joints": [
+          {
+            "name": "shoulder_pan",
+            "logical_name": "shoulder_pan",
+            "type": "revolute",
+            "unit": "m",
+            "lower": -2.0,
+            "upper": 2.0,
+            "home": 0.0,
+            "velocity_limit": 2.0
+          },
+          {
+            "name": "shoulder_lift",
+            "logical_name": "shoulder_lift",
+            "type": "revolute",
+            "unit": "rad",
+            "lower": -1.5,
+            "upper": 1.5,
+            "home": 0.0,
+            "velocity_limit": 2.0
+          },
+          {
+            "name": "elbow_flex",
+            "logical_name": "elbow_flex",
+            "type": "revolute",
+            "unit": "rad",
+            "lower": -1.8,
+            "upper": 1.8,
+            "home": 0.0,
+            "velocity_limit": 2.0
+          },
+          {
+            "name": "wrist_flex",
+            "logical_name": "wrist_flex",
+            "type": "revolute",
+            "unit": "rad",
+            "lower": -1.7,
+            "upper": 1.7,
+            "home": 0.0,
+            "velocity_limit": 2.0
+          },
+          {
+            "name": "wrist_roll",
+            "logical_name": "wrist_roll",
+            "type": "revolute",
+            "unit": "rad",
+            "lower": -2.5,
+            "upper": 2.5,
+            "home": 0.0,
+            "velocity_limit": 3.0
+          },
+          {
+            "name": "gripper",
+            "logical_name": "gripper",
+            "type": "prismatic",
+            "unit": "m",
+            "lower": 0.0,
+            "upper": 0.04,
+            "home": 0.0,
+            "velocity_limit": 0.1
+          }
+        ],
+        "end_effector": {
+          "name": "tool0",
+          "parent_joint": "wrist_roll",
+          "offset_m": [
+            0.0,
+            0.0,
+            0.1
+          ]
+        },
+        "gripper": {
+          "kind": "parallel",
+          "joint_names": [
+            "gripper"
+          ],
+          "open_value": 0.04,
+          "close_value": 0.0,
+          "max_width_m": 0.04
+        },
+        "control_modes": [
+          "position"
+        ],
+        "skills": [
+          "observe_scene",
+          "home",
+          "pick",
+          "place"
+        ],
+        "asset": {
+          "usd_path": "https://example.invalid/isaac/so101_new_calib.usd",
+          "license": "NVIDIA Isaac Sim asset license",
+          "source": "Isaac Sim 6.0 asset root"
+        }
+      }
+    },
+    {
+      "name": "simulation_zero_envs",
+      "model": "SimulationSpec",
+      "valid": false,
+      "payload": {
+        "profile_id": "profile_dev_franka_physx",
+        "backend_kind": "isaaclab_physx",
+        "robot_id": "franka",
+        "scene_id": "table_top",
+        "physics": {
+          "engine": "physx",
+          "dt": 0.005,
+          "decimation": 4,
+          "solver_iterations": 8
+        },
+        "renderer": {
+          "enabled": true,
+          "headless": true,
+          "backend": "isaac_rtx",
+          "cameras": [
+            {
+              "name": "front",
+              "width": 320,
+              "height": 240,
+              "update_period_s": 0.2,
+              "data_types": [
+                "rgb",
+                "depth"
+              ]
+            }
+          ]
+        },
+        "seed": 7,
+        "num_envs": 0,
+        "budget": {
+          "max_sim_time_s": 120.0,
+          "max_wall_time_s": 300.0
+        }
+      }
+    },
+    {
+      "name": "world_state_negative_time",
+      "model": "WorldState",
+      "valid": false,
+      "payload": {
+        "simulation_id": "sim_0123456789abcdef",
+        "episode_id": "ep_0123456789abcdef",
+        "env_id": 0,
+        "state_version": 3,
+        "event_seq": 5,
+        "sim_step": 120,
+        "sim_time_s": -1.0,
+        "wall_time": "2026-11-06T16:39:05.347237+00:00",
+        "source": "sim_ground_truth",
+        "frame": "world",
+        "robots": [
+          {
+            "robot_id": "franka",
+            "dof": 7,
+            "joint_positions": [
+              0.0,
+              -0.4,
+              0.0,
+              -2.0,
+              0.0,
+              1.6,
+              0.8
+            ],
+            "joint_velocities": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ee_pose": {
+              "frame": "world",
+              "position": [
+                0.4,
+                0.0,
+                0.25
+              ],
+              "orientation_xyzw": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            "gripper": {
+              "width_m": 0.04,
+              "closed": false
+            }
+          }
+        ],
+        "objects": [
+          {
+            "object_id": "red_block",
+            "pose": {
+              "frame": "world",
+              "position": [
+                0.5,
+                0.0,
+                0.02
+              ],
+              "orientation_xyzw": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            "size_m": [
+              0.04,
+              0.04,
+              0.04
+            ]
+          },
+          {
+            "object_id": "target_box",
+            "pose": {
+              "frame": "world",
+              "position": [
+                0.6,
+                0.3,
+                0.04
+              ],
+              "orientation_xyzw": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            "size_m": [
+              0.12,
+              0.12,
+              0.08
+            ]
+          }
+        ],
+        "skills": []
+      }
+    },
+    {
+      "name": "world_state_quaternion_not_normalized",
+      "model": "WorldState",
+      "valid": false,
+      "payload": {
+        "simulation_id": "sim_0123456789abcdef",
+        "episode_id": "ep_0123456789abcdef",
+        "env_id": 0,
+        "state_version": 3,
+        "event_seq": 5,
+        "sim_step": 120,
+        "sim_time_s": 0.6,
+        "wall_time": "2026-11-06T16:39:05.347237+00:00",
+        "source": "sim_ground_truth",
+        "frame": "world",
+        "robots": [
+          {
+            "robot_id": "franka",
+            "dof": 7,
+            "joint_positions": [
+              0.0,
+              -0.4,
+              0.0,
+              -2.0,
+              0.0,
+              1.6,
+              0.8
+            ],
+            "joint_velocities": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ee_pose": {
+              "frame": "world",
+              "position": [
+                0.4,
+                0.0,
+                0.25
+              ],
+              "orientation_xyzw": [
+                0.0,
+                0.0,
+                0.0,
+                2.0
+              ]
+            },
+            "gripper": {
+              "width_m": 0.04,
+              "closed": false
+            }
+          }
+        ],
+        "objects": [
+          {
+            "object_id": "red_block",
+            "pose": {
+              "frame": "world",
+              "position": [
+                0.5,
+                0.0,
+                0.02
+              ],
+              "orientation_xyzw": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            "size_m": [
+              0.04,
+              0.04,
+              0.04
+            ]
+          },
+          {
+            "object_id": "target_box",
+            "pose": {
+              "frame": "world",
+              "position": [
+                0.6,
+                0.3,
+                0.04
+              ],
+              "orientation_xyzw": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            "size_m": [
+              0.12,
+              0.12,
+              0.08
+            ]
+          }
+        ],
+        "skills": []
+      }
+    },
+    {
+      "name": "task_plan_cycle",
+      "model": "TaskPlan",
+      "valid": false,
+      "payload": {
+        "plan_id": "plan_0123456789abcdef",
+        "task_id": "task_0123456789abcdef",
+        "episode_id": "ep_0123456789abcdef",
+        "base_state_version": 3,
+        "created_at": "2026-11-07T00:30:00+08:00",
+        "steps": [
+          {
+            "step_id": "step_observe",
+            "skill": "observe_scene",
+            "parameters": {},
+            "depends_on": [
+              "step_place"
+            ],
+            "expected_duration_s": 2.0
+          },
+          {
+            "step_id": "step_pick",
+            "skill": "pick",
+            "parameters": {
+              "target": "red_block"
+            },
+            "depends_on": [
+              "step_observe"
+            ],
+            "expected_duration_s": 10.0
+          },
+          {
+            "step_id": "step_place",
+            "skill": "place",
+            "parameters": {
+              "target": "target_box"
+            },
+            "depends_on": [
+              "step_pick"
+            ],
+            "expected_duration_s": 10.0
+          }
+        ],
+        "plan_hash": "349343fc13e2bee3f23e77f68981c5b70769454753c00b6f6cd791fd0f26443f",
+        "budget": {
+          "sim_time_s": 120.0,
+          "wall_time_s": 300.0,
+          "max_skill_calls": 12,
+          "max_retries": 2
+        }
+      }
+    },
+    {
+      "name": "task_plan_duplicate_step",
+      "model": "TaskPlan",
+      "valid": false,
+      "payload": {
+        "plan_id": "plan_0123456789abcdef",
+        "task_id": "task_0123456789abcdef",
+        "episode_id": "ep_0123456789abcdef",
+        "base_state_version": 3,
+        "created_at": "2026-11-07T00:30:00+08:00",
+        "steps": [
+          {
+            "step_id": "step_observe",
+            "skill": "observe_scene",
+            "parameters": {},
+            "depends_on": [],
+            "expected_duration_s": 2.0
+          },
+          {
+            "step_id": "step_observe",
+            "skill": "pick",
+            "parameters": {
+              "target": "red_block"
+            },
+            "depends_on": [
+              "step_observe"
+            ],
+            "expected_duration_s": 10.0
+          },
+          {
+            "step_id": "step_place",
+            "skill": "place",
+            "parameters": {
+              "target": "target_box"
+            },
+            "depends_on": [
+              "step_pick"
+            ],
+            "expected_duration_s": 10.0
+          }
+        ],
+        "plan_hash": "349343fc13e2bee3f23e77f68981c5b70769454753c00b6f6cd791fd0f26443f",
+        "budget": {
+          "sim_time_s": 120.0,
+          "wall_time_s": 300.0,
+          "max_skill_calls": 12,
+          "max_retries": 2
+        }
+      }
+    },
+    {
+      "name": "task_spec_unknown_field",
+      "model": "TaskSpec",
+      "valid": false,
+      "payload": {
+        "task_id": "task_0123456789abcdef",
+        "goal": "Place the red block inside the target box.",
+        "robot_id": "franka",
+        "scene_id": "table_top",
+        "success_predicates": [
+          {
+            "predicate_id": "pred_in_box",
+            "kind": "object_in_region",
+            "object_id": "red_block",
+            "region": {
+              "min": [
+                0.54,
+                0.24,
+                0.0
+              ],
+              "max": [
+                0.66,
+                0.36,
+                0.12
+              ]
+            },
+            "tolerance_m": 0.005
+          }
+        ],
+        "budgets": {
+          "sim_time_s": 120.0,
+          "wall_time_s": 300.0,
+          "max_skill_calls": 12,
+          "max_retries": 2
+        },
+        "constraints": [
+          "keep the target box upright"
+        ],
+        "surprise": true
+      }
+    },
+    {
+      "name": "task_predicate_missing_region",
+      "model": "TaskSpec",
+      "valid": false,
+      "payload": {
+        "task_id": "task_0123456789abcdef",
+        "goal": "Place the red block inside the target box.",
+        "robot_id": "franka",
+        "scene_id": "table_top",
+        "success_predicates": [
+          {
+            "predicate_id": "pred_in_box",
+            "kind": "object_in_region",
+            "object_id": "red_block",
+            "tolerance_m": 0.005
+          }
+        ],
+        "budgets": {
+          "sim_time_s": 120.0,
+          "wall_time_s": 300.0,
+          "max_skill_calls": 12,
+          "max_retries": 2
+        },
+        "constraints": [
+          "keep the target box upright"
+        ]
+      }
+    },
+    {
+      "name": "capabilities_verified_without_evidence",
+      "model": "BackendCapabilities",
+      "valid": false,
+      "payload": {
+        "backend_id": "backend_mock",
+        "backend_kind": "mock",
+        "generated_at": "2026-11-07T00:30:00+08:00",
+        "updated_at": "2026-11-07T00:30:00+08:00",
+        "physics": {
+          "engine": "none",
+          "version": "0",
+          "deterministic": true
+        },
+        "renderer": {
+          "enabled": false
+        },
+        "visualizer": {
+          "enabled": false
+        },
+        "installed": true,
+        "verified": true,
+        "evidence": [],
+        "combinations": [
+          {
+            "combination_id": "combo_mock_franka_pick_place",
+            "robot_id": "franka",
+            "task_id": "pick_place",
+            "scene_id": "table_top",
+            "backend_kind": "mock",
+            "status": "installed",
+            "evidence": [
+              "fake backend"
+            ],
+            "checked_at": "2026-11-07T00:30:00+08:00"
+          }
+        ]
+      }
+    },
+    {
+      "name": "capabilities_mock_cannot_be_verified",
+      "model": "BackendCapabilities",
+      "valid": false,
+      "payload": {
+        "backend_id": "backend_mock",
+        "backend_kind": "mock",
+        "generated_at": "2026-11-07T00:30:00+08:00",
+        "updated_at": "2026-11-07T00:30:00+08:00",
+        "physics": {
+          "engine": "none",
+          "version": "0",
+          "deterministic": true
+        },
+        "renderer": {
+          "enabled": false
+        },
+        "visualizer": {
+          "enabled": false
+        },
+        "installed": true,
+        "verified": true,
+        "evidence": [
+          "wishful thinking"
+        ],
+        "combinations": [
+          {
+            "combination_id": "combo_mock_franka_pick_place",
+            "robot_id": "franka",
+            "task_id": "pick_place",
+            "scene_id": "table_top",
+            "backend_kind": "mock",
+            "status": "installed",
+            "evidence": [
+              "fake backend"
+            ],
+            "checked_at": "2026-11-07T00:30:00+08:00"
+          }
+        ]
+      }
+    },
+    {
+      "name": "error_retryable_mismatch",
+      "model": "ErrorInfo",
+      "valid": false,
+      "payload": {
+        "code": "GRASP_FAILED",
+        "message": "skill exceeded its wall-clock budget",
+        "retryable": true,
+        "details": {
+          "timeout_s": 30.0
+        },
+        "evidence": [
+          "artifacts/run-001/worker.log"
+        ],
+        "occurred_at": "2026-11-07T00:30:00+08:00"
+      }
+    },
+    {
+      "name": "skill_invocation_nonfinite_timeout",
+      "model": "SkillInvocation",
+      "valid": false,
+      "payload": {
+        "skill": "pick",
+        "parameters": {
+          "approach_height_m": 0.1
+        },
+        "target_object_id": "red_block",
+        "frame": "world",
+        "timeout_s": Infinity,
+        "expected_duration_s": 10.0
+      }
+    }
+  ]
+}

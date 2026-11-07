@@ -1,0 +1,1371 @@
+{
+  "started_at": "2026-11-07T05:43:11.651010+00:00",
+  "events": [
+    {
+      "at": "2026-11-07T05:43:11.699175+00:00",
+      "label": "start_simulation",
+      "payload": {
+        "status": 202,
+        "response": {
+          "job_id": "job_53cbd4c876b34eb8aa78cb90522ad06b",
+          "kind": "start_simulation",
+          "status": "running",
+          "simulation_id": null,
+          "task_id": null,
+          "skill": null,
+          "worker_job_id": null,
+          "parent_job_id": null,
+          "progress": null,
+          "cancel_requested": false,
+          "created_at": "2026-11-07T05:43:11.697724+00:00",
+          "updated_at": "2026-11-07T05:43:11.697724+00:00"
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:23.025027+00:00",
+      "label": "start_job",
+      "payload": {
+        "job_id": "job_53cbd4c876b34eb8aa78cb90522ad06b",
+        "kind": "start_simulation",
+        "status": "succeeded",
+        "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+        "task_id": null,
+        "skill": null,
+        "worker_job_id": null,
+        "parent_job_id": null,
+        "progress": 1.0,
+        "cancel_requested": false,
+        "created_at": "2026-11-07T05:43:11.697724+00:00",
+        "updated_at": "2026-11-07T05:43:22.982877+00:00"
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:23.042002+00:00",
+      "label": "state_initial",
+      "payload": {
+        "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+        "episode_id": "ep_47fa705068c84fc19f85d76e9ce59175",
+        "state_version": 0,
+        "sim_step": 0,
+        "sim_time_s": 0.0,
+        "state": {
+          "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+          "episode_id": "ep_47fa705068c84fc19f85d76e9ce59175",
+          "env_id": 0,
+          "state_version": 0,
+          "event_seq": 0,
+          "sim_step": 0,
+          "sim_time_s": 0.0,
+          "wall_time": "2026-11-07T05:43:23.040431Z",
+          "source": "sim_ground_truth",
+          "frame": "world",
+          "robots": [
+            {
+              "robot_id": "so101",
+              "dof": 6,
+              "joint_positions": [
+                -1.059244095813483e-05,
+                0.0017342183273285627,
+                0.000815761333797127,
+                0.0003081822651438415,
+                3.7505831187445438e-06,
+                -0.0015507627977058291
+              ],
+              "joint_velocities": [
+                -0.0017481012037023902,
+                0.29878583550453186,
+                -0.03899897634983063,
+                -0.055289119482040405,
+                0.0005283678183332086,
+                -0.5317866802215576
+              ],
+              "ee_pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.020619846880435944,
+                  -0.36270081996917725,
+                  0.2731423079967499
+                ],
+                "orientation_xyzw": [
+                  -0.49928295612335205,
+                  -0.4992902874946594,
+                  -0.5007054209709167,
+                  0.5007193088531494
+                ]
+              },
+              "gripper": {
+                "width_m": 0.09010134848697586,
+                "closed": true
+              }
+            }
+          ],
+          "objects": [
+            {
+              "object_id": "red_block",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.17999990284442902,
+                  -1.3129375986409286e-07,
+                  0.07499999552965164
+                ],
+                "orientation_xyzw": [
+                  2.1074761207273696e-06,
+                  -1.2397908903949428e-06,
+                  3.4658289571609657e-09,
+                  0.9999999403953552
+                ]
+              },
+              "size_m": [
+                0.03,
+                0.03,
+                0.03
+              ],
+              "grasped_by": null,
+              "visible": true
+            },
+            {
+              "object_id": "target_box",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.22,
+                  0.05,
+                  0.02
+                ],
+                "orientation_xyzw": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "size_m": [
+                0.1,
+                0.1,
+                0.04
+              ],
+              "grasped_by": null,
+              "visible": true
+            }
+          ],
+          "skills": []
+        },
+        "skills": [
+          "hold_pose",
+          "move_object",
+          "observe_scene",
+          "pick"
+        ]
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:23.059643+00:00",
+      "label": "create_task",
+      "payload": {
+        "status": 201,
+        "response": {
+          "task_id": "task_d5210426a5f4407aac5378e145845035",
+          "spec": {
+            "schema_version": "0.1",
+            "request_id": null,
+            "trace_id": null,
+            "task_id": "task_d5210426a5f4407aac5378e145845035",
+            "goal": "把红色积木放入目标盒",
+            "robot_id": "so101",
+            "scene_id": "table_pick_place",
+            "success_predicates": [
+              {
+                "predicate_id": "pred_block_in_box",
+                "kind": "object_in_region",
+                "object_id": "red_block",
+                "region": {
+                  "min": [
+                    0.19,
+                    0.02,
+                    0.03
+                  ],
+                  "max": [
+                    0.25,
+                    0.08,
+                    0.08
+                  ]
+                },
+                "params": {},
+                "tolerance_m": 0.01
+              }
+            ],
+            "budgets": {
+              "sim_time_s": 180.0,
+              "wall_time_s": 240.0,
+              "max_skill_calls": 6,
+              "max_retries": 2
+            },
+            "constraints": [
+              "top grasp",
+              "place on the target box top face"
+            ]
+          },
+          "plan": null,
+          "plan_hash": null,
+          "snapshot": null,
+          "created_at": "2026-11-07T05:43:23.054692+00:00"
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:23.063021+00:00",
+      "label": "validate_plan_1",
+      "payload": {
+        "status": 200,
+        "response": {
+          "task_id": "task_d5210426a5f4407aac5378e145845035",
+          "plan_hash": "8d65accd13cee673ac8ce739f41131ea3708c5e62fc2a4e1efd99ee6b9a1421d",
+          "valid": true
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:23.353898+00:00",
+      "label": "fault_move_block",
+      "payload": {
+        "http_status": 202,
+        "job": {
+          "job_id": "job_7b07d4e581ef4eaa984ad16216b4fcab",
+          "kind": "skill",
+          "status": "succeeded",
+          "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+          "task_id": null,
+          "skill": "move_object",
+          "worker_job_id": "job_e45f76735caa4009ad04b10555ceb06c",
+          "parent_job_id": null,
+          "progress": 1.0,
+          "cancel_requested": false,
+          "created_at": "2026-11-07T05:43:23.088391+00:00",
+          "updated_at": "2026-11-07T05:43:23.217401+00:00"
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:23.381438+00:00",
+      "label": "execute_stale_plan",
+      "payload": {
+        "status": 409,
+        "response": {
+          "error": {
+            "code": "STALE_WORLD_STATE",
+            "message": "plan episode/state_version is stale",
+            "retryable": true
+          }
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:23.396555+00:00",
+      "label": "state_after_move",
+      "payload": {
+        "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+        "episode_id": "ep_47fa705068c84fc19f85d76e9ce59175",
+        "state_version": 1,
+        "sim_step": 30,
+        "sim_time_s": 0.15000000000000005,
+        "state": {
+          "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+          "episode_id": "ep_47fa705068c84fc19f85d76e9ce59175",
+          "env_id": 0,
+          "state_version": 1,
+          "event_seq": 1,
+          "sim_step": 30,
+          "sim_time_s": 0.15000000000000005,
+          "wall_time": "2026-11-07T05:43:23.395666Z",
+          "source": "sim_ground_truth",
+          "frame": "world",
+          "robots": [
+            {
+              "robot_id": "so101",
+              "dof": 6,
+              "joint_positions": [
+                5.187316105548234e-07,
+                0.025701025500893593,
+                0.023332785815000534,
+                0.005406438373029232,
+                -1.2499252079578582e-05,
+                -0.000638995785266161
+              ],
+              "joint_velocities": [
+                0.000237731946981512,
+                0.024970917031168938,
+                0.0025524874217808247,
+                0.007926206104457378,
+                -6.457961717387661e-05,
+                0.002486281329765916
+              ],
+              "ee_pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.020616041496396065,
+                  -0.36561939120292664,
+                  0.2586173117160797
+                ],
+                "orientation_xyzw": [
+                  -0.4862031936645508,
+                  -0.48621293902397156,
+                  -0.5134214758872986,
+                  0.5134217143058777
+                ]
+              },
+              "gripper": {
+                "width_m": 0.09057626106301069,
+                "closed": true
+              }
+            }
+          ],
+          "objects": [
+            {
+              "object_id": "red_block",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.18386752903461456,
+                  -1.0772448177931437e-07,
+                  0.07499999552965164
+                ],
+                "orientation_xyzw": [
+                  2.2511660517920973e-06,
+                  -1.2491731240515946e-06,
+                  -3.8484122555360045e-09,
+                  1.0
+                ]
+              },
+              "size_m": [
+                0.03,
+                0.03,
+                0.03
+              ],
+              "grasped_by": null,
+              "visible": true
+            },
+            {
+              "object_id": "target_box",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.22,
+                  0.05,
+                  0.02
+                ],
+                "orientation_xyzw": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "size_m": [
+                0.1,
+                0.1,
+                0.04
+              ],
+              "grasped_by": null,
+              "visible": true
+            }
+          ],
+          "skills": [
+            {
+              "skill": "move_object",
+              "phase": "succeeded",
+              "progress": 1.0,
+              "message": null
+            }
+          ]
+        },
+        "skills": [
+          "hold_pose",
+          "move_object",
+          "observe_scene",
+          "pick"
+        ]
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:23.400560+00:00",
+      "label": "validate_plan_2",
+      "payload": {
+        "status": 200,
+        "response": {
+          "task_id": "task_d5210426a5f4407aac5378e145845035",
+          "plan_hash": "ccccb447fec8de728fee601b4415d8d5aaf63c28af878b2ac7bb2f19f9df0219",
+          "valid": true
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:23.427937+00:00",
+      "label": "execute_plan_2",
+      "payload": {
+        "status": 202,
+        "response": {
+          "job_id": "job_3861d32181fd42c59225c6f3be8959ce",
+          "kind": "task",
+          "status": "pending",
+          "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+          "task_id": "task_d5210426a5f4407aac5378e145845035",
+          "skill": null,
+          "worker_job_id": null,
+          "parent_job_id": null,
+          "progress": null,
+          "cancel_requested": false,
+          "created_at": "2026-11-07T05:43:23.427394+00:00",
+          "updated_at": "2026-11-07T05:43:23.427394+00:00"
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:33.757488+00:00",
+      "label": "task_job_2",
+      "payload": {
+        "job_id": "job_3861d32181fd42c59225c6f3be8959ce",
+        "kind": "task",
+        "status": "succeeded",
+        "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+        "task_id": "task_d5210426a5f4407aac5378e145845035",
+        "skill": null,
+        "worker_job_id": null,
+        "parent_job_id": null,
+        "progress": 1.0,
+        "cancel_requested": false,
+        "created_at": "2026-11-07T05:43:23.427394+00:00",
+        "updated_at": "2026-11-07T05:43:33.633478+00:00"
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:33.761138+00:00",
+      "label": "state_after_plan_2",
+      "payload": {
+        "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+        "episode_id": "ep_47fa705068c84fc19f85d76e9ce59175",
+        "state_version": 2,
+        "sim_step": 2090,
+        "sim_time_s": 10.450000000000001,
+        "state": {
+          "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+          "episode_id": "ep_47fa705068c84fc19f85d76e9ce59175",
+          "env_id": 0,
+          "state_version": 2,
+          "event_seq": 3,
+          "sim_step": 2090,
+          "sim_time_s": 10.450000000000001,
+          "wall_time": "2026-11-07T05:43:33.760060Z",
+          "source": "sim_ground_truth",
+          "frame": "world",
+          "robots": [
+            {
+              "robot_id": "so101",
+              "dof": 6,
+              "joint_positions": [
+                -1.891426682472229,
+                -0.0001677822438068688,
+                -0.21459944546222687,
+                1.6548783779144287,
+                1.2471014261245728,
+                0.59980708360672
+              ],
+              "joint_velocities": [
+                0.0003906729107256979,
+                -0.07541957497596741,
+                -0.09660008549690247,
+                0.03381277620792389,
+                -0.0023298265878111124,
+                0.00045012542977929115
+              ],
+              "ee_pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.2183559238910675,
+                  0.04944176226854324,
+                  0.1509266495704651
+                ],
+                "orientation_xyzw": [
+                  -0.029176095500588417,
+                  -0.058417271822690964,
+                  0.7045180797576904,
+                  0.7066757082939148
+                ]
+              },
+              "gripper": {
+                "width_m": 0.40333093461830877,
+                "closed": false
+              }
+            }
+          ],
+          "objects": [
+            {
+              "object_id": "red_block",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.23257306218147278,
+                  0.05861341580748558,
+                  0.05499999597668648
+                ],
+                "orientation_xyzw": [
+                  2.0456693619053112e-06,
+                  -1.068685946847836e-06,
+                  0.038324274122714996,
+                  0.9992652535438538
+                ]
+              },
+              "size_m": [
+                0.03,
+                0.03,
+                0.03
+              ],
+              "grasped_by": null,
+              "visible": true
+            },
+            {
+              "object_id": "target_box",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.22,
+                  0.05,
+                  0.02
+                ],
+                "orientation_xyzw": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "size_m": [
+                0.1,
+                0.1,
+                0.04
+              ],
+              "grasped_by": null,
+              "visible": true
+            }
+          ],
+          "skills": [
+            {
+              "skill": "pick",
+              "phase": "succeeded",
+              "progress": 1.0,
+              "message": null
+            }
+          ]
+        },
+        "skills": [
+          "hold_pose",
+          "move_object",
+          "observe_scene",
+          "pick"
+        ]
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:33.794158+00:00",
+      "label": "reset",
+      "payload": {
+        "status": 202,
+        "response": {
+          "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+          "episode_id": "ep_65f76fc3cab24ee39379d5fb9f2d303a",
+          "state": {
+            "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+            "episode_id": "ep_65f76fc3cab24ee39379d5fb9f2d303a",
+            "env_id": 0,
+            "state_version": 3,
+            "event_seq": 4,
+            "sim_step": 0,
+            "sim_time_s": 0.0,
+            "wall_time": "2026-11-07T05:43:33.793244Z",
+            "source": "sim_ground_truth",
+            "frame": "world",
+            "robots": [
+              {
+                "robot_id": "so101",
+                "dof": 6,
+                "joint_positions": [
+                  -1.891426682472229,
+                  -0.0001677822438068688,
+                  -0.21459944546222687,
+                  1.6548783779144287,
+                  1.2471014261245728,
+                  0.59980708360672
+                ],
+                "joint_velocities": [
+                  0.0003906729107256979,
+                  -0.07541957497596741,
+                  -0.09660008549690247,
+                  0.03381277620792389,
+                  -0.0023298265878111124,
+                  0.00045012542977929115
+                ],
+                "ee_pose": {
+                  "frame": "world",
+                  "frame_id": null,
+                  "position": [
+                    0.2183559238910675,
+                    0.04944176226854324,
+                    0.1509266495704651
+                  ],
+                  "orientation_xyzw": [
+                    -0.029176095500588417,
+                    -0.058417271822690964,
+                    0.7045180797576904,
+                    0.7066757082939148
+                  ]
+                },
+                "gripper": {
+                  "width_m": 0.40333093461830877,
+                  "closed": false
+                }
+              }
+            ],
+            "objects": [
+              {
+                "object_id": "red_block",
+                "pose": {
+                  "frame": "world",
+                  "frame_id": null,
+                  "position": [
+                    0.23257306218147278,
+                    0.05861341580748558,
+                    0.05499999597668648
+                  ],
+                  "orientation_xyzw": [
+                    2.0456693619053112e-06,
+                    -1.068685946847836e-06,
+                    0.038324274122714996,
+                    0.9992652535438538
+                  ]
+                },
+                "size_m": [
+                  0.03,
+                  0.03,
+                  0.03
+                ],
+                "grasped_by": null,
+                "visible": true
+              },
+              {
+                "object_id": "target_box",
+                "pose": {
+                  "frame": "world",
+                  "frame_id": null,
+                  "position": [
+                    0.22,
+                    0.05,
+                    0.02
+                  ],
+                  "orientation_xyzw": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                },
+                "size_m": [
+                  0.1,
+                  0.1,
+                  0.04
+                ],
+                "grasped_by": null,
+                "visible": true
+              }
+            ],
+            "skills": []
+          }
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:33.819944+00:00",
+      "label": "state_after_reset",
+      "payload": {
+        "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+        "episode_id": "ep_65f76fc3cab24ee39379d5fb9f2d303a",
+        "state_version": 3,
+        "sim_step": 0,
+        "sim_time_s": 0.0,
+        "state": {
+          "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+          "episode_id": "ep_65f76fc3cab24ee39379d5fb9f2d303a",
+          "env_id": 0,
+          "state_version": 3,
+          "event_seq": 4,
+          "sim_step": 0,
+          "sim_time_s": 0.0,
+          "wall_time": "2026-11-07T05:43:33.818936Z",
+          "source": "sim_ground_truth",
+          "frame": "world",
+          "robots": [
+            {
+              "robot_id": "so101",
+              "dof": 6,
+              "joint_positions": [
+                -1.891426682472229,
+                -0.0001677822438068688,
+                -0.21459944546222687,
+                1.6548783779144287,
+                1.2471014261245728,
+                0.59980708360672
+              ],
+              "joint_velocities": [
+                0.0003906729107256979,
+                -0.07541957497596741,
+                -0.09660008549690247,
+                0.03381277620792389,
+                -0.0023298265878111124,
+                0.00045012542977929115
+              ],
+              "ee_pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.2183559238910675,
+                  0.04944176226854324,
+                  0.1509266495704651
+                ],
+                "orientation_xyzw": [
+                  -0.029176095500588417,
+                  -0.058417271822690964,
+                  0.7045180797576904,
+                  0.7066757082939148
+                ]
+              },
+              "gripper": {
+                "width_m": 0.40333093461830877,
+                "closed": false
+              }
+            }
+          ],
+          "objects": [
+            {
+              "object_id": "red_block",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.23257306218147278,
+                  0.05861341580748558,
+                  0.05499999597668648
+                ],
+                "orientation_xyzw": [
+                  2.0456693619053112e-06,
+                  -1.068685946847836e-06,
+                  0.038324274122714996,
+                  0.9992652535438538
+                ]
+              },
+              "size_m": [
+                0.03,
+                0.03,
+                0.03
+              ],
+              "grasped_by": null,
+              "visible": true
+            },
+            {
+              "object_id": "target_box",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.22,
+                  0.05,
+                  0.02
+                ],
+                "orientation_xyzw": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "size_m": [
+                0.1,
+                0.1,
+                0.04
+              ],
+              "grasped_by": null,
+              "visible": true
+            }
+          ],
+          "skills": []
+        },
+        "skills": [
+          "hold_pose",
+          "move_object",
+          "observe_scene",
+          "pick"
+        ]
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:34.110970+00:00",
+      "label": "fault_move_block_2",
+      "payload": {
+        "http_status": 202,
+        "job": {
+          "job_id": "job_1ddc09afb169446f84bae88692784c73",
+          "kind": "skill",
+          "status": "succeeded",
+          "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+          "task_id": null,
+          "skill": "move_object",
+          "worker_job_id": "job_5eafa2b2fe6f408b9ce180445d758b63",
+          "parent_job_id": null,
+          "progress": 1.0,
+          "cancel_requested": false,
+          "created_at": "2026-11-07T05:43:33.835174+00:00",
+          "updated_at": "2026-11-07T05:43:33.961828+00:00"
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:34.128437+00:00",
+      "label": "state_after_move_2",
+      "payload": {
+        "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+        "episode_id": "ep_65f76fc3cab24ee39379d5fb9f2d303a",
+        "state_version": 4,
+        "sim_step": 30,
+        "sim_time_s": 0.15000000000000005,
+        "state": {
+          "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+          "episode_id": "ep_65f76fc3cab24ee39379d5fb9f2d303a",
+          "env_id": 0,
+          "state_version": 4,
+          "event_seq": 5,
+          "sim_step": 30,
+          "sim_time_s": 0.15000000000000005,
+          "wall_time": "2026-11-07T05:43:34.126894Z",
+          "source": "sim_ground_truth",
+          "frame": "world",
+          "robots": [
+            {
+              "robot_id": "so101",
+              "dof": 6,
+              "joint_positions": [
+                -1.8914138078689575,
+                -0.0016749660717323422,
+                -0.2169034332036972,
+                1.6580536365509033,
+                1.2469213008880615,
+                0.5998050570487976
+              ],
+              "joint_velocities": [
+                0.0002839278895407915,
+                -0.058309514075517654,
+                -0.07291753590106964,
+                0.0018535014241933823,
+                -0.0005361944204196334,
+                0.0004644834261853248
+              ],
+              "ee_pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.2181609869003296,
+                  0.0493738129734993,
+                  0.15148018300533295
+                ],
+                "orientation_xyzw": [
+                  -0.029312826693058014,
+                  -0.058703333139419556,
+                  0.7044352293014526,
+                  0.7067288160324097
+                ]
+              },
+              "gripper": {
+                "width_m": 0.40332987904398965,
+                "closed": false
+              }
+            }
+          ],
+          "objects": [
+            {
+              "object_id": "red_block",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.19999989867210388,
+                  -1.345724314205654e-07,
+                  0.07499999552965164
+                ],
+                "orientation_xyzw": [
+                  2.171799678762909e-06,
+                  -1.224458515025617e-06,
+                  -8.470081525047135e-09,
+                  0.9999999403953552
+                ]
+              },
+              "size_m": [
+                0.03,
+                0.03,
+                0.03
+              ],
+              "grasped_by": null,
+              "visible": true
+            },
+            {
+              "object_id": "target_box",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.22,
+                  0.05,
+                  0.02
+                ],
+                "orientation_xyzw": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "size_m": [
+                0.1,
+                0.1,
+                0.04
+              ],
+              "grasped_by": null,
+              "visible": true
+            }
+          ],
+          "skills": [
+            {
+              "skill": "move_object",
+              "phase": "succeeded",
+              "progress": 1.0,
+              "message": null
+            }
+          ]
+        },
+        "skills": [
+          "hold_pose",
+          "move_object",
+          "observe_scene",
+          "pick"
+        ]
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:34.132352+00:00",
+      "label": "validate_plan_3_wrong_variant",
+      "payload": {
+        "status": 200,
+        "response": {
+          "task_id": "task_d5210426a5f4407aac5378e145845035",
+          "plan_hash": "3b7a77ca002b791276209792b272552d536856949e70ac5966721853a795b460",
+          "valid": true
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:34.136240+00:00",
+      "label": "execute_plan_3_wrong_variant",
+      "payload": {
+        "status": 202,
+        "response": {
+          "job_id": "job_61cfb5accc31437eb063d35b0e18174c",
+          "kind": "task",
+          "status": "pending",
+          "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+          "task_id": "task_d5210426a5f4407aac5378e145845035",
+          "skill": null,
+          "worker_job_id": null,
+          "parent_job_id": null,
+          "progress": null,
+          "cancel_requested": false,
+          "created_at": "2026-11-07T05:43:34.135313+00:00",
+          "updated_at": "2026-11-07T05:43:34.135313+00:00"
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:36.187058+00:00",
+      "label": "task_job_3",
+      "payload": {
+        "job_id": "job_61cfb5accc31437eb063d35b0e18174c",
+        "kind": "task",
+        "status": "failed",
+        "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+        "task_id": "task_d5210426a5f4407aac5378e145845035",
+        "skill": null,
+        "worker_job_id": null,
+        "parent_job_id": null,
+        "progress": null,
+        "cancel_requested": false,
+        "created_at": "2026-11-07T05:43:34.135313+00:00",
+        "updated_at": "2026-11-07T05:43:36.174457+00:00",
+        "error": {
+          "code": "GRASP_MISSED",
+          "message": "GRASP_MISSED"
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:36.212464+00:00",
+      "label": "state_after_failure",
+      "payload": {
+        "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+        "episode_id": "ep_65f76fc3cab24ee39379d5fb9f2d303a",
+        "state_version": 5,
+        "sim_step": 550,
+        "sim_time_s": 2.75,
+        "state": {
+          "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+          "episode_id": "ep_65f76fc3cab24ee39379d5fb9f2d303a",
+          "env_id": 0,
+          "state_version": 5,
+          "event_seq": 7,
+          "sim_step": 550,
+          "sim_time_s": 2.75,
+          "wall_time": "2026-11-07T05:43:36.211453Z",
+          "source": "sim_ground_truth",
+          "frame": "world",
+          "robots": [
+            {
+              "robot_id": "so101",
+              "dof": 6,
+              "joint_positions": [
+                -1.6408027410507202,
+                -0.2397119104862213,
+                0.5632927417755127,
+                1.2813485860824585,
+                1.499669075012207,
+                0.39988723397254944
+              ],
+              "joint_velocities": [
+                0.0008782713557593524,
+                -0.01911545731127262,
+                0.019315028563141823,
+                -0.018305126577615738,
+                -0.007552796043455601,
+                0.006301682908087969
+              ],
+              "ee_pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.17586877942085266,
+                  -0.00527780968695879,
+                  0.08108506351709366
+                ],
+                "orientation_xyzw": [
+                  0.011186516843736172,
+                  0.01288582757115364,
+                  0.706609845161438,
+                  0.7073976397514343
+                ]
+              },
+              "gripper": {
+                "width_m": 0.29919857460211347,
+                "closed": false
+              }
+            }
+          ],
+          "objects": [
+            {
+              "object_id": "red_block",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.19999989867210388,
+                  -1.3442857493828342e-07,
+                  0.07499999552965164
+                ],
+                "orientation_xyzw": [
+                  2.3468562631023815e-06,
+                  -1.3153196505300002e-06,
+                  -4.568981992747467e-08,
+                  0.9999999403953552
+                ]
+              },
+              "size_m": [
+                0.03,
+                0.03,
+                0.03
+              ],
+              "grasped_by": null,
+              "visible": true
+            },
+            {
+              "object_id": "target_box",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.22,
+                  0.05,
+                  0.02
+                ],
+                "orientation_xyzw": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "size_m": [
+                0.1,
+                0.1,
+                0.04
+              ],
+              "grasped_by": null,
+              "visible": true
+            }
+          ],
+          "skills": [
+            {
+              "skill": "pick",
+              "phase": "failed",
+              "progress": 1.0,
+              "message": "GRASP_MISSED"
+            }
+          ]
+        },
+        "skills": [
+          "hold_pose",
+          "move_object",
+          "observe_scene",
+          "pick"
+        ]
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:36.216779+00:00",
+      "label": "validate_plan_4",
+      "payload": {
+        "status": 200,
+        "response": {
+          "task_id": "task_d5210426a5f4407aac5378e145845035",
+          "plan_hash": "2829157afa185a94545bc93ad38a58448644d14aa26bee5003c1ec52b14f7b8d",
+          "valid": true
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:36.243878+00:00",
+      "label": "execute_plan_4",
+      "payload": {
+        "status": 202,
+        "response": {
+          "job_id": "job_156fad2219da402da9b13a11ed60ca36",
+          "kind": "task",
+          "status": "pending",
+          "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+          "task_id": "task_d5210426a5f4407aac5378e145845035",
+          "skill": null,
+          "worker_job_id": null,
+          "parent_job_id": null,
+          "progress": null,
+          "cancel_requested": false,
+          "created_at": "2026-11-07T05:43:36.243371+00:00",
+          "updated_at": "2026-11-07T05:43:36.243371+00:00"
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:46.804499+00:00",
+      "label": "task_job_4",
+      "payload": {
+        "job_id": "job_156fad2219da402da9b13a11ed60ca36",
+        "kind": "task",
+        "status": "succeeded",
+        "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+        "task_id": "task_d5210426a5f4407aac5378e145845035",
+        "skill": null,
+        "worker_job_id": null,
+        "parent_job_id": null,
+        "progress": 1.0,
+        "cancel_requested": false,
+        "created_at": "2026-11-07T05:43:36.243371+00:00",
+        "updated_at": "2026-11-07T05:43:46.667031+00:00"
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:46.822467+00:00",
+      "label": "state_final",
+      "payload": {
+        "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+        "episode_id": "ep_65f76fc3cab24ee39379d5fb9f2d303a",
+        "state_version": 6,
+        "sim_step": 2610,
+        "sim_time_s": 13.05,
+        "state": {
+          "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+          "episode_id": "ep_65f76fc3cab24ee39379d5fb9f2d303a",
+          "env_id": 0,
+          "state_version": 6,
+          "event_seq": 9,
+          "sim_step": 2610,
+          "sim_time_s": 13.05,
+          "wall_time": "2026-11-07T05:43:46.821442Z",
+          "source": "sim_ground_truth",
+          "frame": "world",
+          "robots": [
+            {
+              "robot_id": "so101",
+              "dof": 6,
+              "joint_positions": [
+                -1.8914270401000977,
+                -0.00016735514509491622,
+                -0.21459972858428955,
+                1.6548781394958496,
+                1.2471014261245728,
+                0.5998070240020752
+              ],
+              "joint_velocities": [
+                0.0003941538743674755,
+                -0.07542382925748825,
+                -0.09659716486930847,
+                0.03381519019603729,
+                -0.002329818205907941,
+                0.0004507432458922267
+              ],
+              "ee_pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.2183559536933899,
+                  0.0494418740272522,
+                  0.1509265899658203
+                ],
+                "orientation_xyzw": [
+                  -0.02917594648897648,
+                  -0.05841721221804619,
+                  0.70451819896698,
+                  0.7066755890846252
+                ]
+              },
+              "gripper": {
+                "width_m": 0.4033309035720053,
+                "closed": false
+              }
+            }
+          ],
+          "objects": [
+            {
+              "object_id": "red_block",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.23216533660888672,
+                  0.05845094472169876,
+                  0.05499999597668648
+                ],
+                "orientation_xyzw": [
+                  1.995369984797435e-06,
+                  -1.2953602208654047e-06,
+                  0.014057999476790428,
+                  0.9999011158943176
+                ]
+              },
+              "size_m": [
+                0.03,
+                0.03,
+                0.03
+              ],
+              "grasped_by": null,
+              "visible": true
+            },
+            {
+              "object_id": "target_box",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.22,
+                  0.05,
+                  0.02
+                ],
+                "orientation_xyzw": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "size_m": [
+                0.1,
+                0.1,
+                0.04
+              ],
+              "grasped_by": null,
+              "visible": true
+            }
+          ],
+          "skills": [
+            {
+              "skill": "pick",
+              "phase": "succeeded",
+              "progress": 1.0,
+              "message": null
+            }
+          ]
+        },
+        "skills": [
+          "hold_pose",
+          "move_object",
+          "observe_scene",
+          "pick"
+        ]
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:46.823998+00:00",
+      "label": "summary",
+      "payload": {
+        "stale_detected": false,
+        "task_3_failure": "GRASP_MISSED",
+        "success_after_recovery": true,
+        "failure_then_recovery": true,
+        "block_final": [
+          0.23216533660888672,
+          0.05845094472169876,
+          0.05499999597668648
+        ]
+      }
+    },
+    {
+      "at": "2026-11-07T05:43:57.025922+00:00",
+      "label": "close",
+      "payload": {
+        "status": 202,
+        "response": {
+          "simulation_id": "sim_fb857e9968334dffa47c8b02bbca7c11",
+          "closed": true
+        }
+      }
+    }
+  ],
+  "success_after_recovery": true,
+  "failure_then_recovery": true,
+  "stale_detected": false,
+  "task_3_failure": "GRASP_MISSED",
+  "block_final": [
+    0.23216533660888672,
+    0.05845094472169876,
+    0.05499999597668648
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "results": [
+    {
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "close_angle": 0.0,
+      "target": [
+        0.18,
+        0.0,
+        0.075
+      ],
+      "ik_error": 0.015701910480856895,
+      "lift_ik_error": 0.005545509979128838,
+      "block_z_after_lift": 0.07499998807907104,
+      "lifted": false
+    },
+    {
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "close_angle": 0.4,
+      "target": [
+        0.18,
+        0.0,
+        0.075
+      ],
+      "ik_error": 0.01551111787557602,
+      "lift_ik_error": 0.005575810559093952,
+      "block_z_after_lift": 0.07499998807907104,
+      "lifted": false
+    },
+    {
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "close_angle": 0.8,
+      "target": [
+        0.18,
+        0.0,
+        0.075
+      ],
+      "ik_error": 0.015512718819081783,
+      "lift_ik_error": 0.00556756928563118,
+      "block_z_after_lift": 0.07499998807907104,
+      "lifted": false
+    },
+    {
+      "offset": [
+        0.02,
+        0.0,
+        0.0
+      ],
+      "close_angle": 0.4,
+      "target": [
+        0.19999999999999998,
+        0.0,
+        0.075
+      ],
+      "ik_error": 0.015476617962121964,
+      "lift_ik_error": 0.00521516939625144,
+      "block_z_after_lift": 0.07499998807907104,
+      "lifted": false
+    },
+    {
+      "offset": [
+        -0.02,
+        0.0,
+        0.0
+      ],
+      "close_angle": 0.4,
+      "target": [
+        0.16,
+        0.0,
+        0.075
+      ],
+      "ik_error": 0.012000327929854393,
+      "lift_ik_error": 0.005820136051625013,
+      "block_z_after_lift": 0.07499998062849045,
+      "lifted": false
+    },
+    {
+      "offset": [
+        0.0,
+        0.02,
+        0.0
+      ],
+      "close_angle": 0.4,
+      "target": [
+        0.18,
+        0.02,
+        0.075
+      ],
+      "ik_error": 0.03521251305937767,
+      "lift_ik_error": 0.0052368128672242165,
+      "block_z_after_lift": 0.07499999552965164,
+      "lifted": false
+    },
+    {
+      "offset": [
+        0.0,
+        -0.02,
+        0.0
+      ],
+      "close_angle": 0.4,
+      "target": [
+        0.18,
+        -0.02,
+        0.075
+      ],
+      "ik_error": 0.014643137343227863,
+      "lift_ik_error": 0.005683654919266701,
+      "block_z_after_lift": 0.07499999552965164,
+      "lifted": false
+    },
+    {
+      "offset": [
+        0.0,
+        0.0,
+        0.03
+      ],
+      "close_angle": 0.4,
+      "target": [
+        0.18,
+        0.0,
+        0.105
+      ],
+      "ik_error": 0.010868131183087826,
+      "lift_ik_error": 0.0061926329508423805,
+      "block_z_after_lift": 0.07499999552965164,
+      "lifted": false
+    },
+    {
+      "offset": [
+        0.0,
+        0.0,
+        -0.02
+      ],
+      "close_angle": 0.4,
+      "target": [
+        0.18,
+        0.0,
+        0.05499999999999999
+      ],
+      "ik_error": 0.042077891528606415,
+      "lift_ik_error": 0.005266890861093998,
+      "block_z_after_lift": 0.07499999552965164,
+      "lifted": false
+    }
+  ]
+}

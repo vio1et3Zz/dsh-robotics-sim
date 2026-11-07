@@ -1,0 +1,92 @@
+{
+  "run_id": "variant_fail",
+  "matrix": {
+    "name": "variant_x016_missing",
+    "path": "configs\\agent_eval_variant_fail.json",
+    "description": "D 闭环 demo 第 1 步：块放在 x=0.16，当前只有 0.18/0.20 变体 → 预期 GRASP_POSE_UNAVAILABLE。"
+  },
+  "started_at": "2026-11-07T12:44:53.535863+00:00",
+  "simulation": {
+    "profile_id": "profile_so101_physx",
+    "seed": 7,
+    "simulation_id": "sim_f5f18a47780148afa894cfd303a552ff",
+    "startup_wall_s": 9.56
+  },
+  "episodes": [
+    {
+      "index": 1,
+      "task_id": "pick_x016_missing_variant",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "expected_failure": "GRASP_POSE_UNAVAILABLE",
+      "jsonl": "artifacts\\agent_eval\\variant_fail\\episode_01.jsonl",
+      "job_id": "job_4adf9883afe448868f2df7aa7c322e5d",
+      "status": "failed",
+      "error_code": "GRASP_POSE_UNAVAILABLE",
+      "passed": false,
+      "details": {
+        "job_status": "failed",
+        "block": [
+          0.16013203561306,
+          -1.6118221424221701e-07,
+          0.07499999552965164
+        ],
+        "xy_distance": 0.078,
+        "z": 0.075,
+        "passed": false
+      },
+      "wall_s": 0.21,
+      "sim_step_end": 30,
+      "sim_time_s_end": 0.15000000000000005,
+      "state_version_end": 3,
+      "frames": 2,
+      "frame_steps": [
+        30,
+        30
+      ],
+      "events": 4,
+      "records": 14,
+      "setup": [
+        {
+          "skill": "move_object",
+          "job_id": "job_35fe4406589f490680d0742dc4639e16",
+          "status": "succeeded"
+        }
+      ],
+      "final_frame": "frame_766bda7fc09c46cab729a0a0884ea88e",
+      "expected_met": true
+    }
+  ],
+  "start": {
+    "job_id": "job_03dd70adac7d42748f24d5f4e9edd032",
+    "status": "succeeded",
+    "error": null,
+    "wall_s": 9.56
+  },
+  "summary": {
+    "episodes": 1,
+    "passed": 0,
+    "pass_rate": 0.0,
+    "expected_met": 1,
+    "failure_codes": {
+      "GRASP_POSE_UNAVAILABLE": 1
+    },
+    "failure_categories": {
+      "grasp_pose_unavailable": 1
+    },
+    "wall_s": {
+      "total": 0.21,
+      "mean": 0.21,
+      "median": 0.21
+    },
+    "frames": 2,
+    "events": 4
+  },
+  "verdict": {
+    "ok": true,
+    "expected_met_all": true
+  },
+  "finished_at": "2026-11-07T12:45:03.706813+00:00",
+  "closed": true
+}

@@ -1,0 +1,38 @@
+{
+  "name": "failure_taxonomy",
+  "description": "B3：两类已知失败（抓取位姿不可用 / 目标不可达）+ 一次成功对照，用于校验失败分类计数。",
+  "simulation": {
+    "profile_id": "profile_so101_physx",
+    "seed": 7,
+    "budget": {"max_sim_time_s": 600.0, "max_wall_time_s": 1200.0}
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "task_id": "grasp_pose_unavailable",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "setup": [
+        {"skill": "move_object", "parameters": {"object_id": "red_block", "position": [0.16, 0.0, 0.075]}}
+      ],
+      "expected_failure": "GRASP_POSE_UNAVAILABLE"
+    },
+    {
+      "episode": 2,
+      "task_id": "unreachable_place",
+      "skill": "pick",
+      "parameters": {"place_x": 0.30, "place_y": 0.05},
+      "seed": 7,
+      "expected_failure": "UNREACHABLE_TARGET"
+    },
+    {
+      "episode": 3,
+      "task_id": "baseline_control",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "expected_failure": null
+    }
+  ]
+}

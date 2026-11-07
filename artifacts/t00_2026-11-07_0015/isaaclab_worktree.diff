@@ -1,0 +1,30 @@
+﻿diff --git a/scripts/reinforcement_learning/rsl_rl/play_rsl_rl.py b/scripts/reinforcement_learning/rsl_rl/play_rsl_rl.py
+index ce7281074..e35afcf64 100644
+--- a/scripts/reinforcement_learning/rsl_rl/play_rsl_rl.py
++++ b/scripts/reinforcement_learning/rsl_rl/play_rsl_rl.py
+@@ -9,6 +9,7 @@ import argparse
+ import contextlib
+ import importlib.metadata as metadata
+ import os
++import platform
+ import sys
+ import time
+ 
+@@ -170,6 +171,17 @@ def main(env_cfg: ManagerBasedRLEnvCfg | DirectRLEnvCfg | DirectMARLEnvCfg, agen
+ 
+         # export the trained policy to JIT and ONNX formats
+         export_model_dir = os.path.join(os.path.dirname(resume_path), "exported")
++        # TorchScript's Windows serializer cannot save to paths containing non-ASCII
++        # characters. Keep checkpoint loading at its original location, but redirect
++        # exported deployment artifacts to an ASCII-only per-user directory.
++        if platform.system() == "Windows" and not export_model_dir.isascii():
++            experiment_name = os.path.basename(os.path.dirname(os.path.dirname(resume_path)))
++            run_name = os.path.basename(os.path.dirname(resume_path))
++            export_model_dir = os.path.join(
++                os.environ["LOCALAPPDATA"], "IsaacLab", "exported", experiment_name, run_name
++            )
++            print(f"[INFO]: Non-ASCII checkpoint path detected; exporting policy to: {export_model_dir}")
++        os.makedirs(export_model_dir, exist_ok=True)
+ 
+         if version.parse(installed_version) >= version.parse("4.0.0"):
+             # use the new export functions for rsl-rl >= 4.0.0

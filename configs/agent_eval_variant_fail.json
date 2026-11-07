@@ -1,0 +1,22 @@
+{
+  "name": "variant_x016_missing",
+  "description": "D 闭环 demo 第 1 步：块放在 x=0.16，当前只有 0.18/0.20 变体 → 预期 GRASP_POSE_UNAVAILABLE。",
+  "simulation": {
+    "profile_id": "profile_so101_physx",
+    "seed": 7,
+    "budget": {"max_sim_time_s": 600.0, "max_wall_time_s": 1200.0}
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "task_id": "pick_x016_missing_variant",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "setup": [
+        {"skill": "move_object", "parameters": {"object_id": "red_block", "position": [0.16, 0.0, 0.075]}}
+      ],
+      "expected_failure": "GRASP_POSE_UNAVAILABLE"
+    }
+  ]
+}

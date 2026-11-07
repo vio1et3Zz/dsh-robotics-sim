@@ -1,0 +1,117 @@
+{
+  "runId": "t02_2026-11-07_0150",
+  "stage": "T02",
+  "status": "passed",
+  "checks": {
+    "scene_ready": true,
+    "joint_count_matches": true,
+    "state_finite": true,
+    "illegal_action_rejected": true,
+    "unknown_joint_rejected": true,
+    "illegal_action_not_written": true,
+    "calibration_passed": true,
+    "state_version_advanced": true,
+    "episode_changed_on_reset": true,
+    "reset_state_valid": true,
+    "close_idempotent": true
+  },
+  "robot": {
+    "robot_id": "franka",
+    "model": "Franka Emika Panda",
+    "dof": 9,
+    "joints": [
+      "panda_joint1",
+      "panda_joint2",
+      "panda_joint3",
+      "panda_joint4",
+      "panda_joint5",
+      "panda_joint6",
+      "panda_joint7",
+      "panda_finger_joint1",
+      "panda_finger_joint2"
+    ],
+    "asset": {
+      "usd_path": "<repo>\\assets\\isaac6\\FrankaPanda\\franka.usd",
+      "sha256": null,
+      "license": "Isaac Lab / NVIDIA Isaac Sim asset license",
+      "source": "isaaclab_assets.robots.franka.FRANKA_PANDA_CFG (franka.usd)"
+    }
+  },
+  "calibration": {
+    "joint": "panda_joint1",
+    "index": 0,
+    "delta_requested_rad": 0.05,
+    "target_rad": 0.04992139093956212,
+    "lower_rad": -2.8973000049591064,
+    "upper_rad": 2.8973000049591064,
+    "margin_rad": 0.05,
+    "hold_s": 0.25,
+    "settle_s": 0.2,
+    "hold_steps": 50,
+    "start_rad": -7.860906043788418e-05,
+    "measured_hold_rad": 0.04989573359489441,
+    "hold_error_rad": 2.5657344667709414e-05,
+    "max_tail_error_rad": 2.5657344667709414e-05,
+    "settled_rad": -0.001666199997998774,
+    "return_error_rad": 0.0015875909375608899,
+    "all_joint_positions_after_hold": [
+      0.04989573359489441,
+      0.025087833404541016,
+      0.00014993458171375096,
+      -0.06980038434267044,
+      0.00035602570278570056,
+      0.20593665540218353,
+      0.25126636028289795,
+      7.257976540131494e-05,
+      2.229141136922408e-05
+    ],
+    "passed": true
+  },
+  "timings": {
+    "build_scene": 2.4213101863861084,
+    "total": 6.666874170303345
+  },
+  "manifest": {
+    "runtime_id": "runtime_t02_b04efaacfbf4",
+    "adapter_version": "0.2.0",
+    "source": {
+      "repo": "<isaac-root>\\IsaacLab",
+      "commit": "ffff603eafc6b74264a5261cc0183d6a65390d78",
+      "describe": "v3.0.0-beta2.patch1-dirty",
+      "dirty": true,
+      "diff_sha256": "0394d0a4294c2f64cfdbaf691eadba3df2f705098160588311ff0bdc28191bb2"
+    },
+    "assets": {
+      "franka.usd": "aa480a0c26cfacedd223259bd82b0825a44f857a27769db8be1d34c3f82c6d0f"
+    },
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "memory_mib": 8187,
+      "driver": "616.92"
+    },
+    "worker": {
+      "cwd": "<repo>",
+      "log_dir": "<repo>\\artifacts\\t02_2026-11-07_0150",
+      "num_envs": 1,
+      "device": "cuda:0"
+    }
+  },
+  "evidence": {
+    "result": "result.json",
+    "runtime_manifest": "runtime_manifest.json",
+    "stdout": "stdout.log",
+    "stderr": "stderr.log",
+    "worker": "worker.log"
+  },
+  "priorFailures": [
+    "t02_2026-11-07_0050: panda_instanceable.usd 404",
+    "t02_2026-11-07_0100: remote franka.usd not openable via omni.client",
+    "t02_2026-11-07_0110: remote default_environment.usd 404 for ground plane"
+  ],
+  "limitations": [
+    "One environment, no objects, no camera, no network command queue.",
+    "Calibration is synchronous; cancellation and idempotency are T03.",
+    "EE/body quaternion is assumed xyzw because root_quat_w is xyzw on this build.",
+    "Remote Nucleus assets are unusable here; the local mirror is required."
+  ]
+}

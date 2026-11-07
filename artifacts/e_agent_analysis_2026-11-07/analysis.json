@@ -1,0 +1,93 @@
+{
+  "run_id": "e_failure_analysis",
+  "source_report": "artifacts/agent_eval/e_failure_analysis/report.json",
+  "agent": "DSH session (Agent reads report.json, episode JSONL and a failed frame)",
+  "restated": {
+    "episodes": 6,
+    "passed": 3,
+    "pass_rate": 0.5,
+    "codes": {
+      "OK": 3,
+      "GRASP_MISSED": 1,
+      "OBJECT_OUT_OF_WORKSPACE": 1,
+      "UNREACHABLE_TARGET": 1
+    },
+    "categories": {
+      "unreachable": 2,
+      "grasp_offset": 1
+    }
+  },
+  "matches_script": true,
+  "differences": "Counts and categories match report.json exactly. The analysis adds root-cause labels and a rerun recommendation that the script report does not contain.",
+  "frame_observation": {
+    "episode": 5,
+    "frame_id": "frame_998c9e60a83c43a49c27d45e4cc55bc4",
+    "sim_step": 550,
+    "file": "grasp_missed_final.png",
+    "observation": "Gripper open and left of the red block; jaws do not frame the block. Consistent with a 3 cm grasp-variant offset, not with a contact or solver failure."
+  },
+  "root_causes": [
+    {
+      "episode": 3,
+      "task": "place_out_of_reach",
+      "code": "UNREACHABLE_TARGET",
+      "evidence": "0.21 s, sim_step 0, block unchanged at (0.18, 0, 0.075)",
+      "cause": "place_x=0.30 is outside the reachable/place tolerance region",
+      "kind": "task_parameter_error",
+      "action": "reject at task validation; no grasp fix needed"
+    },
+    {
+      "episode": 4,
+      "task": "block_too_far",
+      "code": "OBJECT_OUT_OF_WORKSPACE",
+      "evidence": "0.20 s, sim_step 30, block settled at (0.25, 0, 0.055) after falling off the platform",
+      "cause": "block moved to x=0.25, outside the 0.14-0.22 grasp workspace",
+      "kind": "scene_error",
+      "action": "keep the block on the platform; not a grasp defect"
+    },
+    {
+      "episode": 5,
+      "task": "stale_grasp_variant",
+      "code": "GRASP_MISSED",
+      "evidence": "3.65 s, 550 steps, block final (0.18987, 0, 0.075), frame shows jaws left of the block",
+      "cause": "block at x=0.19 but grasp_x=0.16 forced: the gripper closed 3 cm to the left",
+      "kind": "task_parameter_error",
+      "action": "rerun the same scene without grasp_x so the worker picks the nearest variant (0.19, verified in D)"
+    }
+  ],
+  "recommendation": {
+    "rerun": {
+      "matrix": "configs/agent_eval_e_recheck.json",
+      "scene": "block at (0.19, 0, 0.075)",
+      "parameters": {},
+      "why": "let variant selection use the measured block position instead of a stale forced grasp_x"
+    },
+    "prediction": {
+      "status": "succeeded",
+      "block_in_target_box": true,
+      "merged_pass_rate": 0.6667,
+      "note": "episodes 3/4 stay as task-validation failures; 4/6 if only episode 5's scene is fixed"
+    }
+  },
+  "actual": {
+    "run": "e_recheck",
+    "report": "artifacts/agent_eval/e_recheck/report.json",
+    "status": "succeeded",
+    "passed": true,
+    "block": [0.22869132459163666, 0.05813184008002281, 0.05499999597668648],
+    "xy_distance": 0.0119,
+    "wall_s": 16.01,
+    "prediction_confirmed": true,
+    "merged_pass_rate": 0.6667
+  },
+  "recovery": {
+    "tool_chain": "DSH robotics_* tools",
+    "stale_detected": true,
+    "stale_error": "STALE_WORLD_STATE: plan episode/state_version is stale",
+    "replan_succeeded": true,
+    "task_job": "job_7794cbc02a544b918e81f55e9cdab4ff",
+    "final_block": [0.23257306218147278, 0.05861341580748558, 0.05499999597668648],
+    "in_target_region": true,
+    "evidence": "recovery.json"
+  }
+}

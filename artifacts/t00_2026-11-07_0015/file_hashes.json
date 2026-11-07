@@ -1,0 +1,50 @@
+[
+  {
+    "name": "kit_exe",
+    "path": "<isaac-root>\\env_isaaclab\\Lib\\site-packages\\isaacsim\\kit\\kit.exe",
+    "bytes": 752224,
+    "sha256": "B339AF98B7DB95CDD26504998746DF5619DA78D07802C9FDAF85424B8C10C6C7"
+  },
+  {
+    "name": "sim_version",
+    "path": "<isaac-root>\\env_isaaclab\\Lib\\site-packages\\isaacsim\\VERSION",
+    "bytes": 36,
+    "sha256": "DD69799842A727B6A272EDFAAA11B471BE6CA19A2D2806973EB5DDB89A2AAC0D"
+  },
+  {
+    "name": "launcher",
+    "path": "<isaac-root>\\isaaclab.cmd",
+    "bytes": 276,
+    "sha256": "989989F7B4EC423A9E9EB0F7CD05FBC0EF30A730B5A07D10CF571A08F30D8757"
+  },
+  {
+    "name": "lab_version",
+    "path": "<isaac-root>\\IsaacLab\\VERSION",
+    "bytes": 7,
+    "sha256": "B97C7F28087977393A99695DE8E3A57BE7F2C904D9F4132F04C5666A0BE39BE7"
+  },
+  {
+    "name": "lab_python",
+    "path": "<isaac-root>\\env_isaaclab\\Scripts\\python.exe",
+    "bytes": 274424,
+    "sha256": "0B471133E110CFB53A061CAD528CE8E517D7B9AC41A0A396C39AD795A487FC14"
+  },
+  {
+    "name": "play_rsl_rl",
+    "path": "<isaac-root>\\IsaacLab\\scripts\\reinforcement_learning\\rsl_rl\\play_rsl_rl.py",
+    "bytes": 11063,
+    "sha256": "D6ED90D293525A5C231CD7255E769DC453A030BC73C08368EDE2104E54D41972"
+  },
+  {
+    "name": "untracked_underscore",
+    "path": "<isaac-root>\\IsaacLab\\_",
+    "bytes": 1855,
+    "sha256": "620A14D3A4EAEEC90E30D16D7B756DC85A4BB885E0DB941F70D83E92A40C3210"
+  },
+  {
+    "name": "lab_kit_app",
+    "path": "<isaac-root>\\IsaacLab\\apps\\isaaclab.python.kit",
+    "bytes": 11885,
+    "sha256": "EF61ADA2D98AC8CBF3A9D7128F24550343BEE112FC08A3D0814A426E208C1FE9"
+  }
+]

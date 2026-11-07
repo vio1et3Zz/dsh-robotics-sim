@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Robotics Gateway",
+    "description": "Start, inspect, command and cancel a local Isaac simulation through the DSH Robotics Gateway."
+  }
+}

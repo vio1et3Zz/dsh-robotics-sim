@@ -1,0 +1,143 @@
+{
+  "base": "http://127.0.0.1:8714",
+  "started_at": "2026-11-07T19:29:14+0800",
+  "startup": {
+    "job_id": "job_e031c7e818604ff9bbac5077e1f5d779",
+    "status": "succeeded",
+    "error": null
+  },
+  "simulation_id": "sim_15cd66323c1240dabf5cfbf3da58bb4c",
+  "state_before": {
+    "episode_id": "ep_b9f98900aaba4d4695e8755d1fcdd340",
+    "state_version": 0,
+    "sim_step": 0
+  },
+  "job_id": "job_206bbe20f20b4d88975de94a12ccdeca",
+  "skill": {
+    "name": "hold_pose",
+    "parameters": {
+      "duration_s": 20
+    }
+  },
+  "state": {
+    "count": 3,
+    "errors": 0,
+    "p50_ms": 499.8,
+    "p95_ms": 25906.6,
+    "max_ms": 25906.6,
+    "samples": [
+      {
+        "ms": 25906.60310000021,
+        "status": 200,
+        "error": null,
+        "t": 0.001,
+        "sim_step": 4000,
+        "state_version": 1,
+        "episode_id": "ep_b9f98900aaba4d4695e8755d1fcdd340",
+        "joints_finite": true
+      },
+      {
+        "ms": 499.7981000014988,
+        "status": 200,
+        "error": null,
+        "t": 26.417,
+        "sim_step": 4000,
+        "state_version": 1,
+        "episode_id": "ep_b9f98900aaba4d4695e8755d1fcdd340",
+        "joints_finite": true
+      },
+      {
+        "ms": 19.057599998632213,
+        "status": 200,
+        "error": null,
+        "t": 27.421,
+        "sim_step": 4000,
+        "state_version": 1,
+        "episode_id": "ep_b9f98900aaba4d4695e8755d1fcdd340",
+        "joints_finite": true
+      }
+    ]
+  },
+  "frames": {
+    "count": 1,
+    "errors": 0,
+    "p50_ms": 26913.0,
+    "p95_ms": 26913.0,
+    "max_ms": 26913.0,
+    "samples": [
+      {
+        "ms": 26913.00169999886,
+        "status": 201,
+        "error": null,
+        "t": 0.001,
+        "sim_step": 4000,
+        "state_version": 1,
+        "episode_id": "ep_b9f98900aaba4d4695e8755d1fcdd340",
+        "frame_id": "frame_0fb7ce0736be43ddbad0818f44576088",
+        "buffered": null
+      }
+    ]
+  },
+  "health": {
+    "ms": 16913.985300001514,
+    "status": 200,
+    "json": {
+      "gateway": "ok",
+      "worker": "alive",
+      "simulation_ready": true,
+      "startup_lost_jobs": 0
+    },
+    "error": null,
+    "t": 26.915
+  },
+  "cancel": {
+    "request": {
+      "ms": 3.0508999989251606,
+      "status": 202,
+      "json": {
+        "job_id": "job_206bbe20f20b4d88975de94a12ccdeca",
+        "kind": "skill",
+        "status": "succeeded",
+        "simulation_id": "sim_15cd66323c1240dabf5cfbf3da58bb4c",
+        "task_id": null,
+        "skill": "hold_pose",
+        "worker_job_id": "job_67dd5349d5494efc97517cd0ee96084d",
+        "parent_job_id": null,
+        "progress": 1.0,
+        "cancel_requested": false,
+        "created_at": "2026-11-07T11:30:45.342665+00:00",
+        "updated_at": "2026-11-07T11:31:11.306296+00:00"
+      },
+      "error": null,
+      "t": 26.918
+    },
+    "settled_ms": 25.9,
+    "final_status": "succeeded",
+    "error": null
+  },
+  "job": {
+    "status": "succeeded",
+    "progress": 1.0,
+    "error": null
+  },
+  "frame_sim_steps": [
+    4000
+  ],
+  "frame_sim_step_monotonic": null,
+  "events_endpoint": {
+    "status": 404
+  },
+  "latest_frame_endpoint": {
+    "status": 404
+  },
+  "closed": true,
+  "finished_at": "2026-11-07T19:31:23+0800",
+  "verdict": {
+    "state_p95_under_200ms": false,
+    "frame_max_under_1000ms": false,
+    "frames_increasing": false,
+    "cancel_ack_under_1000ms": true,
+    "health_under_100ms": false,
+    "all_pass": false
+  }
+}

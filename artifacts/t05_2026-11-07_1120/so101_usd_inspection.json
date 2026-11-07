@@ -1,0 +1,190 @@
+{
+  "usd": "<repo>\\assets\\isaac6\\RobotStudio\\so101_new_calib\\so101_new_calib.usd",
+  "sha256": "04ef30434ff8bb752241ce5c6d33304ad04629b5d9290c580c4fd8b9fc89efb3",
+  "sub_layers": [],
+  "composition_assets": [
+    "configuration/so101_new_calib_base.usd",
+    "configuration/so101_new_calib_physics.usd",
+    "configuration/so101_new_calib_robot.usd",
+    "configuration/so101_new_calib_sensor.usd"
+  ],
+  "joints": [
+    {
+      "path": "/so101_new_calib/joints/shoulder_pan",
+      "name": "shoulder_pan",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/so101_new_calib/base"
+      ],
+      "body1": [
+        "/so101_new_calib/shoulder"
+      ],
+      "axis": "Z",
+      "lower": -109.99987030029297,
+      "upper": 109.99987030029297,
+      "drive": {
+        "stiffness": 0.30935126543045044,
+        "damping": 0.0001237405085703358,
+        "target_position": 0.0,
+        "target_velocity": 0.0,
+        "max_force": 10.0
+      }
+    },
+    {
+      "path": "/so101_new_calib/joints/shoulder_lift",
+      "name": "shoulder_lift",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/so101_new_calib/shoulder"
+      ],
+      "body1": [
+        "/so101_new_calib/upper_arm"
+      ],
+      "axis": "Z",
+      "lower": -100.00003814697266,
+      "upper": 100.00003814697266,
+      "drive": {
+        "stiffness": 2.6218552589416504,
+        "damping": 0.0010487420950084925,
+        "target_position": 0.0,
+        "target_velocity": 0.0,
+        "max_force": 10.0
+      }
+    },
+    {
+      "path": "/so101_new_calib/joints/elbow_flex",
+      "name": "elbow_flex",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/so101_new_calib/upper_arm"
+      ],
+      "body1": [
+        "/so101_new_calib/lower_arm"
+      ],
+      "axis": "Z",
+      "lower": -96.82986450195312,
+      "upper": 96.82986450195312,
+      "drive": {
+        "stiffness": 5.285901069641113,
+        "damping": 0.0021143604535609484,
+        "target_position": 0.0,
+        "target_velocity": 0.0,
+        "max_force": 10.0
+      }
+    },
+    {
+      "path": "/so101_new_calib/joints/wrist_flex",
+      "name": "wrist_flex",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/so101_new_calib/lower_arm"
+      ],
+      "body1": [
+        "/so101_new_calib/wrist"
+      ],
+      "axis": "Z",
+      "lower": -94.99983215332031,
+      "upper": 94.99983215332031,
+      "drive": {
+        "stiffness": 4.8006134033203125,
+        "damping": 0.0019202452385798097,
+        "target_position": 0.0,
+        "target_velocity": 0.0,
+        "max_force": 10.0
+      }
+    },
+    {
+      "path": "/so101_new_calib/joints/wrist_roll",
+      "name": "wrist_roll",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/so101_new_calib/wrist"
+      ],
+      "body1": [
+        "/so101_new_calib/gripper"
+      ],
+      "axis": "Z",
+      "lower": -157.2110137939453,
+      "upper": 162.78932189941406,
+      "drive": {
+        "stiffness": 0.7527836561203003,
+        "damping": 0.0003011134685948491,
+        "target_position": 0.0,
+        "target_velocity": 0.0,
+        "max_force": 10.0
+      }
+    },
+    {
+      "path": "/so101_new_calib/joints/gripper",
+      "name": "gripper",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/so101_new_calib/gripper"
+      ],
+      "body1": [
+        "/so101_new_calib/moving_jaw_so101_v1"
+      ],
+      "axis": "Z",
+      "lower": -10.000003814697266,
+      "upper": 100.00003814697266,
+      "drive": {
+        "stiffness": 0.03781667724251747,
+        "damping": 1.5126670405152254e-05,
+        "target_position": 0.0,
+        "target_velocity": 0.0,
+        "max_force": 10.0
+      }
+    },
+    {
+      "path": "/so101_new_calib/root_joint",
+      "name": "root_joint",
+      "type": "PhysicsFixedJoint",
+      "body0": [],
+      "body1": [
+        "/so101_new_calib/base"
+      ]
+    }
+  ],
+  "bodies": [
+    {
+      "path": "/so101_new_calib/base",
+      "name": "base",
+      "type": "Xform"
+    },
+    {
+      "path": "/so101_new_calib/shoulder",
+      "name": "shoulder",
+      "type": "Xform"
+    },
+    {
+      "path": "/so101_new_calib/upper_arm",
+      "name": "upper_arm",
+      "type": "Xform"
+    },
+    {
+      "path": "/so101_new_calib/lower_arm",
+      "name": "lower_arm",
+      "type": "Xform"
+    },
+    {
+      "path": "/so101_new_calib/wrist",
+      "name": "wrist",
+      "type": "Xform"
+    },
+    {
+      "path": "/so101_new_calib/gripper",
+      "name": "gripper",
+      "type": "Xform"
+    },
+    {
+      "path": "/so101_new_calib/moving_jaw_so101_v1",
+      "name": "moving_jaw_so101_v1",
+      "type": "Xform"
+    }
+  ],
+  "articulation_roots": [
+    "/so101_new_calib/root_joint"
+  ],
+  "up_axis": "Z",
+  "meters_per_unit": 1.0
+}

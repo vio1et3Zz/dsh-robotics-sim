@@ -1,0 +1,456 @@
+{
+  "started_at": "2026-11-07T05:40:05.762115+00:00",
+  "events": [
+    {
+      "at": "2026-11-07T05:40:05.802083+00:00",
+      "label": "start_simulation",
+      "payload": {
+        "status": 202,
+        "response": {
+          "job_id": "job_07e2e26df9354c5d9def199a15a527cd",
+          "kind": "start_simulation",
+          "status": "running",
+          "simulation_id": null,
+          "task_id": null,
+          "skill": null,
+          "worker_job_id": null,
+          "parent_job_id": null,
+          "progress": null,
+          "cancel_requested": false,
+          "created_at": "2026-11-07T05:40:05.800674+00:00",
+          "updated_at": "2026-11-07T05:40:05.800674+00:00"
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:40:17.243527+00:00",
+      "label": "start_job",
+      "payload": {
+        "job_id": "job_07e2e26df9354c5d9def199a15a527cd",
+        "kind": "start_simulation",
+        "status": "succeeded",
+        "simulation_id": "sim_77867558546d49a6a6383c745c9d90b9",
+        "task_id": null,
+        "skill": null,
+        "worker_job_id": null,
+        "parent_job_id": null,
+        "progress": 1.0,
+        "cancel_requested": false,
+        "created_at": "2026-11-07T05:40:05.800674+00:00",
+        "updated_at": "2026-11-07T05:40:17.016612+00:00"
+      }
+    },
+    {
+      "at": "2026-11-07T05:40:17.260691+00:00",
+      "label": "state_initial",
+      "payload": {
+        "simulation_id": "sim_77867558546d49a6a6383c745c9d90b9",
+        "episode_id": "ep_959779f46fbc4031aa4f34c780b4730b",
+        "state_version": 0,
+        "sim_step": 0,
+        "sim_time_s": 0.0,
+        "state": {
+          "simulation_id": "sim_77867558546d49a6a6383c745c9d90b9",
+          "episode_id": "ep_959779f46fbc4031aa4f34c780b4730b",
+          "env_id": 0,
+          "state_version": 0,
+          "event_seq": 0,
+          "sim_step": 0,
+          "sim_time_s": 0.0,
+          "wall_time": "2026-11-07T05:40:17.259683Z",
+          "source": "sim_ground_truth",
+          "frame": "world",
+          "robots": [
+            {
+              "robot_id": "so101",
+              "dof": 6,
+              "joint_positions": [
+                -1.059244095813483e-05,
+                0.0017342183273285627,
+                0.000815761333797127,
+                0.0003081822651438415,
+                3.7505831187445438e-06,
+                -0.0015507627977058291
+              ],
+              "joint_velocities": [
+                -0.0017481012037023902,
+                0.29878583550453186,
+                -0.03899897634983063,
+                -0.055289119482040405,
+                0.0005283678183332086,
+                -0.5317866802215576
+              ],
+              "ee_pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.020619846880435944,
+                  -0.36270081996917725,
+                  0.2731423079967499
+                ],
+                "orientation_xyzw": [
+                  -0.49928295612335205,
+                  -0.4992902874946594,
+                  -0.5007054209709167,
+                  0.5007193088531494
+                ]
+              },
+              "gripper": {
+                "width_m": 0.09010134848697586,
+                "closed": true
+              }
+            }
+          ],
+          "objects": [
+            {
+              "object_id": "red_block",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.17999990284442902,
+                  -1.3129375986409286e-07,
+                  0.07499999552965164
+                ],
+                "orientation_xyzw": [
+                  2.1074761207273696e-06,
+                  -1.2397908903949428e-06,
+                  3.4658289571609657e-09,
+                  0.9999999403953552
+                ]
+              },
+              "size_m": [
+                0.03,
+                0.03,
+                0.03
+              ],
+              "grasped_by": null,
+              "visible": true
+            },
+            {
+              "object_id": "target_box",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.22,
+                  0.05,
+                  0.02
+                ],
+                "orientation_xyzw": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "size_m": [
+                0.1,
+                0.1,
+                0.04
+              ],
+              "grasped_by": null,
+              "visible": true
+            }
+          ],
+          "skills": []
+        },
+        "skills": [
+          "hold_pose",
+          "move_object",
+          "observe_scene",
+          "pick"
+        ]
+      }
+    },
+    {
+      "at": "2026-11-07T05:40:17.279282+00:00",
+      "label": "create_task",
+      "payload": {
+        "status": 422,
+        "response": {
+          "detail": [
+            {
+              "type": "string_pattern_mismatch",
+              "loc": [
+                "body",
+                "spec",
+                "task_id"
+              ],
+              "msg": "String should match pattern '^task_[0-9a-f-]{8,36}$'",
+              "input": "task_so101_pick",
+              "ctx": {
+                "pattern": "^task_[0-9a-f-]{8,36}$"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:40:17.281466+00:00",
+      "label": "validate_plan_1",
+      "payload": {
+        "status": 422,
+        "response": {
+          "detail": [
+            {
+              "type": "string_pattern_mismatch",
+              "loc": [
+                "body",
+                "plan",
+                "plan_id"
+              ],
+              "msg": "String should match pattern '^plan_[0-9a-f-]{8,36}$'",
+              "input": "plan_so101_1",
+              "ctx": {
+                "pattern": "^plan_[0-9a-f-]{8,36}$"
+              }
+            },
+            {
+              "type": "string_pattern_mismatch",
+              "loc": [
+                "body",
+                "plan",
+                "task_id"
+              ],
+              "msg": "String should match pattern '^task_[0-9a-f-]{8,36}$'",
+              "input": "task_so101_pick",
+              "ctx": {
+                "pattern": "^task_[0-9a-f-]{8,36}$"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:40:17.584306+00:00",
+      "label": "fault_move_block",
+      "payload": {
+        "http_status": 202,
+        "job": {
+          "job_id": "job_3fbec9c774c9474d8a73f1a2acc827ff",
+          "kind": "skill",
+          "status": "succeeded",
+          "simulation_id": "sim_77867558546d49a6a6383c745c9d90b9",
+          "task_id": null,
+          "skill": "move_object",
+          "worker_job_id": "job_c75dbde3166e4a69927085888d646ddf",
+          "parent_job_id": null,
+          "progress": 1.0,
+          "cancel_requested": false,
+          "created_at": "2026-11-07T05:40:17.306765+00:00",
+          "updated_at": "2026-11-07T05:40:17.433469+00:00"
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:40:17.599404+00:00",
+      "label": "execute_stale_plan",
+      "payload": {
+        "status": 422,
+        "response": {
+          "detail": [
+            {
+              "type": "string_type",
+              "loc": [
+                "body",
+                "plan_hash"
+              ],
+              "msg": "Input should be a valid string",
+              "input": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:40:17.616583+00:00",
+      "label": "state_after_move",
+      "payload": {
+        "simulation_id": "sim_77867558546d49a6a6383c745c9d90b9",
+        "episode_id": "ep_959779f46fbc4031aa4f34c780b4730b",
+        "state_version": 1,
+        "sim_step": 30,
+        "sim_time_s": 0.15000000000000005,
+        "state": {
+          "simulation_id": "sim_77867558546d49a6a6383c745c9d90b9",
+          "episode_id": "ep_959779f46fbc4031aa4f34c780b4730b",
+          "env_id": 0,
+          "state_version": 1,
+          "event_seq": 1,
+          "sim_step": 30,
+          "sim_time_s": 0.15000000000000005,
+          "wall_time": "2026-11-07T05:40:17.615549Z",
+          "source": "sim_ground_truth",
+          "frame": "world",
+          "robots": [
+            {
+              "robot_id": "so101",
+              "dof": 6,
+              "joint_positions": [
+                5.187316105548234e-07,
+                0.025701025500893593,
+                0.023332785815000534,
+                0.005406438373029232,
+                -1.2499252079578582e-05,
+                -0.000638995785266161
+              ],
+              "joint_velocities": [
+                0.000237731946981512,
+                0.024970917031168938,
+                0.0025524874217808247,
+                0.007926206104457378,
+                -6.457961717387661e-05,
+                0.002486281329765916
+              ],
+              "ee_pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.020616041496396065,
+                  -0.36561939120292664,
+                  0.2586173117160797
+                ],
+                "orientation_xyzw": [
+                  -0.4862031936645508,
+                  -0.48621293902397156,
+                  -0.5134214758872986,
+                  0.5134217143058777
+                ]
+              },
+              "gripper": {
+                "width_m": 0.09057626106301069,
+                "closed": true
+              }
+            }
+          ],
+          "objects": [
+            {
+              "object_id": "red_block",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.18386752903461456,
+                  -1.0772448177931437e-07,
+                  0.07499999552965164
+                ],
+                "orientation_xyzw": [
+                  2.2511660517920973e-06,
+                  -1.2491731240515946e-06,
+                  -3.8484122555360045e-09,
+                  1.0
+                ]
+              },
+              "size_m": [
+                0.03,
+                0.03,
+                0.03
+              ],
+              "grasped_by": null,
+              "visible": true
+            },
+            {
+              "object_id": "target_box",
+              "pose": {
+                "frame": "world",
+                "frame_id": null,
+                "position": [
+                  0.22,
+                  0.05,
+                  0.02
+                ],
+                "orientation_xyzw": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "size_m": [
+                0.1,
+                0.1,
+                0.04
+              ],
+              "grasped_by": null,
+              "visible": true
+            }
+          ],
+          "skills": [
+            {
+              "skill": "move_object",
+              "phase": "succeeded",
+              "progress": 1.0,
+              "message": null
+            }
+          ]
+        },
+        "skills": [
+          "hold_pose",
+          "move_object",
+          "observe_scene",
+          "pick"
+        ]
+      }
+    },
+    {
+      "at": "2026-11-07T05:40:17.618607+00:00",
+      "label": "validate_plan_2",
+      "payload": {
+        "status": 422,
+        "response": {
+          "detail": [
+            {
+              "type": "string_pattern_mismatch",
+              "loc": [
+                "body",
+                "plan",
+                "plan_id"
+              ],
+              "msg": "String should match pattern '^plan_[0-9a-f-]{8,36}$'",
+              "input": "plan_so101_2",
+              "ctx": {
+                "pattern": "^plan_[0-9a-f-]{8,36}$"
+              }
+            },
+            {
+              "type": "string_pattern_mismatch",
+              "loc": [
+                "body",
+                "plan",
+                "task_id"
+              ],
+              "msg": "String should match pattern '^task_[0-9a-f-]{8,36}$'",
+              "input": "task_so101_pick",
+              "ctx": {
+                "pattern": "^task_[0-9a-f-]{8,36}$"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-11-07T05:40:17.646406+00:00",
+      "label": "execute_plan_2",
+      "payload": {
+        "status": 422,
+        "response": {
+          "detail": [
+            {
+              "type": "string_type",
+              "loc": [
+                "body",
+                "plan_hash"
+              ],
+              "msg": "Input should be a valid string",
+              "input": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

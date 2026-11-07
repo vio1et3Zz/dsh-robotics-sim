@@ -1,0 +1,4743 @@
+{
+  "db": "<repo>\\artifacts\\t04_2026-11-07_1140\\gateway.db",
+  "jobs": [
+    {
+      "job_id": "job_a4686f36999746219c2c18428cf07b60",
+      "kind": "start_simulation",
+      "status": "succeeded",
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "task_id": null,
+      "skill": null,
+      "worker_job_id": null,
+      "parent_job_id": null,
+      "progress": 1.0,
+      "error_json": null,
+      "cancel_requested": 0,
+      "created_at": "2026-11-07T03:07:13.940165+00:00",
+      "updated_at": "2026-11-07T03:07:20.445750+00:00"
+    },
+    {
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "kind": "skill",
+      "status": "canceled",
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "task_id": null,
+      "skill": "hold_pose",
+      "worker_job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+      "parent_job_id": null,
+      "progress": 0.0,
+      "error_json": null,
+      "cancel_requested": 1,
+      "created_at": "2026-11-07T03:07:49.330605+00:00",
+      "updated_at": "2026-11-07T03:07:56.094430+00:00"
+    }
+  ],
+  "events": [
+    {
+      "seq": 1,
+      "simulation_id": null,
+      "job_id": "job_a4686f36999746219c2c18428cf07b60",
+      "created_at": "2026-11-07T03:07:13.940165+00:00",
+      "event": {
+        "job_id": "job_a4686f36999746219c2c18428cf07b60",
+        "event_seq": 0,
+        "at": "2026-11-07T11:07:13+0800",
+        "type": "created",
+        "status": "pending",
+        "data": {},
+        "evidence": []
+      }
+    },
+    {
+      "seq": 2,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_a4686f36999746219c2c18428cf07b60",
+      "created_at": "2026-11-07T03:07:20.445750+00:00",
+      "event": {
+        "job_id": "job_a4686f36999746219c2c18428cf07b60",
+        "event_seq": 1,
+        "at": "2026-11-07T11:07:20+0800",
+        "type": "succeeded",
+        "status": "succeeded",
+        "data": {
+          "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf"
+        },
+        "evidence": []
+      }
+    },
+    {
+      "seq": 3,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.330605+00:00",
+      "event": {
+        "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+        "event_seq": 0,
+        "at": "2026-11-07T11:07:49+0800",
+        "type": "created",
+        "status": "pending",
+        "data": {},
+        "evidence": []
+      }
+    },
+    {
+      "seq": 4,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.335105+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 1,
+        "at": "2026-11-07T03:07:49.331149Z",
+        "type": "created",
+        "status": "pending",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": null,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 5,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.335105+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 2,
+        "at": "2026-11-07T03:07:49.331149Z",
+        "type": "started",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.0,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 6,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.355797+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 3,
+        "at": "2026-11-07T03:07:49.353578Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00025,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 7,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.370366+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 4,
+        "at": "2026-11-07T03:07:49.367862Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.0005,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 8,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.380592+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 5,
+        "at": "2026-11-07T03:07:49.376087Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00075,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 9,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.401096+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 6,
+        "at": "2026-11-07T03:07:49.398093Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.001,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 10,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.421915+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 7,
+        "at": "2026-11-07T03:07:49.415858Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00125,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 11,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.443070+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 8,
+        "at": "2026-11-07T03:07:49.437685Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.0015,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 12,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.453559+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 9,
+        "at": "2026-11-07T03:07:49.452049Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00175,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 13,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.474386+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 10,
+        "at": "2026-11-07T03:07:49.471381Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.002,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 14,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.495292+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 11,
+        "at": "2026-11-07T03:07:49.486798Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00225,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 15,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.505730+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 12,
+        "at": "2026-11-07T03:07:49.497275Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.0025,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 16,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.516294+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 13,
+        "at": "2026-11-07T03:07:49.515290Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00275,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 17,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.527351+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 14,
+        "at": "2026-11-07T03:07:49.526346Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.003,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 18,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.537695+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 15,
+        "at": "2026-11-07T03:07:49.534027Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00325,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 19,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.558485+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 16,
+        "at": "2026-11-07T03:07:49.552647Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.0035,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 20,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.568940+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 17,
+        "at": "2026-11-07T03:07:49.567436Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00375,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 21,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.579446+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 18,
+        "at": "2026-11-07T03:07:49.576253Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.004,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 22,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.600382+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 19,
+        "at": "2026-11-07T03:07:49.593400Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00425,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 23,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.600382+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 20,
+        "at": "2026-11-07T03:07:49.597341Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.0045,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 24,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.611089+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 21,
+        "at": "2026-11-07T03:07:49.601776Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00475,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 25,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.611089+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 22,
+        "at": "2026-11-07T03:07:49.606184Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.005,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 26,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.611089+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 23,
+        "at": "2026-11-07T03:07:49.609754Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00525,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 27,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.621692+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 24,
+        "at": "2026-11-07T03:07:49.614142Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.0055,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 28,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.621692+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 25,
+        "at": "2026-11-07T03:07:49.619679Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00575,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 29,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.631995+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 26,
+        "at": "2026-11-07T03:07:49.624242Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.006,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 30,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.631995+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 27,
+        "at": "2026-11-07T03:07:49.628893Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00625,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 31,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.642494+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 28,
+        "at": "2026-11-07T03:07:49.633639Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.0065,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 32,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.642494+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 29,
+        "at": "2026-11-07T03:07:49.637394Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00675,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 33,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.642494+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 30,
+        "at": "2026-11-07T03:07:49.641490Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.007,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 34,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.653020+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 31,
+        "at": "2026-11-07T03:07:49.645550Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00725,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 35,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.653020+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 32,
+        "at": "2026-11-07T03:07:49.649188Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.0075,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 36,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.663776+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 33,
+        "at": "2026-11-07T03:07:49.653020Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00775,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 37,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.664277+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 34,
+        "at": "2026-11-07T03:07:49.658183Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.008,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 38,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.664277+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 35,
+        "at": "2026-11-07T03:07:49.662771Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00825,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 39,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.675047+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 36,
+        "at": "2026-11-07T03:07:49.667432Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.0085,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 40,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.675047+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 37,
+        "at": "2026-11-07T03:07:49.670735Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00875,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 41,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.685425+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 38,
+        "at": "2026-11-07T03:07:49.675047Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.009,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 42,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.685425+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 39,
+        "at": "2026-11-07T03:07:49.678793Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00925,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 43,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.685425+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 40,
+        "at": "2026-11-07T03:07:49.683303Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.0095,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 44,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:49.695907+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 41,
+        "at": "2026-11-07T03:07:49.686829Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.00975,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 45,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.031571+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 42,
+        "at": "2026-11-07T03:07:51.027473Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.1,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 46,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.031571+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 43,
+        "at": "2026-11-07T03:07:51.030567Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10025,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 47,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.042280+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 44,
+        "at": "2026-11-07T03:07:51.035038Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.1005,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 48,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.042280+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 45,
+        "at": "2026-11-07T03:07:51.037953Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10075,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 49,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.043242+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 46,
+        "at": "2026-11-07T03:07:51.041275Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.101,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 50,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.053707+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 47,
+        "at": "2026-11-07T03:07:51.045514Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10125,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 51,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.053707+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 48,
+        "at": "2026-11-07T03:07:51.048965Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.1015,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 52,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.053707+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 49,
+        "at": "2026-11-07T03:07:51.052255Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10175,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 53,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.064607+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 50,
+        "at": "2026-11-07T03:07:51.056366Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.102,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 54,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.064607+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 51,
+        "at": "2026-11-07T03:07:51.059599Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10225,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 55,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.064607+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 52,
+        "at": "2026-11-07T03:07:51.063101Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.1025,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 56,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.075018+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 53,
+        "at": "2026-11-07T03:07:51.067684Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10275,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 57,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.075018+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 54,
+        "at": "2026-11-07T03:07:51.070878Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.103,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 58,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.075018+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 55,
+        "at": "2026-11-07T03:07:51.074013Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10325,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 59,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.089468+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 56,
+        "at": "2026-11-07T03:07:51.077565Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.1035,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 60,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.089468+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 57,
+        "at": "2026-11-07T03:07:51.082385Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10375,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 61,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.089468+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 58,
+        "at": "2026-11-07T03:07:51.085934Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.104,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 62,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.099825+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 59,
+        "at": "2026-11-07T03:07:51.089819Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10425,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 63,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.099825+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 60,
+        "at": "2026-11-07T03:07:51.092738Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.1045,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 64,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.099825+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 61,
+        "at": "2026-11-07T03:07:51.096370Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10475,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 65,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.110245+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 62,
+        "at": "2026-11-07T03:07:51.101413Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.105,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 66,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.110245+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 63,
+        "at": "2026-11-07T03:07:51.105322Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10525,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 67,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.110245+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 64,
+        "at": "2026-11-07T03:07:51.108733Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.1055,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 68,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.120952+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 65,
+        "at": "2026-11-07T03:07:51.112126Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10575,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 69,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.120952+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 66,
+        "at": "2026-11-07T03:07:51.116090Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.106,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 70,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.120952+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 67,
+        "at": "2026-11-07T03:07:51.119447Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10625,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 71,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.131413+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 68,
+        "at": "2026-11-07T03:07:51.122979Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.1065,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 72,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.131413+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 69,
+        "at": "2026-11-07T03:07:51.126515Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10675,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 73,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.131413+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 70,
+        "at": "2026-11-07T03:07:51.130406Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.107,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 74,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.141922+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 71,
+        "at": "2026-11-07T03:07:51.134669Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10725,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 75,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.141922+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 72,
+        "at": "2026-11-07T03:07:51.139153Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.1075,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 76,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.152402+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 73,
+        "at": "2026-11-07T03:07:51.142232Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10775,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 77,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.152402+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 74,
+        "at": "2026-11-07T03:07:51.146423Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.108,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 78,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.152402+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 75,
+        "at": "2026-11-07T03:07:51.150894Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10825,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 79,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.163012+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 76,
+        "at": "2026-11-07T03:07:51.154082Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.1085,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 80,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.163012+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 77,
+        "at": "2026-11-07T03:07:51.158083Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10875,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 81,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.163012+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 78,
+        "at": "2026-11-07T03:07:51.161740Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.109,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 82,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.174231+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 79,
+        "at": "2026-11-07T03:07:51.165435Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10925,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 83,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.174231+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 80,
+        "at": "2026-11-07T03:07:51.168383Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.1095,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 84,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:51.174231+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 81,
+        "at": "2026-11-07T03:07:51.172721Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.10975,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 85,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.518998+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 82,
+        "at": "2026-11-07T03:07:52.511861Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.2,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 86,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.518998+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 83,
+        "at": "2026-11-07T03:07:52.515130Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20025,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 87,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.529740+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 84,
+        "at": "2026-11-07T03:07:52.518998Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.2005,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 88,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.529740+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 85,
+        "at": "2026-11-07T03:07:52.523039Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20075,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 89,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.529740+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 86,
+        "at": "2026-11-07T03:07:52.526235Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.201,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 90,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.540630+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 87,
+        "at": "2026-11-07T03:07:52.529740Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20125,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 91,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.540630+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 88,
+        "at": "2026-11-07T03:07:52.533361Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.2015,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 92,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.540630+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 89,
+        "at": "2026-11-07T03:07:52.537616Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20175,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 93,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.554997+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 90,
+        "at": "2026-11-07T03:07:52.541330Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.202,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 94,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.554997+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 91,
+        "at": "2026-11-07T03:07:52.545381Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20225,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 95,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.554997+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 92,
+        "at": "2026-11-07T03:07:52.548947Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.2025,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 96,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.554997+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 93,
+        "at": "2026-11-07T03:07:52.552294Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20275,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 97,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.565803+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 94,
+        "at": "2026-11-07T03:07:52.556545Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.203,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 98,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.565803+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 95,
+        "at": "2026-11-07T03:07:52.559950Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20325,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 99,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.565803+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 96,
+        "at": "2026-11-07T03:07:52.563771Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.2035,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 100,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.576521+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 97,
+        "at": "2026-11-07T03:07:52.567539Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20375,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 101,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.576521+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 98,
+        "at": "2026-11-07T03:07:52.571244Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.204,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 102,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.576521+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 99,
+        "at": "2026-11-07T03:07:52.574511Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20425,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 103,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.586995+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 100,
+        "at": "2026-11-07T03:07:52.578830Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.2045,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 104,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.586995+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 101,
+        "at": "2026-11-07T03:07:52.581914Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20475,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 105,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.586995+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 102,
+        "at": "2026-11-07T03:07:52.585972Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.205,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 106,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.597659+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 103,
+        "at": "2026-11-07T03:07:52.589914Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20525,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 107,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.597659+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 104,
+        "at": "2026-11-07T03:07:52.593324Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.2055,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 108,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.597659+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 105,
+        "at": "2026-11-07T03:07:52.596654Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20575,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 109,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.608219+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 106,
+        "at": "2026-11-07T03:07:52.600213Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.206,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 110,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.608219+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 107,
+        "at": "2026-11-07T03:07:52.603244Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20625,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 111,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.608219+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 108,
+        "at": "2026-11-07T03:07:52.607214Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.2065,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 112,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.618654+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 109,
+        "at": "2026-11-07T03:07:52.611143Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20675,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 113,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.618654+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 110,
+        "at": "2026-11-07T03:07:52.614686Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.207,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 114,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.629533+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 111,
+        "at": "2026-11-07T03:07:52.619178Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20725,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 115,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.629533+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 112,
+        "at": "2026-11-07T03:07:52.622762Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.2075,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 116,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.629533+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 113,
+        "at": "2026-11-07T03:07:52.626481Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20775,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 117,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.640957+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 114,
+        "at": "2026-11-07T03:07:52.630053Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.208,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 118,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.640957+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 115,
+        "at": "2026-11-07T03:07:52.633537Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20825,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 119,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.640957+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 116,
+        "at": "2026-11-07T03:07:52.636591Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.2085,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 120,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.651567+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 117,
+        "at": "2026-11-07T03:07:52.640957Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20875,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 121,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.651567+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 118,
+        "at": "2026-11-07T03:07:52.645068Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.209,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 122,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.651567+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 119,
+        "at": "2026-11-07T03:07:52.648181Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20925,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 123,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.662313+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 120,
+        "at": "2026-11-07T03:07:52.651994Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.2095,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 124,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:52.662313+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 121,
+        "at": "2026-11-07T03:07:52.656559Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.20975,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 125,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:53.970190+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 122,
+        "at": "2026-11-07T03:07:53.969185Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.3,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 126,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:53.980856+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 123,
+        "at": "2026-11-07T03:07:53.973534Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30025,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 127,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:53.980856+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 124,
+        "at": "2026-11-07T03:07:53.979120Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.3005,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 128,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:53.991270+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 125,
+        "at": "2026-11-07T03:07:53.984154Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30075,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 129,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:53.991270+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 126,
+        "at": "2026-11-07T03:07:53.987933Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.301,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 130,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.001738+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 127,
+        "at": "2026-11-07T03:07:53.991270Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30125,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 131,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.001738+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 128,
+        "at": "2026-11-07T03:07:53.995101Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.3015,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 132,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.001738+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 129,
+        "at": "2026-11-07T03:07:53.998791Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30175,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 133,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.012454+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 130,
+        "at": "2026-11-07T03:07:54.003103Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.302,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 134,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.012454+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 131,
+        "at": "2026-11-07T03:07:54.006760Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30225,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 135,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.012454+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 132,
+        "at": "2026-11-07T03:07:54.009945Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.3025,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 136,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.023049+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 133,
+        "at": "2026-11-07T03:07:54.013729Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30275,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 137,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.023049+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 134,
+        "at": "2026-11-07T03:07:54.018035Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.303,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 138,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.023049+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 135,
+        "at": "2026-11-07T03:07:54.021545Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30325,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 139,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.033752+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 136,
+        "at": "2026-11-07T03:07:54.024575Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.3035,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 140,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.033752+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 137,
+        "at": "2026-11-07T03:07:54.029139Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30375,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 141,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.033752+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 138,
+        "at": "2026-11-07T03:07:54.032742Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.304,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 142,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.044662+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 139,
+        "at": "2026-11-07T03:07:54.035782Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30425,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 143,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.044662+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 140,
+        "at": "2026-11-07T03:07:54.040181Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.3045,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 144,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.044662+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 141,
+        "at": "2026-11-07T03:07:54.043656Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30475,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 145,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.055078+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 142,
+        "at": "2026-11-07T03:07:54.047949Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.305,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 146,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.055078+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 143,
+        "at": "2026-11-07T03:07:54.051254Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30525,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 147,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.055078+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 144,
+        "at": "2026-11-07T03:07:54.054073Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.3055,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 148,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.066175+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 145,
+        "at": "2026-11-07T03:07:54.058685Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30575,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 149,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.066175+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 146,
+        "at": "2026-11-07T03:07:54.062715Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.306,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 150,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.076722+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 147,
+        "at": "2026-11-07T03:07:54.066651Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30625,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 151,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.076722+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 148,
+        "at": "2026-11-07T03:07:54.070253Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.3065,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 152,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.076722+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 149,
+        "at": "2026-11-07T03:07:54.073904Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30675,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 153,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.087628+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 150,
+        "at": "2026-11-07T03:07:54.078210Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.307,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 154,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.087628+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 151,
+        "at": "2026-11-07T03:07:54.081337Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30725,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 155,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.087628+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 152,
+        "at": "2026-11-07T03:07:54.086078Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.3075,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 156,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.098285+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 153,
+        "at": "2026-11-07T03:07:54.089815Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30775,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 157,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.098285+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 154,
+        "at": "2026-11-07T03:07:54.093286Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.308,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 158,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.098285+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 155,
+        "at": "2026-11-07T03:07:54.097280Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30825,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 159,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.109228+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 156,
+        "at": "2026-11-07T03:07:54.101719Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.3085,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 160,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.109228+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 157,
+        "at": "2026-11-07T03:07:54.104671Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30875,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 161,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.119651+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 158,
+        "at": "2026-11-07T03:07:54.109228Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.309,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 162,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.119651+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 159,
+        "at": "2026-11-07T03:07:54.113033Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30925,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 163,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.119651+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 160,
+        "at": "2026-11-07T03:07:54.116874Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.3095,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 164,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:54.130394+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 161,
+        "at": "2026-11-07T03:07:54.120169Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.30975,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 165,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.447111+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 162,
+        "at": "2026-11-07T03:07:55.437225Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.4,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 166,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.447111+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 163,
+        "at": "2026-11-07T03:07:55.441580Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40025,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 167,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.447111+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 164,
+        "at": "2026-11-07T03:07:55.445263Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.4005,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 168,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.457993+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 165,
+        "at": "2026-11-07T03:07:55.449084Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40075,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 169,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.457993+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 166,
+        "at": "2026-11-07T03:07:55.452628Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.401,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 170,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.457993+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 167,
+        "at": "2026-11-07T03:07:55.456988Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40125,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 171,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.468686+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 168,
+        "at": "2026-11-07T03:07:55.460566Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.4015,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 172,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.468686+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 169,
+        "at": "2026-11-07T03:07:55.463603Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40175,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 173,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.468686+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 170,
+        "at": "2026-11-07T03:07:55.467681Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.402,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 174,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.479537+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 171,
+        "at": "2026-11-07T03:07:55.470635Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40225,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 175,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.479537+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 172,
+        "at": "2026-11-07T03:07:55.473704Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.4025,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 176,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.479537+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 173,
+        "at": "2026-11-07T03:07:55.477531Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40275,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 177,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.490102+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 174,
+        "at": "2026-11-07T03:07:55.481410Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.403,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 178,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.490102+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 175,
+        "at": "2026-11-07T03:07:55.485195Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40325,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 179,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.490102+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 176,
+        "at": "2026-11-07T03:07:55.488320Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.4035,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 180,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.500907+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 177,
+        "at": "2026-11-07T03:07:55.491663Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40375,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 181,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.500907+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 178,
+        "at": "2026-11-07T03:07:55.496309Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.404,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 182,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.511603+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 179,
+        "at": "2026-11-07T03:07:55.500907Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40425,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 183,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.515600+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 180,
+        "at": "2026-11-07T03:07:55.504255Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.4045,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 184,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.515600+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 181,
+        "at": "2026-11-07T03:07:55.507939Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40475,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 185,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.525787+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 182,
+        "at": "2026-11-07T03:07:55.511603Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.405,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 186,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.525787+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 183,
+        "at": "2026-11-07T03:07:55.515600Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40525,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 187,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.525787+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 184,
+        "at": "2026-11-07T03:07:55.519472Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.4055,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 188,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.525787+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 185,
+        "at": "2026-11-07T03:07:55.523126Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40575,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 189,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.536587+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 186,
+        "at": "2026-11-07T03:07:55.526288Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.406,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 190,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.536587+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 187,
+        "at": "2026-11-07T03:07:55.530324Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40625,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 191,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.536587+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 188,
+        "at": "2026-11-07T03:07:55.534081Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.4065,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 192,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.547134+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 189,
+        "at": "2026-11-07T03:07:55.537471Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40675,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 193,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.547134+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 190,
+        "at": "2026-11-07T03:07:55.541459Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.407,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 194,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.547134+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 191,
+        "at": "2026-11-07T03:07:55.545631Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40725,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 195,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.557652+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 192,
+        "at": "2026-11-07T03:07:55.549105Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.4075,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 196,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.557652+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 193,
+        "at": "2026-11-07T03:07:55.552336Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40775,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 197,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.557652+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 194,
+        "at": "2026-11-07T03:07:55.555880Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.408,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 198,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.568445+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 195,
+        "at": "2026-11-07T03:07:55.559655Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40825,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 199,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.568445+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 196,
+        "at": "2026-11-07T03:07:55.562941Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.4085,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 200,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.568445+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 197,
+        "at": "2026-11-07T03:07:55.566875Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40875,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 201,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.579207+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 198,
+        "at": "2026-11-07T03:07:55.570067Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.409,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 202,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.579207+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 199,
+        "at": "2026-11-07T03:07:55.573929Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40925,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 203,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.579207+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 200,
+        "at": "2026-11-07T03:07:55.577202Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.4095,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 204,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:55.590040+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 201,
+        "at": "2026-11-07T03:07:55.581845Z",
+        "type": "progress",
+        "status": "running",
+        "skill": "hold_pose",
+        "message": null,
+        "progress": 0.40975,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    },
+    {
+      "seq": 205,
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "job_id": "job_7c52dc1517a74568bcfe689841c37eca",
+      "created_at": "2026-11-07T03:07:56.094430+00:00",
+      "event": {
+        "schema_version": "0.1",
+        "request_id": null,
+        "trace_id": null,
+        "job_id": "job_3ab65c3f142e4920863cc4923f54d41c",
+        "event_seq": 202,
+        "at": "2026-11-07T03:07:56.092918Z",
+        "type": "canceled",
+        "status": "canceled",
+        "skill": "hold_pose",
+        "message": "cancel acknowledged",
+        "progress": 0.0,
+        "data": {},
+        "evidence": [
+          "isaaclab_physx"
+        ]
+      }
+    }
+  ],
+  "simulations": [
+    {
+      "simulation_id": "sim_11de9f366a594e31b3bfc837a8513ecf",
+      "episode_id": "ep_0c7f37c358224b36b59c5537a4258993",
+      "closed": true,
+      "created_at": "2026-11-07T03:07:20.445750+00:00"
+    }
+  ],
+  "counts": {
+    "jobs": 2,
+    "events": 205,
+    "simulations": 1
+  }
+}

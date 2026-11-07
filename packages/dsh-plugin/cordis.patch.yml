@@ -1,0 +1,3 @@
+- insert:
+    - id: dsh-robotics
+      name: '@local/dsh-robotics'

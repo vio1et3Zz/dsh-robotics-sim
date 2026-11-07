@@ -1,0 +1,15 @@
+{
+  "name": "@dsh-robotics/protocol",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Versioned JSON Schema, TypeScript types and runtime validation for the DSH Robotics protocol.",
+  "scripts": {
+    "validate": "node validate.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "typescript": "^5.7.0"
+  }
+}

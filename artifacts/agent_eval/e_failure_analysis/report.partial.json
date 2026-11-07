@@ -1,0 +1,326 @@
+{
+  "run_id": "e_failure_analysis",
+  "matrix": {
+    "name": "e_failure_analysis",
+    "path": "configs\\agent_eval_e.json",
+    "description": "E：混合成功/失败（预检失败 2 类 + 抓取阶段失败 1 类），供 Agent 读 report.json 做失败分析。"
+  },
+  "started_at": "2026-11-07T13:12:53.674487+00:00",
+  "simulation": {
+    "profile_id": "profile_so101_physx",
+    "seed": 7,
+    "simulation_id": "sim_d14e150e86a54059a5fcf38b4c8157a8",
+    "startup_wall_s": 10.93
+  },
+  "episodes": [
+    {
+      "index": 1,
+      "task_id": "control_x018",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "expected_failure": null,
+      "jsonl": "artifacts\\agent_eval\\e_failure_analysis\\episode_01.jsonl",
+      "job_id": "job_bd2546a9cd8a4796bfde7a5736aded72",
+      "status": "succeeded",
+      "error_code": null,
+      "passed": true,
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23034372925758362,
+          0.05815571919083595,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.01317,
+        "z": 0.055,
+        "passed": true
+      },
+      "wall_s": 17.61,
+      "sim_step_end": 2060,
+      "sim_time_s_end": 10.3,
+      "state_version_end": 2,
+      "frames": 17,
+      "frame_steps": [
+        0,
+        89,
+        179,
+        282,
+        420,
+        570,
+        683,
+        908,
+        1006,
+        1114,
+        1233,
+        1349,
+        1461,
+        1574,
+        1863,
+        2012,
+        2060
+      ],
+      "events": 15,
+      "records": 65,
+      "setup": [],
+      "final_frame": "frame_a9b1797c97e445beaa90232ee56baac5",
+      "expected_met": true
+    },
+    {
+      "index": 2,
+      "task_id": "variant_x016",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "expected_failure": null,
+      "jsonl": "artifacts\\agent_eval\\e_failure_analysis\\episode_02.jsonl",
+      "job_id": "job_a9decd71850344e5b70406729339fc9b",
+      "status": "succeeded",
+      "error_code": null,
+      "passed": true,
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.22950118780136108,
+          0.057414326816797256,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.01205,
+        "z": 0.055,
+        "passed": true
+      },
+      "wall_s": 16.43,
+      "sim_step_end": 2090,
+      "sim_time_s_end": 10.450000000000001,
+      "state_version_end": 5,
+      "frames": 16,
+      "frame_steps": [
+        30,
+        167,
+        311,
+        449,
+        596,
+        722,
+        957,
+        1070,
+        1172,
+        1279,
+        1385,
+        1495,
+        1616,
+        1922,
+        2090,
+        2090
+      ],
+      "events": 15,
+      "records": 63,
+      "setup": [
+        {
+          "skill": "move_object",
+          "job_id": "job_9ef418e7d3da4016b9bb0f19774ee09a",
+          "status": "succeeded"
+        }
+      ],
+      "final_frame": "frame_9d10c8fac3fc4734b1a1b836681519fb",
+      "expected_met": true
+    },
+    {
+      "index": 3,
+      "task_id": "place_out_of_reach",
+      "skill": "pick",
+      "parameters": {
+        "place_x": 0.3,
+        "place_y": 0.05
+      },
+      "seed": 7,
+      "expected_failure": "UNREACHABLE_TARGET",
+      "jsonl": "artifacts\\agent_eval\\e_failure_analysis\\episode_03.jsonl",
+      "job_id": "job_cc75c2b1f2e54b78a87eca9f26f78d82",
+      "status": "failed",
+      "error_code": "UNREACHABLE_TARGET",
+      "passed": false,
+      "details": {
+        "job_status": "failed",
+        "block": [
+          0.17999984323978424,
+          -2.0357875030185824e-07,
+          0.07499999552965164
+        ],
+        "xy_distance": 0.06403,
+        "z": 0.075,
+        "passed": false
+      },
+      "wall_s": 0.21,
+      "sim_step_end": 0,
+      "sim_time_s_end": 0.0,
+      "state_version_end": 7,
+      "frames": 2,
+      "frame_steps": [
+        0,
+        0
+      ],
+      "events": 4,
+      "records": 13,
+      "setup": [],
+      "final_frame": "frame_e9d167e7406c4998b90eef4801f84b2c",
+      "expected_met": true
+    },
+    {
+      "index": 4,
+      "task_id": "block_too_far",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "expected_failure": "OBJECT_OUT_OF_WORKSPACE",
+      "jsonl": "artifacts\\agent_eval\\e_failure_analysis\\episode_04.jsonl",
+      "job_id": "job_893a94a5b90b4416920ef20187536cce",
+      "status": "failed",
+      "error_code": "OBJECT_OUT_OF_WORKSPACE",
+      "passed": false,
+      "details": {
+        "job_status": "failed",
+        "block": [
+          0.2500000596046448,
+          -0.00018729083240032196,
+          0.05499884858727455
+        ],
+        "xy_distance": 0.05847,
+        "z": 0.055,
+        "passed": false
+      },
+      "wall_s": 0.2,
+      "sim_step_end": 30,
+      "sim_time_s_end": 0.15000000000000005,
+      "state_version_end": 10,
+      "frames": 2,
+      "frame_steps": [
+        30,
+        30
+      ],
+      "events": 4,
+      "records": 14,
+      "setup": [
+        {
+          "skill": "move_object",
+          "job_id": "job_01f9e675f9734b9da6031f426d77d912",
+          "status": "succeeded"
+        }
+      ],
+      "final_frame": "frame_e76d6b7d71e34400974ac58e42e5bdcf",
+      "expected_met": true
+    },
+    {
+      "index": 5,
+      "task_id": "stale_grasp_variant",
+      "skill": "pick",
+      "parameters": {
+        "grasp_x": 0.16
+      },
+      "seed": 7,
+      "expected_failure": "GRASP_MISSED",
+      "jsonl": "artifacts\\agent_eval\\e_failure_analysis\\episode_05.jsonl",
+      "job_id": "job_44baf97966e94921b798a6b42db54f60",
+      "status": "failed",
+      "error_code": "GRASP_MISSED",
+      "passed": false,
+      "details": {
+        "job_status": "failed",
+        "block": [
+          0.18986748158931732,
+          -1.0136200501165149e-07,
+          0.07499999552965164
+        ],
+        "xy_distance": 0.05838,
+        "z": 0.075,
+        "passed": false
+      },
+      "wall_s": 3.65,
+      "sim_step_end": 550,
+      "sim_time_s_end": 2.75,
+      "state_version_end": 13,
+      "frames": 5,
+      "frame_steps": [
+        30,
+        186,
+        344,
+        550,
+        550
+      ],
+      "events": 9,
+      "records": 27,
+      "setup": [
+        {
+          "skill": "move_object",
+          "job_id": "job_6e2783eaf02a44529bd7f229ad5b30f4",
+          "status": "succeeded"
+        }
+      ],
+      "final_frame": "frame_998c9e60a83c43a49c27d45e4cc55bc4",
+      "expected_met": true
+    },
+    {
+      "index": 6,
+      "task_id": "variant_x021",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "expected_failure": null,
+      "jsonl": "artifacts\\agent_eval\\e_failure_analysis\\episode_06.jsonl",
+      "job_id": "job_4ba8f6eb1d134e2db37a19fdff9851c7",
+      "status": "succeeded",
+      "error_code": null,
+      "passed": true,
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.22997795045375824,
+          0.057940248399972916,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.01275,
+        "z": 0.055,
+        "passed": true
+      },
+      "wall_s": 17.19,
+      "sim_step_end": 2350,
+      "sim_time_s_end": 11.75,
+      "state_version_end": 16,
+      "frames": 16,
+      "frame_steps": [
+        30,
+        185,
+        334,
+        490,
+        644,
+        798,
+        1061,
+        1177,
+        1296,
+        1408,
+        1527,
+        1650,
+        1771,
+        2064,
+        2220,
+        2350
+      ],
+      "events": 15,
+      "records": 64,
+      "setup": [
+        {
+          "skill": "move_object",
+          "job_id": "job_cce67973a4e4418d9c46b586b9140fef",
+          "status": "succeeded"
+        }
+      ],
+      "final_frame": "frame_5932424be154408cbc044507752c84c8",
+      "expected_met": true
+    }
+  ],
+  "start": {
+    "job_id": "job_0167570b83774aa091950858bc415142",
+    "status": "succeeded",
+    "error": null,
+    "wall_s": 10.93
+  }
+}

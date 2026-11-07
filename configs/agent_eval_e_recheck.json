@@ -1,0 +1,20 @@
+{
+  "name": "e_recheck_x019_default",
+  "description": "E：按 Agent 建议重跑 episode 5 的场景（块 x=0.19），不强制 grasp_x，期望变体自动选择后成功。",
+  "simulation": {
+    "profile_id": "profile_so101_physx",
+    "seed": 7,
+    "budget": {"max_sim_time_s": 600.0, "max_wall_time_s": 1200.0}
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "task_id": "recheck_x019_default",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "setup": [{"skill": "move_object", "parameters": {"object_id": "red_block", "position": [0.19, 0.0, 0.075]}}],
+      "expected_failure": null
+    }
+  ]
+}

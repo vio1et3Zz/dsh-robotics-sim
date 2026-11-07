@@ -1,0 +1,10 @@
+# monitor probe (vla_stub)
+
+- state: p50 17.9 ms / p95 21.4 ms / max 23.1 ms (21 samples, 0 errors)
+- frames: p50 39.7 ms / p95 50.3 ms / max 50.3 ms (6 samples, 0 errors)
+- health: {"ms": 19.298899998830166, "delay_ms": 0.0, "status": 200, "json": {"gateway": "ok", "worker": "alive", "simulation_ready": true, "startup_lost_jobs": 0}, "error": null, "t": 10.019}
+- cancel: {"request": null, "settled_ms": 1.1, "final_status": "failed", "error": {"code": "NO_PROGRESS", "message": "EE moved < 0.002 m for 15 chunks"}}
+- frame sim_step: [0, 324, 580, 580, 580, 580]
+- events endpoint: {'status': 200, 'count': 19, 'types': ['created', 'created', 'started', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'progress', 'failed'], 'seq': [148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166], 'terminal': {'schema_version': '0.1', 'request_id': None, 'trace_id': None, 'job_id': 'job_e8c520b804ca46d5801532e26ea358b9', 'event_seq': 18, 'at': '2026-11-07T12:34:31.251977Z', 'type': 'failed', 'status': 'failed', 'skill': 'vla_stub', 'message': 'NO_PROGRESS', 'progress': None, 'data': {'error_code': 'NO_PROGRESS', 'message': 'EE moved < 0.002 m for 15 chunks', 'detail': {'chunks': 58, 'sim_step': 580}}, 'evidence': ['isaaclab_physx']}}
+- terminal event: {"schema_version": "0.1", "request_id": null, "trace_id": null, "job_id": "job_e8c520b804ca46d5801532e26ea358b9", "event_seq": 18, "at": "2026-11-07T12:34:31.251977Z", "type": "failed", "status": "failed", "skill": "vla_stub", "message": "NO_PROGRESS", "progress": null, "data": {"error_code": "NO_PROGRESS", "message": "EE moved < 0.002 m for 15 chunks", "detail": {"chunks": 58, "sim_step": 580}}, "evidence": ["isaaclab_physx"]}
+- verdict: {"state_p95_under_200ms": true, "state_samples_present": true, "frame_max_under_1000ms": true, "frames_increasing": true, "cancel_ack_under_1000ms": false, "cancel_final_canceled": true, "health_under_100ms": true, "all_pass": false}

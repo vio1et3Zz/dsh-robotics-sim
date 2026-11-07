@@ -1,0 +1,548 @@
+{
+  "started_at": "2026-11-07T06:32:59.064926+00:00",
+  "runs": [
+    {
+      "label": "run_1",
+      "ok": true,
+      "job": {
+        "job_id": "job_8fbdafb6b3c440a8aa8e8a7192ae10dc",
+        "status": "succeeded",
+        "error": null
+      },
+      "grasp_x": 0.18,
+      "block_before": [
+        0.17999990284442902,
+        -1.3129375986409286e-07,
+        0.07499999552965164
+      ],
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23018670082092285,
+          0.05837193503975868,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.013185528807178323,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 15.781386137008667,
+      "state": {
+        "episode_id": "ep_6a7c7976383144339747cbad9404e763",
+        "state_version": 1,
+        "sim_time_s": 10.3,
+        "sim_step": 2060
+      }
+    },
+    {
+      "label": "run_2",
+      "ok": false,
+      "job": {
+        "job_id": "job_b3b190c381fb4e35b08aa2bc23b32765",
+        "status": "failed",
+        "error": {
+          "code": "OBJECT_OUT_OF_WORKSPACE",
+          "message": "OBJECT_OUT_OF_WORKSPACE"
+        }
+      },
+      "grasp_x": 0.2,
+      "block_before": [
+        0.23018670082092285,
+        0.05837193503975868,
+        0.05499999597668648
+      ],
+      "details": {
+        "job_status": "failed",
+        "block": [
+          0.23018670082092285,
+          0.05837193503975868,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.013185528807178323,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 0.23135900497436523,
+      "state": {
+        "episode_id": "ep_ce0119ff630e4a32a01389e17fd860cb",
+        "state_version": 3,
+        "sim_time_s": 0.0,
+        "sim_step": 0
+      }
+    },
+    {
+      "label": "run_3",
+      "ok": false,
+      "job": {
+        "job_id": "job_be53fe8baf4145ad87ffd9ace8288f22",
+        "status": "failed",
+        "error": {
+          "code": "OBJECT_OUT_OF_WORKSPACE",
+          "message": "OBJECT_OUT_OF_WORKSPACE"
+        }
+      },
+      "grasp_x": 0.2,
+      "block_before": [
+        0.23018668591976166,
+        0.05837193503975868,
+        0.05499999597668648
+      ],
+      "details": {
+        "job_status": "failed",
+        "block": [
+          0.23018668591976166,
+          0.05837193503975868,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.013185517295040403,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 0.21977710723876953,
+      "state": {
+        "episode_id": "ep_0f6ca2522a6341e38e6552d506a46bb6",
+        "state_version": 5,
+        "sim_time_s": 0.0,
+        "sim_step": 0
+      }
+    },
+    {
+      "label": "run_4",
+      "ok": false,
+      "job": {
+        "job_id": "job_2eeff6c6ce954360bfeeefe422c69a22",
+        "status": "failed",
+        "error": {
+          "code": "OBJECT_OUT_OF_WORKSPACE",
+          "message": "OBJECT_OUT_OF_WORKSPACE"
+        }
+      },
+      "grasp_x": 0.2,
+      "block_before": [
+        0.23018670082092285,
+        0.05837193503975868,
+        0.05499999597668648
+      ],
+      "details": {
+        "job_status": "failed",
+        "block": [
+          0.23018670082092285,
+          0.05837193503975868,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.013185528807178323,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 0.20589590072631836,
+      "state": {
+        "episode_id": "ep_5097db4da8384fd78e8dc189d9ba8988",
+        "state_version": 7,
+        "sim_time_s": 0.0,
+        "sim_step": 0
+      }
+    },
+    {
+      "label": "run_5",
+      "ok": false,
+      "job": {
+        "job_id": "job_b62ff3b2ff7c4176ad9f29dcb2eff0fa",
+        "status": "failed",
+        "error": {
+          "code": "OBJECT_OUT_OF_WORKSPACE",
+          "message": "OBJECT_OUT_OF_WORKSPACE"
+        }
+      },
+      "grasp_x": 0.2,
+      "block_before": [
+        0.23018670082092285,
+        0.05837193503975868,
+        0.05499999597668648
+      ],
+      "details": {
+        "job_status": "failed",
+        "block": [
+          0.23018670082092285,
+          0.05837193503975868,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.013185528807178323,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 0.21766185760498047,
+      "state": {
+        "episode_id": "ep_8164d5c96a96485ab3906058b7a3f84a",
+        "state_version": 9,
+        "sim_time_s": 0.0,
+        "sim_step": 0
+      }
+    },
+    {
+      "label": "run_6",
+      "ok": false,
+      "job": {
+        "job_id": "job_0476a260fe9b4d40a9ce69f5cda6d24c",
+        "status": "failed",
+        "error": {
+          "code": "OBJECT_OUT_OF_WORKSPACE",
+          "message": "OBJECT_OUT_OF_WORKSPACE"
+        }
+      },
+      "grasp_x": 0.2,
+      "block_before": [
+        0.23018670082092285,
+        0.05837193876504898,
+        0.05499999597668648
+      ],
+      "details": {
+        "job_status": "failed",
+        "block": [
+          0.23018670082092285,
+          0.05837193876504898,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.013185531172490553,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 0.20526599884033203,
+      "state": {
+        "episode_id": "ep_769789af7265451f8cdd18d81d6c3de5",
+        "state_version": 11,
+        "sim_time_s": 0.0,
+        "sim_step": 0
+      }
+    },
+    {
+      "label": "run_7",
+      "ok": false,
+      "job": {
+        "job_id": "job_8fd88f7c940d4176bdb5300eef137316",
+        "status": "failed",
+        "error": {
+          "code": "OBJECT_OUT_OF_WORKSPACE",
+          "message": "OBJECT_OUT_OF_WORKSPACE"
+        }
+      },
+      "grasp_x": 0.2,
+      "block_before": [
+        0.23018670082092285,
+        0.05837193503975868,
+        0.05499999597668648
+      ],
+      "details": {
+        "job_status": "failed",
+        "block": [
+          0.23018670082092285,
+          0.05837193503975868,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.013185528807178323,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 0.244248628616333,
+      "state": {
+        "episode_id": "ep_736e2f1088bb420ab5b7bc3a7d208417",
+        "state_version": 13,
+        "sim_time_s": 0.0,
+        "sim_step": 0
+      }
+    },
+    {
+      "label": "run_8",
+      "ok": false,
+      "job": {
+        "job_id": "job_bc17873438af47e7b8d7aa6077afda2f",
+        "status": "failed",
+        "error": {
+          "code": "OBJECT_OUT_OF_WORKSPACE",
+          "message": "OBJECT_OUT_OF_WORKSPACE"
+        }
+      },
+      "grasp_x": 0.2,
+      "block_before": [
+        0.23018670082092285,
+        0.05837193503975868,
+        0.05499999597668648
+      ],
+      "details": {
+        "job_status": "failed",
+        "block": [
+          0.23018670082092285,
+          0.05837193503975868,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.013185528807178323,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 0.23124456405639648,
+      "state": {
+        "episode_id": "ep_e8bb0423a18c4a318315043f9f34a9ea",
+        "state_version": 15,
+        "sim_time_s": 0.0,
+        "sim_step": 0
+      }
+    },
+    {
+      "label": "run_9",
+      "ok": false,
+      "job": {
+        "job_id": "job_0e3c71ee9ecf400cace13994df06dce7",
+        "status": "failed",
+        "error": {
+          "code": "OBJECT_OUT_OF_WORKSPACE",
+          "message": "OBJECT_OUT_OF_WORKSPACE"
+        }
+      },
+      "grasp_x": 0.2,
+      "block_before": [
+        0.23018670082092285,
+        0.05837193503975868,
+        0.05499999597668648
+      ],
+      "details": {
+        "job_status": "failed",
+        "block": [
+          0.23018670082092285,
+          0.05837193503975868,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.013185528807178323,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 0.24488019943237305,
+      "state": {
+        "episode_id": "ep_f641efd93fea40e3b9ded9726b3af9e1",
+        "state_version": 17,
+        "sim_time_s": 0.0,
+        "sim_step": 0
+      }
+    },
+    {
+      "label": "run_10",
+      "ok": false,
+      "job": {
+        "job_id": "job_0e9c22cdef0940b88bd296f979207176",
+        "status": "failed",
+        "error": {
+          "code": "OBJECT_OUT_OF_WORKSPACE",
+          "message": "OBJECT_OUT_OF_WORKSPACE"
+        }
+      },
+      "grasp_x": 0.2,
+      "block_before": [
+        0.23018670082092285,
+        0.05837193503975868,
+        0.05499999597668648
+      ],
+      "details": {
+        "job_status": "failed",
+        "block": [
+          0.23018670082092285,
+          0.05837193503975868,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.013185528807178323,
+        "z": 0.05499999597668648
+      },
+      "wall_s": 0.24544453620910645,
+      "state": {
+        "episode_id": "ep_3c58ab9a912f4a719858a2b8557bfea8",
+        "state_version": 19,
+        "sim_time_s": 0.0,
+        "sim_step": 0
+      }
+    }
+  ],
+  "recoveries": [
+    {
+      "case": "stale_after_object_move",
+      "validate": 200,
+      "move_status": 202,
+      "move_job": "succeeded",
+      "stale_status": 409,
+      "stale_code": "STALE_WORLD_STATE",
+      "stale_detected": true,
+      "replan_validate": 200,
+      "replan_execute": 202,
+      "replan_job": "succeeded",
+      "replan_success": true,
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23484379053115845,
+          0.058538760989904404,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.017124501644591655,
+        "z": 0.05499999597668648
+      }
+    },
+    {
+      "case": "first_grasp_wrong_variant",
+      "reset": 202,
+      "block_after_reset": [
+        0.23484379053115845,
+        0.058538760989904404,
+        0.05499999597668648
+      ],
+      "move_status": 202,
+      "move_job": "succeeded",
+      "first": {
+        "label": "recovery_first_grasp",
+        "ok": false,
+        "job": {
+          "job_id": "job_366ddc988db3446ab17fdf8429d14ee2",
+          "status": "failed",
+          "error": {
+            "code": "GRASP_MISSED",
+            "message": "GRASP_MISSED"
+          }
+        },
+        "grasp_x": 0.18,
+        "block_before": [
+          0.19999989867210388,
+          -1.345724314205654e-07,
+          0.07499999552965164
+        ],
+        "details": {
+          "job_status": "failed",
+          "block": [
+            0.19999989867210388,
+            -1.3442857493828342e-07,
+            0.07499999552965164
+          ],
+          "xy_distance": 0.053851810517397444,
+          "z": 0.07499999552965164
+        },
+        "wall_s": 3.7797739505767822,
+        "state": {
+          "episode_id": "ep_0479ee9aedb54adeb3b3cee0383c3138",
+          "state_version": 24,
+          "sim_time_s": 2.75,
+          "sim_step": 550
+        }
+      },
+      "first_failed_with_grasp_missed": true,
+      "second": {
+        "label": "recovery_second_grasp",
+        "ok": true,
+        "job": {
+          "job_id": "job_95a6adfb3a7f45a69777a2819ad9d3a4",
+          "status": "succeeded",
+          "error": null
+        },
+        "grasp_x": 0.2,
+        "block_before": [
+          0.19999989867210388,
+          -1.3442857493828342e-07,
+          0.07499999552965164
+        ],
+        "details": {
+          "job_status": "succeeded",
+          "block": [
+            0.23373518884181976,
+            0.05883776769042015,
+            0.054999999701976776
+          ],
+          "xy_distance": 0.01633283656534542,
+          "z": 0.054999999701976776
+        },
+        "wall_s": 16.199731826782227,
+        "state": {
+          "episode_id": "ep_0479ee9aedb54adeb3b3cee0383c3138",
+          "state_version": 25,
+          "sim_time_s": 13.05,
+          "sim_step": 2610
+        }
+      },
+      "recovered": true
+    }
+  ],
+  "cancel": {
+    "case": "cancel_pick",
+    "submit_status": 202,
+    "job_id": "job_b903ec76e6894b048e023b7e0629b15d",
+    "ack_s": 0.0228421688079834,
+    "status": "failed",
+    "worker_ack_canceled": false,
+    "episode_unchanged": true,
+    "state_version_after": 27,
+    "block_after_cancel": [
+      0.23373517394065857,
+      0.05883777141571045,
+      0.054999999701976776
+    ]
+  },
+  "start": {
+    "status": 202,
+    "response": {
+      "job_id": "job_b02e692afe974560a88c1cb068cf061d",
+      "kind": "start_simulation",
+      "status": "running",
+      "simulation_id": null,
+      "task_id": null,
+      "skill": null,
+      "worker_job_id": null,
+      "parent_job_id": null,
+      "progress": null,
+      "cancel_requested": false,
+      "created_at": "2026-11-07T06:32:59.092519+00:00",
+      "updated_at": "2026-11-07T06:32:59.092519+00:00"
+    }
+  },
+  "start_job": {
+    "status": "succeeded",
+    "simulation_id": "sim_6dfe348627034dea828574757bf8b68e"
+  },
+  "frame": {
+    "status": 201,
+    "frame_id": "frame_e39283b6929242349923689b15300056",
+    "rgb_url": "/api/v1/frames/frame_e39283b6929242349923689b15300056/rgb.png"
+  },
+  "resets": [
+    {
+      "run": 2,
+      "status": 202
+    },
+    {
+      "run": 3,
+      "status": 202
+    },
+    {
+      "run": 4,
+      "status": 202
+    },
+    {
+      "run": 5,
+      "status": 202
+    },
+    {
+      "run": 6,
+      "status": 202
+    },
+    {
+      "run": 7,
+      "status": 202
+    },
+    {
+      "run": 8,
+      "status": 202
+    },
+    {
+      "run": 9,
+      "status": 202
+    },
+    {
+      "run": 10,
+      "status": 202
+    }
+  ],
+  "successes": 1,
+  "runs_completed": 10,
+  "pass_rate": 0.1,
+  "meets_target": false,
+  "close": {
+    "status": 202,
+    "response": {
+      "simulation_id": "sim_6dfe348627034dea828574757bf8b68e",
+      "closed": true
+    }
+  },
+  "finished_at": "2026-11-07T06:35:40.414534+00:00"
+}

@@ -1,0 +1,186 @@
+{
+  "run_id": "failure_taxonomy",
+  "matrix": {
+    "name": "failure_taxonomy",
+    "path": "configs\\agent_eval_failures.json",
+    "description": "B3：两类已知失败（抓取位姿不可用 / 目标不可达）+ 一次成功对照，用于校验失败分类计数。"
+  },
+  "started_at": "2026-11-07T12:14:35.318243+00:00",
+  "simulation": {
+    "profile_id": "profile_so101_physx",
+    "seed": 7,
+    "simulation_id": "sim_2a34754d193346beaeaab5a418fc4077",
+    "startup_wall_s": 9.9
+  },
+  "episodes": [
+    {
+      "index": 1,
+      "task_id": "grasp_pose_unavailable",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "expected_failure": "GRASP_POSE_UNAVAILABLE",
+      "jsonl": "artifacts\\agent_eval\\failure_taxonomy\\episode_01.jsonl",
+      "job_id": "job_25dc0fece2f04a318161e247ad1db71f",
+      "status": "failed",
+      "error_code": "GRASP_POSE_UNAVAILABLE",
+      "passed": false,
+      "details": {
+        "job_status": "failed",
+        "block": [
+          0.16013203561306,
+          -1.6118221424221701e-07,
+          0.07499999552965164
+        ],
+        "xy_distance": 0.078,
+        "z": 0.075,
+        "passed": false
+      },
+      "wall_s": 0.37,
+      "sim_step_end": 30,
+      "sim_time_s_end": 0.15000000000000005,
+      "state_version_end": 3,
+      "frames": 2,
+      "frame_steps": [
+        30,
+        30
+      ],
+      "events": 4,
+      "records": 14,
+      "setup": [
+        {
+          "skill": "move_object",
+          "job_id": "job_a313bc58533e458c90a07f27550f31d8",
+          "status": "succeeded"
+        }
+      ],
+      "final_frame": "frame_125688342a5e419f966ce48bda26517d",
+      "expected_met": true
+    },
+    {
+      "index": 2,
+      "task_id": "unreachable_place",
+      "skill": "pick",
+      "parameters": {
+        "place_x": 0.3,
+        "place_y": 0.05
+      },
+      "seed": 7,
+      "expected_failure": "UNREACHABLE_TARGET",
+      "jsonl": "artifacts\\agent_eval\\failure_taxonomy\\episode_02.jsonl",
+      "job_id": "job_39bc7cc533b44e7b85c99a480d403b22",
+      "status": "failed",
+      "error_code": "UNREACHABLE_TARGET",
+      "passed": false,
+      "details": {
+        "job_status": "failed",
+        "block": [
+          0.1798672378063202,
+          -2.110971308866283e-07,
+          0.07499999552965164
+        ],
+        "xy_distance": 0.06411,
+        "z": 0.075,
+        "passed": false
+      },
+      "wall_s": 0.18,
+      "sim_step_end": 0,
+      "sim_time_s_end": 0.0,
+      "state_version_end": 5,
+      "frames": 2,
+      "frame_steps": [
+        0,
+        0
+      ],
+      "events": 4,
+      "records": 13,
+      "setup": [],
+      "final_frame": "frame_2058260a041549b68842c367de5b90ff",
+      "expected_met": true
+    },
+    {
+      "index": 3,
+      "task_id": "baseline_control",
+      "skill": "pick",
+      "parameters": {},
+      "seed": 7,
+      "expected_failure": null,
+      "jsonl": "artifacts\\agent_eval\\failure_taxonomy\\episode_03.jsonl",
+      "job_id": "job_a3cf2fcd6a2e42dd8165e026e8d5aa37",
+      "status": "succeeded",
+      "error_code": null,
+      "passed": true,
+      "details": {
+        "job_status": "succeeded",
+        "block": [
+          0.23010346293449402,
+          0.05813351273536682,
+          0.05499999597668648
+        ],
+        "xy_distance": 0.01297,
+        "z": 0.055,
+        "passed": true
+      },
+      "wall_s": 14.62,
+      "sim_step_end": 2060,
+      "sim_time_s_end": 10.3,
+      "state_version_end": 7,
+      "frames": 14,
+      "frame_steps": [
+        0,
+        156,
+        326,
+        491,
+        645,
+        770,
+        894,
+        1149,
+        1274,
+        1398,
+        1523,
+        1658,
+        1824,
+        2060
+      ],
+      "events": 15,
+      "records": 57,
+      "setup": [],
+      "final_frame": "frame_d954996c33124dfa859ac0ed15e6b249",
+      "expected_met": true
+    }
+  ],
+  "start": {
+    "job_id": "job_030de8e5e14d4de3b8f94c1b88ddd8ba",
+    "status": "succeeded",
+    "error": null,
+    "wall_s": 9.9
+  },
+  "summary": {
+    "episodes": 3,
+    "passed": 1,
+    "pass_rate": 0.3333,
+    "expected_met": 3,
+    "failure_codes": {
+      "GRASP_POSE_UNAVAILABLE": 1,
+      "OK": 1,
+      "UNREACHABLE_TARGET": 1
+    },
+    "failure_categories": {
+      "grasp_pose_unavailable": 1,
+      "unreachable": 1
+    },
+    "wall_s": {
+      "total": 15.17,
+      "mean": 5.06,
+      "median": 0.37
+    },
+    "frames": 18,
+    "events": 23
+  },
+  "verdict": {
+    "ok": true,
+    "expected_met_all": true
+  },
+  "finished_at": "2026-11-07T12:15:01.100307+00:00",
+  "closed": true
+}

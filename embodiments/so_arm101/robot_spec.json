@@ -1,0 +1,101 @@
+{
+  "robot_id": "so101",
+  "model": "SO-ARM101",
+  "dof": 6,
+  "joints": [
+    {
+      "name": "shoulder_pan",
+      "logical_name": "shoulder_pan",
+      "type": "revolute",
+      "unit": "rad",
+      "lower": -1.9198598861694336,
+      "upper": 1.9198598861694336,
+      "home": 0.0,
+      "velocity_limit": 10.0
+    },
+    {
+      "name": "shoulder_lift",
+      "logical_name": "shoulder_lift",
+      "type": "revolute",
+      "unit": "rad",
+      "lower": -1.7453298568725586,
+      "upper": 1.7453298568725586,
+      "home": 0.0,
+      "velocity_limit": 10.0
+    },
+    {
+      "name": "elbow_flex",
+      "logical_name": "elbow_flex",
+      "type": "revolute",
+      "unit": "rad",
+      "lower": -1.6899999380111694,
+      "upper": 1.6899999380111694,
+      "home": 0.0,
+      "velocity_limit": 10.0
+    },
+    {
+      "name": "wrist_flex",
+      "logical_name": "wrist_flex",
+      "type": "revolute",
+      "unit": "rad",
+      "lower": -1.65805983543396,
+      "upper": 1.65805983543396,
+      "home": 0.0,
+      "velocity_limit": 10.0
+    },
+    {
+      "name": "wrist_roll",
+      "logical_name": "wrist_roll",
+      "type": "revolute",
+      "unit": "rad",
+      "lower": -2.743849754333496,
+      "upper": 2.841209650039673,
+      "home": 0.0,
+      "velocity_limit": 10.0
+    },
+    {
+      "name": "gripper",
+      "logical_name": "gripper",
+      "type": "revolute",
+      "unit": "rad",
+      "lower": -0.17453299462795258,
+      "upper": 1.7453298568725586,
+      "home": 0.0,
+      "velocity_limit": 10.0
+    }
+  ],
+  "end_effector": {
+    "name": "moving_jaw_so101_v1",
+    "parent_joint": "gripper",
+    "offset_m": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "gripper": {
+    "kind": "single",
+    "joint_names": [
+      "gripper"
+    ],
+    "open_value": 1.0,
+    "close_value": 0.0,
+    "max_width_m": 0.04
+  },
+  "control_modes": [
+    "position"
+  ],
+  "skills": [
+    "observe_scene",
+    "home",
+    "move_joint",
+    "gripper",
+    "hold_pose"
+  ],
+  "asset": {
+    "usd_path": "assets/isaac6/RobotStudio/so101_new_calib/so101_new_calib.usd",
+    "sha256": "04ef30434ff8bb752241ce5c6d33304ad04629b5d9290c580c4fd8b9fc89efb3",
+    "license": "Apache-2.0",
+    "source": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/6.0/Isaac/Robots/RobotStudio/so101_new_calib/"
+  }
+}

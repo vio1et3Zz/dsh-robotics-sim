@@ -1,0 +1,25 @@
+﻿python.exe : test_cancel_only_settles_after_worker_event (tests.unit.test_gateway_service.GatewayServiceTests.test_canc
+el_only_settles_after_worker_event) ... ok
+所在位置 行:6 字符: 3
++   & $py -m unittest tests.unit.test_gateway_service -v 2>&1 | Out-Fil ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_cancel_onl...r_event) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_duplicate_execute_returns_same_job (tests.unit.test_gateway_service.GatewayServiceTests.test_duplicate_execute_ret
+urns_same_job) ... ok
+test_reset_is_rejected_while_a_job_is_live (tests.unit.test_gateway_service.GatewayServiceTests.test_reset_is_rejected_
+while_a_job_is_live) ... ok
+test_restart_marks_live_jobs_failed (tests.unit.test_gateway_service.GatewayServiceTests.test_restart_marks_live_jobs_f
+ailed) ... ok
+test_stale_episode_is_rejected (tests.unit.test_gateway_service.GatewayServiceTests.test_stale_episode_is_rejected) ...
+ ok
+test_start_job_succeeds_and_state_is_readable (tests.unit.test_gateway_service.GatewayServiceTests.test_start_job_succe
+eds_and_state_is_readable) ... ok
+test_worker_loss_fails_live_job (tests.unit.test_gateway_service.GatewayServiceTests.test_worker_loss_fails_live_job) .
+.. ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.437s
+
+OK

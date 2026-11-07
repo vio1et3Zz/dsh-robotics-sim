@@ -1,0 +1,86 @@
+{
+  "eval_id": "t09_fixed_2026-11-07",
+  "created_at": "2026-11-07T14:32:00+08:00",
+  "plan_section": "T09",
+  "scene": {
+    "profile_id": "profile_so101_physx",
+    "robot_id": "so101",
+    "scene_id": "table_pick_place",
+    "block_spawn_m": [0.18, 0.0, 0.075],
+    "block_size_m": [0.03, 0.03, 0.03],
+    "target_box_center_m": [0.22, 0.05, 0.02],
+    "target_box_size_m": [0.10, 0.10, 0.04],
+    "camera": "front 640x480 rgb+distance_to_image_plane"
+  },
+  "seeds": [7, 11, 19, 23, 29, 31, 37, 41, 43, 47],
+  "task": {
+    "goal": "把红色积木放入目标盒",
+    "predicate": {
+      "predicate_id": "pred_block_in_box",
+      "kind": "object_in_region",
+      "object_id": "red_block",
+      "region": { "min": [0.19, 0.02, 0.03], "max": [0.25, 0.08, 0.08] },
+      "tolerance_m": 0.01
+    },
+    "budgets": {
+      "sim_time_s": 180.0,
+      "wall_time_s": 240.0,
+      "max_skill_calls": 6,
+      "max_retries": 2
+    }
+  },
+  "success_conditions": {
+    "job_status": "succeeded",
+    "skill_predicates_all_true": true,
+    "block_xy_distance_to_box_center_lte_m": 0.05,
+    "block_center_z_lte_m": 0.09,
+    "note": "block must end on the target box top face, not merely be moved"
+  },
+  "runs": 10,
+  "min_successes": 8,
+  "budget": {
+    "wall_time_s": 3600.0,
+    "sim_time_s": 1800.0,
+    "max_skill_calls": 80,
+    "max_retries": 20
+  },
+  "recovery_cases": [
+    {
+      "id": "stale_after_object_move",
+      "injection": "validate plan, move red_block +4 mm via move_object, execute stale plan",
+      "expected": "HTTP 409 STALE_WORLD_STATE, then re-observe/replan succeeds"
+    },
+    {
+      "id": "first_grasp_wrong_variant",
+      "injection": "move red_block to x=0.20, plan grasp_x=0.18 on first attempt",
+      "expected": "task job failed GRASP_MISSED, then replan grasp_x=0.20 succeeds"
+    }
+  ],
+  "cancel_test": {
+    "skill": "pick",
+    "cancel_after_s": 1.5,
+    "expected": "canceling -> canceled only after worker ACK; episode unchanged; state_version bumped"
+  },
+  "worker_lost_test": {
+    "injection": "kill the worker process while a pick job is live",
+    "expected": "job failed WORKER_LOST; no replay"
+  },
+  "restart_test": {
+    "injection": "stop gateway and worker, start a fresh gateway + simulation",
+    "expected": "start -> inspect -> one pick succeeds; first run evidence not overwritten"
+  },
+  "resource_metrics": [
+    "gpu_memory_used_mib",
+    "worker_peak_rss_mib",
+    "sim_time_s",
+    "wall_time_s",
+    "skill_calls",
+    "retries"
+  ],
+  "notes": [
+    "Physics is deterministic on this host; the seed list is recorded for provenance and for the declared evaluation set.",
+    "Thresholds are fixed before the runs and are not adjusted afterwards.",
+    "Camera frames are renders of the true scene; control and predicates use ground-truth state (marked in the report).",
+    "The 10-run set is the fixed scene set; a randomized scene set may be reported separately and is not part of the >=8/10 target."
+  ]
+}

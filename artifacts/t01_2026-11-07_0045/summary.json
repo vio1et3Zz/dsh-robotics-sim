@@ -1,0 +1,32 @@
+﻿{
+    "runId":  "t01_2026-11-07_0045",
+    "stage":  "T01",
+    "generatedAt":  "2026-11-07T00:40:04.3415294+08:00",
+    "commands":  [
+                     "python scripts/export_protocol.py",
+                     "python -m unittest discover -s tests/unit -v",
+                     "node validate.mjs (in packages/robotics-protocol)",
+                     "tsc -p tsconfig.json (in packages/robotics-protocol)"
+                 ],
+    "exitCodes":  {
+                      "export":  0,
+                      "python":  0,
+                      "node":  0,
+                      "tsc":  0
+                  },
+    "fixtures":  {
+                     "count":  30,
+                     "valid":  16,
+                     "invalid":  14
+                 },
+    "hashes":  {
+                   "protocolBundle":  "1A6663CC329DA51B29813F3EB6799E0478EC861252E5212A8EC5731A284FF24A",
+                   "typesTs":  "FF698691590550516816FD012AB45AF113E2C251E4B98FD2E09D9AE7FC588685",
+                   "casesJson":  "74EEE94FB19276FBB22649ED13CC0880E7130840C840922D6E069105A5CBF717"
+               },
+    "limitations":  [
+                        "Fake backend is protocol-only; it is never a simulation verification.",
+                        "Plan-hash equality is enforced by Pydantic and the future Gateway, not by Ajv.",
+                        "No real Isaac process is started in T01."
+                    ]
+}

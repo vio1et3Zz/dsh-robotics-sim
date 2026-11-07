@@ -1,0 +1,466 @@
+{
+  "base": "http://127.0.0.1:8714",
+  "started_at": "2026-11-07T20:37:50+0800",
+  "startup": {
+    "job_id": "job_84254a5c1c03429385ffd17f526976d2",
+    "status": "succeeded",
+    "error": null
+  },
+  "simulation_id": "sim_aa0e099738204c9ba721be94e9560491",
+  "reset": {
+    "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+    "status": "ok"
+  },
+  "state_before": {
+    "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+    "state_version": 1,
+    "sim_step": 0
+  },
+  "job_id": "job_e48179871bd34cb2b261ab2fcbb5a286",
+  "skill": {
+    "name": "vla_stub",
+    "parameters": {
+      "mode": "ee_delta",
+      "repeat": 1
+    }
+  },
+  "state": {
+    "count": 21,
+    "errors": 0,
+    "p50_ms": 18.0,
+    "p95_ms": 63.7,
+    "max_ms": 99.1,
+    "samples": [
+      {
+        "ms": 63.725400003022514,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 0.001,
+        "sim_step": 0,
+        "state_version": 1,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 18.490000002202578,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 0.578,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 18.70720000442816,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 1.102,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 5.455200000142213,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 1.628,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 99.07820000080392,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 2.137,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 18.413999998301733,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 2.739,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 3.4823000023607165,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 3.267,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 3.1316999957198277,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 3.778,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 17.706599996017758,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 4.288,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 20.577700001013,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 4.813,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 3.499099999316968,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 5.339,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 18.039000002318062,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 5.849,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 20.030499996209983,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 6.376,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 18.12410000275122,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 6.899,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 18.568699997558724,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 7.427,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 4.640599996491801,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 7.953,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 6.687299995974172,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 8.465,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 20.54140000109328,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 8.975,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 3.581999997550156,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 9.5,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 3.3833999987109564,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 10.008,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      },
+      {
+        "ms": 4.034099998534657,
+        "delay_ms": 0.0,
+        "status": 200,
+        "error": null,
+        "t": 10.518,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "joints_finite": true
+      }
+    ]
+  },
+  "frames": {
+    "count": 6,
+    "errors": 0,
+    "p50_ms": 46.3,
+    "p95_ms": 143.2,
+    "max_ms": 143.2,
+    "samples": [
+      {
+        "ms": 87.15490000031423,
+        "delay_ms": 0.0,
+        "status": 201,
+        "error": null,
+        "t": 0.001,
+        "sim_step": 0,
+        "state_version": 1,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "frame_id": "frame_5fb8b9d1399541f68e159464eb8e1d24",
+        "buffered": true
+      },
+      {
+        "ms": 143.16739999776473,
+        "delay_ms": 0.0,
+        "status": 201,
+        "error": null,
+        "t": 2.092,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "frame_id": "frame_1e886e44b3c34f6cab91ef46aca4359a",
+        "buffered": false
+      },
+      {
+        "ms": 29.719599995587487,
+        "delay_ms": 0.0,
+        "status": 201,
+        "error": null,
+        "t": 4.241,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "frame_id": "frame_953ac145f4684934999e9bb6c5743787",
+        "buffered": false
+      },
+      {
+        "ms": 46.322000001964625,
+        "delay_ms": 0.0,
+        "status": 201,
+        "error": null,
+        "t": 6.283,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "frame_id": "frame_204b969e57c7457da7b58ceccab62966",
+        "buffered": false
+      },
+      {
+        "ms": 32.782800000859424,
+        "delay_ms": 0.0,
+        "status": 201,
+        "error": null,
+        "t": 8.341,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "frame_id": "frame_8fc47c9a6fe24579ac71576e7a12cbbb",
+        "buffered": false
+      },
+      {
+        "ms": 47.85890000493964,
+        "delay_ms": 0.0,
+        "status": 201,
+        "error": null,
+        "t": 10.379,
+        "sim_step": 10,
+        "state_version": 2,
+        "episode_id": "ep_e5617f96b8824b2d8abf859c60330728",
+        "frame_id": "frame_5881bff66a524e8089bb81f16d558f28",
+        "buffered": false
+      }
+    ]
+  },
+  "health": {
+    "ms": 1.3365999984671362,
+    "delay_ms": 0.0,
+    "status": 200,
+    "json": {
+      "gateway": "ok",
+      "worker": "alive",
+      "simulation_ready": true,
+      "startup_lost_jobs": 0
+    },
+    "error": null,
+    "t": 10.002
+  },
+  "cancel": {
+    "request": null,
+    "settled_ms": 21.9,
+    "final_status": "failed",
+    "error": {
+      "code": "EMPTY_GRASP",
+      "message": "EMPTY_GRASP"
+    }
+  },
+  "job": {
+    "status": "failed",
+    "progress": 1.0,
+    "error": {
+      "code": "EMPTY_GRASP",
+      "message": "EMPTY_GRASP"
+    }
+  },
+  "frame_sim_steps": [
+    0,
+    10,
+    10,
+    10,
+    10,
+    10
+  ],
+  "frame_sim_step_monotonic": true,
+  "events_endpoint": {
+    "status": 200,
+    "count": 8,
+    "types": [
+      "created",
+      "created",
+      "started",
+      "progress",
+      "progress",
+      "progress",
+      "progress",
+      "failed"
+    ],
+    "seq": [
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244
+    ],
+    "terminal": {
+      "schema_version": "0.1",
+      "request_id": null,
+      "trace_id": null,
+      "job_id": "job_605f1f309ae14f22aa193de18da75bd3",
+      "event_seq": 7,
+      "at": "2026-11-07T12:38:00.363860Z",
+      "type": "failed",
+      "status": "failed",
+      "skill": "vla_stub",
+      "message": "EMPTY_GRASP",
+      "progress": 1.0,
+      "data": {
+        "error_code": "EMPTY_GRASP",
+        "message": "EMPTY_GRASP",
+        "result": {
+          "passed": false,
+          "failure": "EMPTY_GRASP",
+          "policy": "vla_stub/ee_delta",
+          "chunks": 1,
+          "sim_steps": 10,
+          "elapsed_s": 0.16,
+          "block_start": [
+            0.17999990284442902,
+            -1.3562335254846403e-07,
+            0.07499999552965164
+          ],
+          "block_final": [
+            0.17999990284442902,
+            -1.3570648604854796e-07,
+            0.07499999552965164
+          ],
+          "policy_log": "<repo>\\artifacts\\policy_2026-11-07\\worker_1794054997\\worker_2\\policy_logs\\policy_ep_e5617f96b8824b2d8abf859c60330728.jsonl"
+        }
+      },
+      "evidence": [
+        "isaaclab_physx"
+      ]
+    }
+  },
+  "latest_frame_endpoint": {
+    "status": 200,
+    "frame_id": "frame_5881bff66a524e8089bb81f16d558f28",
+    "sim_step": 10
+  },
+  "finished_at": "2026-11-07T20:38:10+0800",
+  "verdict": {
+    "state_p95_under_200ms": true,
+    "state_samples_present": true,
+    "frame_max_under_1000ms": true,
+    "frames_increasing": true,
+    "cancel_ack_under_1000ms": false,
+    "cancel_final_canceled": true,
+    "health_under_100ms": true,
+    "all_pass": false
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "0.1",
+  "updatedAt": "2026-11-07T15:00:00+08:00",
+  "workspace": "<repo>",
+  "nextAction": "OP01 (optional; main T00-T09 complete)",
+  "tasks": [
+    {
+      "id": "T00",
+      "status": "passed",
+      "dependsOn": [],
+      "evidence": [
+        "artifacts/t00_2026-11-07_0015/baseline_manifest.json",
+        "artifacts/t00_2026-11-07_0015/doctor.json",
+        "artifacts/t00_2026-11-07_0015/isaaclab_worktree.diff",
+        "docs/compatibility.md"
+      ],
+      "notes": "doctor baseline OK (exit 0); no Kit/physics/camera/TCP started; no upstream source modified."
+    },
+    {
+      "id": "T01",
+      "status": "passed",
+      "dependsOn": [
+        "T00"
+      ],
+      "evidence": [
+        "artifacts/t01_2026-11-07_0045/summary.json",
+        "schemas/v0.1/protocol.bundle.json",
+        "packages/robotics-protocol/types.ts",
+        "tests/fixtures/protocol/cases.json"
+      ],
+      "notes": "Python 17 tests OK; Node 30/30 cases; tsc strict OK. Fake backend is protocol-only."
+    },
+    {
+      "id": "T02",
+      "status": "passed",
+      "dependsOn": [
+        "T00",
+        "T01"
+      ],
+      "evidence": [
+        "artifacts/t02_2026-11-07_0150/summary.json",
+        "artifacts/t02_2026-11-07_0150/result.json",
+        "artifacts/t02_2026-11-07_0150/runtime_manifest.json"
+      ],
+      "notes": "Real Franka PhysX: 9 joints, bounded calibration 0.049921 target / 0.049896 measured, 2.57e-05 rad error; illegal actions rejected before buffers; local asset mirror required."
+    },
+    {
+      "id": "T03",
+      "status": "passed",
+      "dependsOn": [
+        "T01",
+        "T02"
+      ],
+      "evidence": [
+        "artifacts/t03_2026-11-07_0210/summary.json",
+        "artifacts/t03_2026-11-07_0210/service_tests.txt",
+        "artifacts/t03_2026-11-07_0210/http_tests.txt"
+      ],
+      "notes": "Real Gateway+Worker cancel in 0.124s; 7 service tests + 3 HTTP/WS tests; idempotency, WORKER_LOST, restart and stale episode covered."
+    },
+    {
+      "id": "T04",
+      "status": "passed",
+      "dependsOn": [
+        "T00",
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "evidence": [
+        "artifacts/t04_2026-11-07_1150/summary.md",
+        "artifacts/t04_2026-11-07_1150/gateway_run.json",
+        "packages/dsh-plugin/index.js"
+      ],
+      "notes": "Real DSH tool calls: start 6.51s, hold_pose canceled with 46ms Worker ACK, state_version 0->1, close with worker status closed."
+    },
+    {
+      "id": "T05",
+      "status": "passed",
+      "dependsOn": [
+        "T02",
+        "T04"
+      ],
+      "evidence": [
+        "artifacts/t05_2026-11-07_1120/summary.md",
+        "artifacts/t05_2026-11-07_1120/calib/so101_calibration.json",
+        "artifacts/t05_2026-11-07_1120/objects4/so101_objects.json",
+        "embodiments/so_arm101/robot_spec.json"
+      ],
+      "notes": "Apache-2.0 SO-101 mirrored; 6 joints calibrated; gripper 0->1 rad measured 0.9992; object scene settled correctly."
+    },
+    {
+      "id": "T06",
+      "status": "passed",
+      "dependsOn": [
+        "T05"
+      ],
+      "evidence": [
+        "artifacts/t06_2026-11-07_1130/summary.md",
+        "artifacts/t06_2026-11-07_1130/waypoint_pick3.json",
+        "artifacts/t06_2026-11-07_1130/skill_success3.json",
+        "artifacts/t06_2026-11-07_1130/skill_empty.json",
+        "artifacts/t06_2026-11-07_1130/skill_grasp_missed.json",
+        "artifacts/t06_2026-11-07_1130/skill_unreachable.json",
+        "python/robotics_backends/isaaclab_physx/so101_pick_place.py"
+      ],
+      "notes": "Measured mouth frame (0.0071,0,-0.085); offline top-grasp waypoints; 3/3 identical real pick/place; block lifted 43mm and placed; EMPTY_GRASP/GRASP_MISSED/UNREACHABLE_TARGET verified."
+    },
+    {
+      "id": "T07",
+      "status": "passed",
+      "dependsOn": [
+        "T04",
+        "T06"
+      ],
+      "evidence": [
+        "artifacts/t07_2026-11-07_1345/summary.md",
+        "artifacts/t07_2026-11-07_1345/dsh_tools.md",
+        "artifacts/t07_2026-11-07_1345/flow2.json",
+        "artifacts/t07_2026-11-07_1345/gateway4.db",
+        "python/robotics_backends/isaaclab_physx/so101_worker.py",
+        "python/robotics_gateway/endpoint.py",
+        "python/robotics_gateway/service.py"
+      ],
+      "notes": "Real DSH chain: Agent plan from inspect_scene; validate-then-move gave 409 STALE_WORLD_STATE; replan succeeded; wrong grasp variant gave GRASP_MISSED; replan with observed variant succeeded; final block (0.2322,0.0585,0.0550)."
+    },
+    {
+      "id": "T08",
+      "status": "passed",
+      "dependsOn": [
+        "T04",
+        "T05"
+      ],
+      "evidence": [
+        "artifacts/t08_2026-11-07_1410/summary.md",
+        "artifacts/t08_2026-11-07_1410/frame1_meta.json",
+        "artifacts/t08_2026-11-07_1410/frame2_meta.json",
+        "python/robotics_backends/isaaclab_physx/so101_worker.py",
+        "python/robotics_gateway/app.py"
+      ],
+      "notes": "Real 640x480 RGB + distance_to_image_plane depth; metadata intrinsics/extrinsics/state_version; frame changes after block move; GPU 5022->1430 MiB after close; UI at /ui."
+    },
+    {
+      "id": "T09",
+      "status": "passed",
+      "dependsOn": [
+        "T07",
+        "T08"
+      ],
+      "evidence": [
+        "artifacts/t09_2026-11-07_1435/summary.md",
+        "artifacts/t09_2026-11-07_1435/eval2.json",
+        "artifacts/t09_2026-11-07_1435/eval.json",
+        "artifacts/t09_2026-11-07_1435/reset_probe.json",
+        "artifacts/t09_2026-11-07_1435/worker_lost_job.json",
+        "artifacts/t09_2026-11-07_1435/restart_pick.json",
+        "artifacts/t09_2026-11-07_1435/gpu_stats.json",
+        "docs/execution/eval_manifest.json",
+        "README.md"
+      ],
+      "notes": "10/10 fixed runs; first eval 1/10 kept as reset-defect failure; 2/2 recoveries; cancel ACK 0.217s; WORKER_LOST; clean restart; GPU 5147->1422 MiB; RSS 8637 MiB."
+    },
+    {
+      "id": "OP01",
+      "status": "pending",
+      "dependsOn": [
+        "T09"
+      ],
+      "evidence": [],
+      "notes": "Newton backend compatibility"
+    },
+    {
+      "id": "OP02",
+      "status": "pending",
+      "dependsOn": [
+        "T04"
+      ],
+      "evidence": [],
+      "notes": "existing Isaac Sim Python Server adapter"
+    }
+  ]
+}

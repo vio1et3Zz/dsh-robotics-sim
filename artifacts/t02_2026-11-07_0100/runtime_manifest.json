@@ -1,0 +1,40 @@
+{
+  "runtime_id": "runtime_t02_04c5e8f4f136",
+  "schema_version": "0.1",
+  "created_at": "2026-11-06T16:48:11.006311Z",
+  "protocol_version": "0.1",
+  "adapter_version": "0.2.0",
+  "python": {
+    "version": "3.12.10",
+    "executable": "<isaac-root>\\env_isaaclab\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "packages": {
+    "isaaclab": "6.1.14",
+    "isaacsim": "6.0.1.0",
+    "isaaclab-physx": "1.1.3",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.3.1"
+  },
+  "source": {
+    "repo": "<isaac-root>\\IsaacLab",
+    "commit": "ffff603eafc6b74264a5261cc0183d6a65390d78",
+    "describe": "v3.0.0-beta2.patch1-dirty",
+    "dirty": true,
+    "diff_sha256": "0394d0a4294c2f64cfdbaf691eadba3df2f705098160588311ff0bdc28191bb2"
+  },
+  "config_sha256": "d4b81fffb5750a3ce1ca254415a73efb4dbe94ae7bbbb6df2757d75b01919213",
+  "assets": {},
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "memory_mib": 8187,
+    "driver": "616.92"
+  },
+  "worker": {
+    "cwd": "<repo>",
+    "log_dir": "<repo>\\artifacts\\t02_2026-11-07_0100",
+    "num_envs": 1,
+    "device": "cuda:0"
+  },
+  "notes": []
+}

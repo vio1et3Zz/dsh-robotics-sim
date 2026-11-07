@@ -1,0 +1,174 @@
+{
+  "tool": "dsh-robotics doctor",
+  "generatedAt": "2026-11-07T00:24:10.2925934+08:00",
+  "config": "<repo>\\configs\\local.example.json",
+  "machine": "<machine>",
+  "user": "<user>",
+  "baselineOk": true,
+  "installed": {
+    "paths": {
+      "isaac.root": {
+        "path": "<isaac-root>",
+        "exists": true
+      },
+      "isaac.labSource": {
+        "path": "<isaac-root>\\IsaacLab",
+        "exists": true
+      },
+      "isaac.python": {
+        "path": "<isaac-root>\\env_isaaclab\\Scripts\\python.exe",
+        "exists": true
+      },
+      "isaac.launcher": {
+        "path": "<isaac-root>\\isaaclab.cmd",
+        "exists": true
+      },
+      "dsh.profileDir": {
+        "path": "%USERPROFILE%\\.dsh\\profiles\\desktop",
+        "exists": true
+      }
+    },
+    "python": {
+      "python": "3.12.10",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "packages": {
+        "isaaclab": "6.1.14",
+        "isaacsim": "6.0.1.0",
+        "isaaclab-physx": "1.1.3",
+        "isaaclab-newton": "0.13.6",
+        "newton": "1.2.1",
+        "torch": "2.11.0+cu128",
+        "gymnasium": "1.2.1",
+        "fastapi": "0.120.4",
+        "pydantic": "2.11.10",
+        "websockets": "12.0"
+      }
+    },
+    "git": {
+      "describe": "v3.0.0-beta2.patch1-dirty",
+      "commit": "ffff603eafc6b74264a5261cc0183d6a65390d78"
+    },
+    "assetRoot": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/6.0",
+    "dsh": {
+      "version": "0.2.2-rc.1",
+      "cordis": "4.1.0",
+      "tools": "0.2.2-rc.1",
+      "profileBundles": [
+        "@deepseek-ai/dsh-base",
+        "@deepseek-ai/dsh-web-app",
+        "dsh-opencode-go",
+        "dsh-agent-plugins-market"
+      ]
+    }
+  },
+  "services": {
+    "gateway": "not_running",
+    "note": "Gateway and Worker do not exist before T03/T02; not_running is expected."
+  },
+  "verified": {
+    "passedTasks": [],
+    "note": "Only stages accepted against a real backend belong here."
+  },
+  "checks": [
+    {
+      "id": "isaac.root",
+      "status": "ok",
+      "detail": "<isaac-root>"
+    },
+    {
+      "id": "isaac.labSource",
+      "status": "ok",
+      "detail": "<isaac-root>\\IsaacLab"
+    },
+    {
+      "id": "isaac.python",
+      "status": "ok",
+      "detail": "<isaac-root>\\env_isaaclab\\Scripts\\python.exe"
+    },
+    {
+      "id": "isaac.launcher",
+      "status": "ok",
+      "detail": "<isaac-root>\\isaaclab.cmd"
+    },
+    {
+      "id": "dsh.profileDir",
+      "status": "ok",
+      "detail": "%USERPROFILE%\\.dsh\\profiles\\desktop"
+    },
+    {
+      "id": "isaac.python.version",
+      "status": "ok",
+      "detail": "3.12.10"
+    },
+    {
+      "id": "package.isaaclab",
+      "status": "ok",
+      "detail": "6.1.14"
+    },
+    {
+      "id": "package.isaacsim",
+      "status": "ok",
+      "detail": "6.0.1.0"
+    },
+    {
+      "id": "package.isaaclab-physx",
+      "status": "ok",
+      "detail": "1.1.3"
+    },
+    {
+      "id": "package.torch",
+      "status": "ok",
+      "detail": "2.11.0+cu128"
+    },
+    {
+      "id": "isaac.git.describe",
+      "status": "ok",
+      "detail": "v3.0.0-beta2.patch1-dirty"
+    },
+    {
+      "id": "isaac.git.commit",
+      "status": "ok",
+      "detail": "ffff603eafc6b74264a5261cc0183d6a65390d78"
+    },
+    {
+      "id": "isaac.assetRoot",
+      "status": "ok",
+      "detail": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/6.0"
+    },
+    {
+      "id": "dsh.runtime.version",
+      "status": "ok",
+      "detail": "0.2.2-rc.1"
+    },
+    {
+      "id": "dsh.cordis.version",
+      "status": "ok",
+      "detail": "4.1.0"
+    },
+    {
+      "id": "dsh.tools.version",
+      "status": "ok",
+      "detail": "0.2.2-rc.1"
+    },
+    {
+      "id": "dsh.profile",
+      "status": "ok",
+      "detail": "@deepseek-ai/dsh-base, @deepseek-ai/dsh-web-app, dsh-opencode-go, dsh-agent-plugins-market"
+    },
+    {
+      "id": "service.gateway",
+      "status": "not_running",
+      "detail": "http://127.0.0.1:8710/api/v1/health"
+    },
+    {
+      "id": "verified.tasks",
+      "status": "none",
+      "detail": ""
+    },
+    {
+      "id": "paths.legacyDrives",
+      "status": "ok",
+      "detail": "no H:/J: references in configs, scripts or docs"
+    }
+  ]
+}

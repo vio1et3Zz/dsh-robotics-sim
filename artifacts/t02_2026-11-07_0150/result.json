@@ -1,0 +1,371 @@
+{
+  "status": "passed",
+  "stage": "complete",
+  "checks": {
+    "scene_ready": true,
+    "joint_count_matches": true,
+    "state_finite": true,
+    "illegal_action_rejected": true,
+    "unknown_joint_rejected": true,
+    "illegal_action_not_written": true,
+    "calibration_passed": true,
+    "state_version_advanced": true,
+    "episode_changed_on_reset": true,
+    "reset_state_valid": true,
+    "close_idempotent": true
+  },
+  "timings_s": {
+    "build_scene": 2.4213101863861084,
+    "total": 6.666874170303345
+  },
+  "before": {
+    "simulation_id": "sim_6a19301155344f0bab88e7e9b252c9d8",
+    "episode_id": "ep_3daf54c175244c80a28ef6ae1c7a06ff",
+    "env_id": 0,
+    "state_version": 0,
+    "event_seq": 0,
+    "sim_step": 0,
+    "sim_time_s": 0.0,
+    "wall_time": "2026-11-06T16:55:04.055010Z",
+    "source": "sim_ground_truth",
+    "frame": "world",
+    "robots": [
+      {
+        "robot_id": "franka",
+        "dof": 9,
+        "joint_positions": [
+          -7.860906043788418e-05,
+          -0.012321898713707924,
+          0.0001222149294335395,
+          -0.022675586864352226,
+          -0.00014424209075514227,
+          0.02609809674322605,
+          0.026083337143063545,
+          3.391563950572163e-05,
+          3.513223782647401e-05
+        ],
+        "joint_velocities": [
+          -0.010432511568069458,
+          -1.2931452989578247,
+          0.01233655959367752,
+          -2.253107786178589,
+          -0.0028748849872499704,
+          2.610520362854004,
+          2.609592914581299,
+          1.514714676886797e-05,
+          0.001240710262209177
+        ],
+        "ee_pose": {
+          "frame": "world",
+          "frame_id": null,
+          "position": [
+            0.08975383639335632,
+            -8.232898835558444e-06,
+            0.9292243719100952
+          ],
+          "orientation_xyzw": [
+            0.9287814120093346,
+            0.3705443528917214,
+            0.007310931742578551,
+            0.0029191647876379537
+          ]
+        },
+        "gripper": {
+          "width_m": 6.904787733219564e-05,
+          "closed": true
+        }
+      }
+    ],
+    "objects": [],
+    "skills": []
+  },
+  "robot_spec": {
+    "robot_id": "franka",
+    "model": "Franka Emika Panda",
+    "dof": 9,
+    "joints": [
+      {
+        "name": "panda_joint1",
+        "logical_name": "panda_joint1",
+        "type": "revolute",
+        "unit": "rad",
+        "lower": -2.8973000049591064,
+        "upper": 2.8973000049591064,
+        "home": 0.0,
+        "velocity_limit": 2.174999952316284
+      },
+      {
+        "name": "panda_joint2",
+        "logical_name": "panda_joint2",
+        "type": "revolute",
+        "unit": "rad",
+        "lower": -1.7627999782562256,
+        "upper": 1.7627999782562256,
+        "home": -0.5690000057220459,
+        "velocity_limit": 2.174999952316284
+      },
+      {
+        "name": "panda_joint3",
+        "logical_name": "panda_joint3",
+        "type": "revolute",
+        "unit": "rad",
+        "lower": -2.8973000049591064,
+        "upper": 2.8973000049591064,
+        "home": 0.0,
+        "velocity_limit": 2.174999952316284
+      },
+      {
+        "name": "panda_joint4",
+        "logical_name": "panda_joint4",
+        "type": "revolute",
+        "unit": "rad",
+        "lower": -3.0717999935150146,
+        "upper": -0.0697999969124794,
+        "home": -2.809999942779541,
+        "velocity_limit": 2.174999952316284
+      },
+      {
+        "name": "panda_joint5",
+        "logical_name": "panda_joint5",
+        "type": "revolute",
+        "unit": "rad",
+        "lower": -2.8973000049591064,
+        "upper": 2.8973000049591064,
+        "home": 0.0,
+        "velocity_limit": 2.6100003719329834
+      },
+      {
+        "name": "panda_joint6",
+        "logical_name": "panda_joint6",
+        "type": "revolute",
+        "unit": "rad",
+        "lower": -0.017500000074505806,
+        "upper": 3.752500057220459,
+        "home": 3.0369999408721924,
+        "velocity_limit": 2.6100003719329834
+      },
+      {
+        "name": "panda_joint7",
+        "logical_name": "panda_joint7",
+        "type": "revolute",
+        "unit": "rad",
+        "lower": -2.8973000049591064,
+        "upper": 2.8973000049591064,
+        "home": 0.7409999966621399,
+        "velocity_limit": 2.6100003719329834
+      },
+      {
+        "name": "panda_finger_joint1",
+        "logical_name": "panda_finger_joint1",
+        "type": "prismatic",
+        "unit": "m",
+        "lower": 0.0,
+        "upper": 0.03999999910593033,
+        "home": 0.03999999910593033,
+        "velocity_limit": 0.20000000298023224
+      },
+      {
+        "name": "panda_finger_joint2",
+        "logical_name": "panda_finger_joint2",
+        "type": "prismatic",
+        "unit": "m",
+        "lower": 0.0,
+        "upper": 0.03999999910593033,
+        "home": 0.03999999910593033,
+        "velocity_limit": 10.0
+      }
+    ],
+    "end_effector": {
+      "name": "panda_hand",
+      "parent_joint": "panda_joint7",
+      "offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "gripper": {
+      "kind": "parallel",
+      "joint_names": [
+        "panda_finger_joint1",
+        "panda_finger_joint2"
+      ],
+      "open_value": 0.04,
+      "close_value": 0.0,
+      "max_width_m": 0.08
+    },
+    "control_modes": [
+      "position"
+    ],
+    "skills": [
+      "observe_scene",
+      "calibrate_joint"
+    ],
+    "asset": {
+      "usd_path": "<repo>\\assets\\isaac6\\FrankaPanda\\franka.usd",
+      "sha256": null,
+      "license": "Isaac Lab / NVIDIA Isaac Sim asset license",
+      "source": "isaaclab_assets.robots.franka.FRANKA_PANDA_CFG (franka.usd)"
+    }
+  },
+  "calibration": {
+    "joint": "panda_joint1",
+    "index": 0,
+    "delta_requested_rad": 0.05,
+    "target_rad": 0.04992139093956212,
+    "lower_rad": -2.8973000049591064,
+    "upper_rad": 2.8973000049591064,
+    "margin_rad": 0.05,
+    "hold_s": 0.25,
+    "settle_s": 0.2,
+    "hold_steps": 50,
+    "start_rad": -7.860906043788418e-05,
+    "measured_hold_rad": 0.04989573359489441,
+    "hold_error_rad": 2.5657344667709414e-05,
+    "max_tail_error_rad": 2.5657344667709414e-05,
+    "settled_rad": -0.001666199997998774,
+    "return_error_rad": 0.0015875909375608899,
+    "all_joint_positions_after_hold": [
+      0.04989573359489441,
+      0.025087833404541016,
+      0.00014993458171375096,
+      -0.06980038434267044,
+      0.00035602570278570056,
+      0.20593665540218353,
+      0.25126636028289795,
+      7.257976540131494e-05,
+      2.229141136922408e-05
+    ],
+    "passed": true
+  },
+  "after": {
+    "simulation_id": "sim_6a19301155344f0bab88e7e9b252c9d8",
+    "episode_id": "ep_3daf54c175244c80a28ef6ae1c7a06ff",
+    "env_id": 0,
+    "state_version": 1,
+    "event_seq": 2,
+    "sim_step": 130,
+    "sim_time_s": 0.6500000000000005,
+    "wall_time": "2026-11-06T16:55:04.667195Z",
+    "source": "sim_ground_truth",
+    "frame": "world",
+    "robots": [
+      {
+        "robot_id": "franka",
+        "dof": 9,
+        "joint_positions": [
+          -0.001666199997998774,
+          0.11724232882261276,
+          -0.001211523893289268,
+          -0.0698004961013794,
+          -7.428555545629933e-05,
+          0.20682477951049805,
+          0.2591800093650818,
+          7.310271030291915e-05,
+          7.055811147438362e-05
+        ],
+        "joint_velocities": [
+          0.005665723234415054,
+          0.5212888121604919,
+          0.014970800839364529,
+          -0.00013782145106233656,
+          0.004970350302755833,
+          0.03482682257890701,
+          -0.02434905618429184,
+          -0.00014589374768547714,
+          -0.00010207563173025846
+        ],
+        "ee_pose": {
+          "frame": "world",
+          "frame_id": null,
+          "position": [
+            0.19934101402759552,
+            -0.0004961376544088125,
+            0.9245849251747131
+          ],
+          "orientation_xyzw": [
+            0.9659200860199624,
+            0.2586514064454945,
+            0.009526473668507755,
+            0.0026615158085900445
+          ]
+        },
+        "gripper": {
+          "width_m": 0.00014366082177730277,
+          "closed": true
+        }
+      }
+    ],
+    "objects": [],
+    "skills": [
+      {
+        "skill": "calibrate_joint",
+        "phase": "succeeded",
+        "progress": 1.0,
+        "message": "hold_error=0.0000 rad"
+      }
+    ]
+  },
+  "reset": {
+    "simulation_id": "sim_6a19301155344f0bab88e7e9b252c9d8",
+    "episode_id": "ep_f8482ec9ccd24fbda9f73cf82b46e563",
+    "env_id": 0,
+    "state_version": 2,
+    "event_seq": 3,
+    "sim_step": 0,
+    "sim_time_s": 0.0,
+    "wall_time": "2026-11-06T16:55:04.669748Z",
+    "source": "sim_ground_truth",
+    "frame": "world",
+    "robots": [
+      {
+        "robot_id": "franka",
+        "dof": 9,
+        "joint_positions": [
+          -0.001666199997998774,
+          0.11724232882261276,
+          -0.001211523893289268,
+          -0.0698004961013794,
+          -7.428555545629933e-05,
+          0.20682477951049805,
+          0.2591800093650818,
+          7.310271030291915e-05,
+          7.055811147438362e-05
+        ],
+        "joint_velocities": [
+          0.005665723234415054,
+          0.5212888121604919,
+          0.014970800839364529,
+          -0.00013782145106233656,
+          0.004970350302755833,
+          0.03482682257890701,
+          -0.02434905618429184,
+          -0.00014589374768547714,
+          -0.00010207563173025846
+        ],
+        "ee_pose": {
+          "frame": "world",
+          "frame_id": null,
+          "position": [
+            0.19934101402759552,
+            -0.0004961376544088125,
+            0.9245849251747131
+          ],
+          "orientation_xyzw": [
+            0.9659200860199624,
+            0.2586514064454945,
+            0.009526473668507755,
+            0.0026615158085900445
+          ]
+        },
+        "gripper": {
+          "width_m": 0.00014366082177730277,
+          "closed": true
+        }
+      }
+    ],
+    "objects": [],
+    "skills": []
+  },
+  "manifest_path": "<repo>\\artifacts\\t02_2026-11-07_0150\\runtime_manifest.json"
+}

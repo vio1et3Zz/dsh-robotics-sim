@@ -1,0 +1,1 @@
+﻿{"schema": "<repo>\\schemas\\v0.1\\protocol.bundle.json", "types": "<repo>\\packages\\robotics-protocol\\types.ts"}

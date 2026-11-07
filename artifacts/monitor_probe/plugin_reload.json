@@ -1,0 +1,66 @@
+{
+  "at": "2026-11-07T20:02:00+08:00",
+  "purpose": "A3 plugin surface: hot-reload robotics_get_job_events / robotics_latest_frame and call them through the real DSH tool chain.",
+  "reload": {
+    "stage": "enable",
+    "target": "include:dsh-robotics",
+    "enabled": true,
+    "changed": false,
+    "application": "applied",
+    "warnings": []
+  },
+  "host_tool_list": {
+    "source": "cordis_inspect Tool.listTools",
+    "robotics_tool_count": 16,
+    "names": [
+      "robotics_list_backends",
+      "robotics_start_simulation",
+      "robotics_inspect_scene",
+      "robotics_get_robot_state",
+      "robotics_run_skill",
+      "robotics_get_job_status",
+      "robotics_get_job_events",
+      "robotics_cancel_job",
+      "robotics_reset_simulation",
+      "robotics_close_simulation",
+      "robotics_capture_frame",
+      "robotics_get_frame",
+      "robotics_latest_frame",
+      "robotics_create_task",
+      "robotics_validate_plan",
+      "robotics_execute_task"
+    ]
+  },
+  "tool_calls": {
+    "robotics_get_job_events": {
+      "job_id": "job_bb8965a6762d4134bd9013775c3d9619",
+      "request": {"after_seq": 0, "limit": 5},
+      "result": "ok",
+      "first_event_types": ["created", "created", "started", "progress", "progress"],
+      "next_seq": 228
+    },
+    "robotics_start_simulation": {
+      "profile_id": "profile_so101_physx",
+      "seed": 21,
+      "job_id": "job_2bf7a82015c44cd7917074c05787f566",
+      "status": "succeeded",
+      "simulation_id": "sim_a0abc5c8d60841acb4483fa7bc5ad664",
+      "startup_wall_s": 9.8
+    },
+    "robotics_capture_frame": {
+      "frame_id": "frame_dda914f8e86a41f8843b313f507e06ca",
+      "sim_step": 0,
+      "capture_ms": 0.8,
+      "width": 640,
+      "height": 480,
+      "depth_range_m": [0.40060415863990784, 1.7674065828323364],
+      "buffered": false
+    },
+    "robotics_latest_frame": {
+      "frame_id": "frame_dda914f8e86a41f8843b313f507e06ca",
+      "same_as_capture": true
+    },
+    "robotics_close_simulation": {"closed": true}
+  },
+  "note": "Hot reload used plugin_manager set_plugin; the DSH Host process was not restarted. Worker startup is ~9.8 s once the RTX/shader cache is warm (first launch after a fresh boot was ~92 s)."
+}
