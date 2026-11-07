@@ -2,42 +2,36 @@
 
 [中文文档](README.zh-CN.md)
 
-DSH Robotics Sim is a research prototype for language-directed tabletop manipulation in Isaac Lab. A DeepSeek Harness (DSH) agent constructs a task plan from scene observations. The gateway checks the plan against the current simulation state, and a PhysX worker executes the selected skills and evaluates their physical outcomes. SO-ARM101 is the evaluation platform. A Franka profile is included for interface development.
+DSH Robotics Sim gives a DeepSeek Harness (DSH) agent access to a running robotics simulation. The project is designed for experiments with vision-language-action (VLA) policies. A policy produces robot actions, while the agent observes the rollout, reads the outcome, and decides whether to let the policy continue, stop it, or take over the task with a simulator skill.
+
+The current backend is Isaac Lab with PhysX. The DSH tools access the simulator through a local gateway, which exposes scene state, camera frames, job events and execution controls. The same tool boundary can be used to add other simulators through backend adapters.
 
 ![Gateway console showing the SO-ARM101 scene, RGB camera, robot state, jobs and events](artifacts/gui_2026-11-07/console.png)
 
-*Gateway console during an SO-ARM101 run. The forward-facing virtual camera also provides [metric depth](artifacts/gui_2026-11-07/console-depth.png).*
+*The console displays the scene, job state and camera data exposed by the gateway. [Depth view](artifacts/gui_2026-11-07/console-depth.png)*
 
-## Method
+## From a policy rollout to agent intervention
 
-| Component | Responsibility |
+| Step | Agent interaction |
 | --- | --- |
-| [DSH plugin](packages/dsh-plugin) | Exposes tools for scene inspection, plan validation, execution, cancellation and frame retrieval. |
-| [Gateway](python/robotics_gateway) | Validates typed requests, associates plans with scene snapshots, and persists job state and events in SQLite. |
-| [Isaac Lab worker](python/robotics_backends/isaaclab_physx) | Advances PhysX, runs skills, captures RGB and depth, and measures task outcomes from simulator state. |
+| Observe | During a rollout, read the robot and object state with `robotics_inspect_scene`, retrieve the latest camera frame with `robotics_latest_frame`, and follow execution with `robotics_get_job_events`. |
+| Interpret | Compare the policy outcome with the task goal using failure codes, scene state and recorded frames. The agent can use the same records after a rollout to diagnose a failure and propose a retry. |
+| Intervene | Request cancellation with `robotics_cancel_job` if the active job should stop. Wait for the worker to acknowledge the stop before sending a replacement action. |
+| Take over | Read the latest scene, validate a revised plan, and submit a recovery skill or a new rollout through the gateway. The gateway checks the plan against the current state before execution. |
 
-The grasp skill selects among six precomputed approach variants at 1 cm intervals along the x-axis. Joint position targets drive the approach, grasp, lift, transfer and release. The evaluation checks the object's final pose against the configured placement region. A cooperative control loop publishes state at 2 Hz and buffers camera frames at 1 Hz while a skill is running.
+The prototype provides monitoring during execution, cancellation with worker acknowledgement, and plan validation and execution. The policy adapter accepts observations and returns action chunks. A scripted policy exercises that interface today. Connecting a trained VLA model is the next integration step. [Policy adapter](python/robotics_backends/isaaclab_physx/stub_policy.py)
 
-## Recorded task
+## Example: diagnose and retry a missed grasp
 
-**Instruction.** “Pick up the red block and place it on the target box.”
+**Task.** Pick up the red block with SO-ARM101 and place it on the target box.
 
-1. Start `profile_so101_physx` with seed 7. Create the task with `robotics_create_task` and inspect the scene with `robotics_inspect_scene`. The red block starts at approximately `(0.180, 0, 0.075) m`.
-2. Validate a plan against state version 0 with `robotics_validate_plan`. For the recovery test, move the block about 4 mm along x using the development skill `move_object`. This advances the state version to 1.
-3. Submit the original plan with `robotics_execute_task`. The gateway rejects it with `STALE_WORLD_STATE` before executing its motion.
-4. Validate a revised plan against state version 1 and submit it. The job succeeds in 13.79 s. A final scene inspection reports the block at `(0.2326, 0.0586, 0.0550) m` and confirms it is in the target region. Close the simulation.
+1. Read the rollout report and the frame recorded at `GRASP_MISSED`. The scene placed the block near `x = 0.19 m`, while the grasp request forced `grasp_x = 0.16 m`.
+2. Compare the frame with the recorded parameters. The gripper closed beside the block, consistent with the 3 cm offset.
+3. Retry the same scene without the forced grasp position so the worker selects the variant from the measured block position. Read the final scene to confirm placement in the target region.
 
-This sequence is a summary of the recorded tool calls. [Execution trace](artifacts/e_agent_analysis_2026-11-07/recovery.json)
+This recorded example illustrates diagnosis and retry through the simulator interface. A separate tool trace records the agent revising a plan after the gateway detected a scene change. [Failure analysis and retry](artifacts/e_agent_analysis_2026-11-07/analysis.md) · [Replanning trace](artifacts/e_agent_analysis_2026-11-07/recovery.json)
 
-## Evaluation
-
-| Experiment | Observed result | Record |
-| --- | --- | --- |
-| Fixed-scene SO-ARM101 pick and place | 10/10 successes after correcting episode reset. The original run obtained 1/10. The acceptance threshold was held fixed. | [Protocol](docs/execution/eval_manifest.json), [results](artifacts/t09_2026-11-07_1435/summary.md) |
-| Recovery and cancellation | Both injected failure cases recovered after replanning. Cancellation during a pick was acknowledged by the worker in 217 ms in the reported trial. | [Recovery and lifecycle tests](artifacts/t09_2026-11-07_1435/summary.md) |
-| Camera output | 640 × 480 RGB and camera-axis depth in metres. Frames and metadata are available through the gateway. | [Camera evaluation](artifacts/t08_2026-11-07_1410/summary.md) |
-
-The experiments used a single Windows workstation. Planning and verification use simulator ground truth. The RGB and depth outputs support inspection and logging. The tested task uses predefined grasp variants and a fixed placement location. Randomized-scene generalization, hardware transfer and learned visual control remain outside the reported evaluation.
+The SO-ARM101 and Franka scenes were used to verify the interface on the local Isaac installation. [Interface verification notes](docs/execution/PROGRESS.md)
 
 ## Reproduction
 
