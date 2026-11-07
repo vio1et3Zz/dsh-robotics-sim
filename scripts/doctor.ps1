@@ -201,8 +201,8 @@ $report = [ordered]@{
     tool = 'dsh-robotics doctor'
     generatedAt = (Get-Date).ToString('o')
     config = $ConfigPath
-    machine = $env:COMPUTERNAME
-    user = $env:USERNAME
+    machine = '<machine>'
+    user = '<user>'
     baselineOk = $baselineOk
     installed = [ordered]@{
         paths = $paths
@@ -227,7 +227,7 @@ $report = [ordered]@{
     checks = $checks
 }
 
-if ($Json) {
+$output = if ($Json) {
     $report | ConvertTo-Json -Depth 8
 }
 else {
@@ -251,6 +251,17 @@ else {
     }
     ''
     if ($baselineOk) { 'baseline: OK' } else { "baseline: FAILED ($($failed.Count) check(s))" }
+}
+
+if ($env:USERPROFILE) {
+    $profilePath = $env:USERPROFILE
+    if ($Json) {
+        $profilePath = (ConvertTo-Json -InputObject $profilePath -Compress).Trim('"')
+    }
+    $output | ForEach-Object { $_ -ireplace [regex]::Escape($profilePath), '<USERPROFILE>' }
+}
+else {
+    $output
 }
 
 if (-not $baselineOk) { exit 1 }
